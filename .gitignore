@@ -1,3 +1,6 @@
+# Cache
+scripts/downloads/
+
 # Logs
 logs
 *.log

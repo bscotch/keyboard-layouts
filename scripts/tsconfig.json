@@ -1,0 +1,21 @@
+{
+  "include": [
+    "**/*.cjs",
+    "**/*.cts",
+    "**/*.js",
+    "**/*.mjs",
+    "**/*.mts",
+    "**/*.ts"
+  ],
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "noEmit": true,
+    "lib": ["ESNext"],
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "strict": true,
+    "target": "ESNext",
+    "types": ["node"]
+  }
+}
