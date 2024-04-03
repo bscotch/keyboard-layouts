@@ -1,0 +1,1202 @@
+<KeyboardLayout RightAltIsAltGr="true" ShiftCancelsCapsLock="false" ChangesDirectionality="false">
+  <PhysicalKeys>
+    <PK VK="VK_ESCAPE" SC="01" Name="Esc">
+      <Result TextCodepoints="001B" />
+      <Result TextCodepoints="001B" With="VK_SHIFT" />
+      <Result TextCodepoints="001B" With="VK_CONTROL" />
+    </PK>
+    <PK VK="VK_1" SC="02">
+      <Result Text="1" />
+      <Result Text="!" With="VK_SHIFT" />
+      <Result Text="′" With="VK_CONTROL VK_MENU" />
+      <Result Text="¡" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_2" SC="03">
+      <Result Text="2" />
+      <Result Text="@" With="VK_SHIFT" />
+      <Result Text="″" With="VK_CONTROL VK_MENU" />
+      <Result Text="√" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_3" SC="04">
+      <Result Text="3" />
+      <Result Text="#" With="VK_SHIFT" />
+      <Result Text="‴" With="VK_CONTROL VK_MENU" />
+      <Result Text="∛" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_4" SC="05">
+      <Result Text="4" />
+      <Result Text="$" With="VK_SHIFT" />
+      <Result Text="¤" With="VK_CONTROL VK_MENU" />
+      <Result Text="£" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_5" SC="06">
+      <Result Text="5" />
+      <Result Text="%" With="VK_SHIFT" />
+      <Result Text="€" With="VK_CONTROL VK_MENU" />
+      <Result Text="‰" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_6" SC="07">
+      <Result Text="6" />
+      <Result Text="^" With="VK_SHIFT" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="̌" Name="COMBINING CARON">
+          <Result Text="ň" With="n" />
+          <Result Text="č" With="c" />
+          <Result Text="ž" With="z" />
+          <Result Text="ǎ" With="a" />
+          <Result Text="ǰ" With="j" />
+          <Result Text="ǧ" With="g" />
+          <Result Text="ď" With="d" />
+          <Result Text="š" With="s" />
+          <Result Text="ľ" With="l" />
+          <Result Text="ǩ" With="k" />
+          <Result Text="ě" With="e" />
+          <Result Text="ř" With="r" />
+          <Result Text="ǔ" With="u" />
+          <Result Text="ǐ" With="i" />
+          <Result Text="ť" With="t" />
+          <Result Text="ǒ" With="o" />
+          <Result Text="Ň" With="N" />
+          <Result Text="Č" With="C" />
+          <Result Text="Ž" With="Z" />
+          <Result Text="Ǎ" With="A" />
+          <Result Text="Ǧ" With="G" />
+          <Result Text="Ď" With="D" />
+          <Result Text="Š" With="S" />
+          <Result Text="Ľ" With="L" />
+          <Result Text="Ǩ" With="K" />
+          <Result Text="Ě" With="E" />
+          <Result Text="Ř" With="R" />
+          <Result Text="Ǔ" With="U" />
+          <Result Text="Ǐ" With="I" />
+          <Result Text="Ť" With="T" />
+          <Result Text="Ǒ" With="O" />
+          <Result Text="ˇ" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result With="VK_SHIFT VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="̂" Name="COMBINING CIRCUMFLEX ACCENT">
+          <Result Text="ĉ" With="c" />
+          <Result Text="â" With="a" />
+          <Result Text="ĥ" With="h" />
+          <Result Text="ĵ" With="j" />
+          <Result Text="ĝ" With="g" />
+          <Result Text="ŝ" With="s" />
+          <Result Text="ŵ" With="w" />
+          <Result Text="ê" With="e" />
+          <Result Text="û" With="u" />
+          <Result Text="î" With="i" />
+          <Result Text="ŷ" With="y" />
+          <Result Text="ô" With="o" />
+          <Result Text="Ĉ" With="C" />
+          <Result Text="Â" With="A" />
+          <Result Text="Ĥ" With="H" />
+          <Result Text="Ĵ" With="J" />
+          <Result Text="Ĝ" With="G" />
+          <Result Text="Ŝ" With="S" />
+          <Result Text="Ŵ" With="W" />
+          <Result Text="Ê" With="E" />
+          <Result Text="Û" With="U" />
+          <Result Text="Î" With="I" />
+          <Result Text="Ŷ" With="Y" />
+          <Result Text="Ô" With="O" />
+          <Result Text="ˆ" With=" " />
+        </DeadKeyTable>
+      </Result>
+    </PK>
+    <PK VK="VK_7" SC="08">
+      <Result Text="7" />
+      <Result Text="&amp;" With="VK_SHIFT" />
+      <Result Text="⃗" With="VK_CONTROL VK_MENU" />
+      <Result With="VK_SHIFT VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="¦" Name="BROKEN BAR">
+          <Result Text="ǌ" With="n" />
+          <Result Text="æ" With="a" />
+          <Result Text="ǳ" With="d" />
+          <Result Text="ĳ" With="i" />
+          <Result Text="þ" With="t" />
+          <Result Text="œ" With="o" />
+          <Result Text="¦" With="|" />
+          <Result Text="Ǌ" With="N" />
+          <Result Text="Æ" With="A" />
+          <Result Text="Ǳ" With="D" />
+          <Result Text="Ĳ" With="I" />
+          <Result Text="Þ" With="T" />
+          <Result Text="Œ" With="O" />
+          <Result Text="⅋" With="&amp;" />
+          <Result Text="ǉ" With="l" />
+          <Result Text="Ǉ" With="L" />
+          <Result Text="ð" With="e" />
+          <Result Text="ᴆ" With="E" />
+          <Result Text="‍" With=" " />
+        </DeadKeyTable>
+      </Result>
+    </PK>
+    <PK VK="VK_8" SC="09">
+      <Result Text="8" />
+      <Result Text="*" With="VK_SHIFT" />
+      <Result Text="∞" With="VK_CONTROL VK_MENU" />
+      <Result Text="⋅" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_9" SC="0A">
+      <Result Text="9" />
+      <Result Text="(" With="VK_SHIFT" />
+      <Result Text="∝" With="VK_CONTROL VK_MENU" />
+      <Result Text="⟨" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_0" SC="0B">
+      <Result Text="0" />
+      <Result Text=")" With="VK_SHIFT" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="̊" Name="COMBINING RING ABOVE">
+          <Result Text="å" With="a" />
+          <Result Text="ů" With="u" />
+          <Result Text="○" With="o" />
+          <Result Text="ᶱ" With="-" />
+          <Result Text="℃" With="C" />
+          <Result Text="Å" With="A" />
+          <Result Text="℉" With="F" />
+          <Result Text="Ů" With="U" />
+          <Result Text="◯" With="O" />
+          <Result Text="◌" With="." />
+          <Result Text="●" With="b" />
+          <Result Text="°" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result Text="⟩" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_OEM_MINUS" SC="0C">
+      <Result Text="-" />
+      <Result Text="_" With="VK_SHIFT" />
+      <Result Text="–" With="VK_CONTROL VK_MENU" />
+      <Result Text="—" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_OEM_PLUS" SC="0D">
+      <Result Text="=" />
+      <Result Text="+" With="VK_SHIFT" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="ª" Name="FEMININE ORDINAL INDICATOR">
+          <Result Text="₌" With="=" />
+          <Result Text="ₙ" With="n" />
+          <Result Text="ᵥ" With="v" />
+          <Result Text="ₓ" With="x" />
+          <Result Text="ₘ" With="m" />
+          <Result Text="ₐ" With="a" />
+          <Result Text="ₕ" With="h" />
+          <Result Text="ₛ" With="s" />
+          <Result Text="ₗ" With="l" />
+          <Result Text="ₖ" With="k" />
+          <Result Text="ₑ" With="e" />
+          <Result Text="ᵣ" With="r" />
+          <Result Text="ₚ" With="p" />
+          <Result Text="ᵤ" With="u" />
+          <Result Text="ᵢ" With="i" />
+          <Result Text="ₜ" With="t" />
+          <Result Text="ₒ" With="o" />
+          <Result Text="₈" With="8" />
+          <Result Text="₉" With="9" />
+          <Result Text="₀" With="0" />
+          <Result Text="₋" With="-" />
+          <Result Text="₆" With="6" />
+          <Result Text="₇" With="7" />
+          <Result Text="₄" With="4" />
+          <Result Text="₅" With="5" />
+          <Result Text="₂" With="2" />
+          <Result Text="₃" With="3" />
+          <Result Text="₁" With="1" />
+          <Result Text="₊" With="+" />
+          <Result Text="₍" With="(" />
+          <Result Text="₎" With=")" />
+          <Result Text="ⱼ" With="j" />
+          <Result Text="ª" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result With="VK_SHIFT VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="º" Name="MASCULINE ORDINAL INDICATOR">
+          <Result Text="⁼" With="=" />
+          <Result Text="ᵇ" With="b" />
+          <Result Text="ⁿ" With="n" />
+          <Result Text="ᵛ" With="v" />
+          <Result Text="ˣ" With="x" />
+          <Result Text="ᵐ" With="m" />
+          <Result Text="ᵃ" With="a" />
+          <Result Text="ʰ" With="h" />
+          <Result Text="ʲ" With="j" />
+          <Result Text="ᵍ" With="g" />
+          <Result Text="ᵈ" With="d" />
+          <Result Text="ˢ" With="s" />
+          <Result Text="ˡ" With="l" />
+          <Result Text="ᵏ" With="k" />
+          <Result Text="ʷ" With="w" />
+          <Result Text="ᵉ" With="e" />
+          <Result Text="ʳ" With="r" />
+          <Result Text="ᵖ" With="p" />
+          <Result Text="ᵘ" With="u" />
+          <Result Text="ⁱ" With="i" />
+          <Result Text="ᵗ" With="t" />
+          <Result Text="ʸ" With="y" />
+          <Result Text="ᵒ" With="o" />
+          <Result Text="⁸" With="8" />
+          <Result Text="⁹" With="9" />
+          <Result Text="⁰" With="0" />
+          <Result Text="⁻" With="-" />
+          <Result Text="⁶" With="6" />
+          <Result Text="⁷" With="7" />
+          <Result Text="⁴" With="4" />
+          <Result Text="⁵" With="5" />
+          <Result Text="²" With="2" />
+          <Result Text="³" With="3" />
+          <Result Text="¹" With="1" />
+          <Result Text="⁺" With="+" />
+          <Result Text="ᴮ" With="B" />
+          <Result Text="ᴺ" With="N" />
+          <Result Text="ᴹ" With="M" />
+          <Result Text="ᴬ" With="A" />
+          <Result Text="ᴴ" With="H" />
+          <Result Text="ᴶ" With="J" />
+          <Result Text="ᴳ" With="G" />
+          <Result Text="ᴰ" With="D" />
+          <Result Text="ᴸ" With="L" />
+          <Result Text="ᴷ" With="K" />
+          <Result Text="ᵂ" With="W" />
+          <Result Text="ᴱ" With="E" />
+          <Result Text="ᴿ" With="R" />
+          <Result Text="ᴾ" With="P" />
+          <Result Text="ᵁ" With="U" />
+          <Result Text="ᴵ" With="I" />
+          <Result Text="ᵀ" With="T" />
+          <Result Text="ᴼ" With="O" />
+          <Result Text="⁽" With="(" />
+          <Result Text="⁾" With=")" />
+          <Result Text="ⱽ" With="V" />
+          <Result Text="ꟲ" With="C" />
+          <Result Text="ꟳ" With="F" />
+          <Result Text="ꟴ" With="Q" />
+          <Result Text="ᶜ" With="c" />
+          <Result Text="ᶠ" With="f" />
+          <Result Text="ᶻ" With="z" />
+          <Result Text="º" With=" " />
+        </DeadKeyTable>
+      </Result>
+    </PK>
+    <PK VK="VK_BACK" SC="0E" Name="Backspace">
+      <Result TextCodepoints="0008" />
+      <Result TextCodepoints="0008" With="VK_SHIFT" />
+      <Result Text="" With="VK_CONTROL" />
+    </PK>
+    <PK VK="VK_TAB" SC="0F" Name="Tab">
+      <Result TextCodepoints="0009" />
+      <Result TextCodepoints="0009" With="VK_SHIFT" />
+    </PK>
+    <PK VK="VK_Q" SC="10">
+      <Result Text="q" />
+      <Result Text="Q" With="VK_SHIFT" />
+      <Result Text="Q" With="VK_CAPITAL" />
+      <Result Text="q" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="÷" With="VK_CONTROL VK_MENU" />
+      <Result Text="≡" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_W" SC="11">
+      <Result Text="w" />
+      <Result Text="W" With="VK_SHIFT" />
+      <Result Text="W" With="VK_CAPITAL" />
+      <Result Text="w" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ϵ" With="VK_CONTROL VK_MENU" />
+      <Result With="VK_SHIFT VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="Ʃ" Name="LATIN CAPITAL LETTER ESH">
+          <Result Text="⅀" With="S" />
+          <Result Text="∏" With="p" />
+          <Result Text="∐" With="P" />
+          <Result Text="⋁" With="v" />
+          <Result Text="⋀" With="V" />
+          <Result Text="⋃" With="u" />
+          <Result Text="⋂" With="U" />
+          <Result Text="⨀" With="." />
+          <Result Text="⨁" With="+" />
+          <Result Text="⨂" With="x" />
+          <Result Text="∑" With="s" />
+          <Result Text="Ʃ" With=" " />
+        </DeadKeyTable>
+      </Result>
+    </PK>
+    <PK VK="VK_E" SC="12">
+      <Result Text="e" />
+      <Result Text="E" With="VK_SHIFT" />
+      <Result Text="E" With="VK_CAPITAL" />
+      <Result Text="e" With="VK_SHIFT VK_CAPITAL" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="϶" Name="GREEK REVERSED LUNATE EPSILON SYMBOL">
+          <Result Text="∌" With="\" />
+          <Result Text="∉" With="/" />
+          <Result Text="϶" With="e" />
+          <Result Text="∋" With="|" />
+          <Result Text="∄" With="E" />
+          <Result Text="∈" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result Text="∃" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_R" SC="13">
+      <Result Text="r" />
+      <Result Text="R" With="VK_SHIFT" />
+      <Result Text="R" With="VK_CAPITAL" />
+      <Result Text="r" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="®" With="VK_CONTROL VK_MENU" />
+      <Result Text="™" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_T" SC="14">
+      <Result Text="t" />
+      <Result Text="T" With="VK_SHIFT" />
+      <Result Text="T" With="VK_CAPITAL" />
+      <Result Text="t" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="†" With="VK_CONTROL VK_MENU" />
+      <Result Text="‡" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_Y" SC="15">
+      <Result Text="y" />
+      <Result Text="Y" With="VK_SHIFT" />
+      <Result Text="Y" With="VK_CAPITAL" />
+      <Result Text="y" With="VK_SHIFT VK_CAPITAL" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="±" Name="PLUS-MINUS SIGN">
+          <Result Text="⊧" With="m" />
+          <Result Text="⊦" With="a" />
+          <Result Text="⊩" With="f" />
+          <Result Text="⊤" With="d" />
+          <Result Text="⊣" With="l" />
+          <Result Text="⊢" With="r" />
+          <Result Text="⟂" With="p" />
+          <Result Text="⊥" With="u" />
+          <Result Text="⊨" With="t" />
+          <Result Text="∓" With="-" />
+          <Result Text="±" With="+" />
+          <Result Text="⊬" With="A" />
+          <Result Text="⊮" With="F" />
+          <Result Text="⊭" With="T" />
+          <Result Text="±" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result Text="¥" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_U" SC="16">
+      <Result Text="u" />
+      <Result Text="U" With="VK_SHIFT" />
+      <Result Text="U" With="VK_CAPITAL" />
+      <Result Text="u" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="∪" With="VK_CONTROL VK_MENU" />
+      <Result Text="∩" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_I" SC="17">
+      <Result Text="i" />
+      <Result Text="I" With="VK_SHIFT" />
+      <Result Text="I" With="VK_CAPITAL" />
+      <Result Text="i" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ı" With="VK_CONTROL VK_MENU" />
+      <Result With="VK_SHIFT VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="ʃ" Name="LATIN SMALL LETTER ESH">
+          <Result Text="∱" With="8" />
+          <Result Text="∲" With="9" />
+          <Result Text="∳" With="0" />
+          <Result Text="∯" With="6" />
+          <Result Text="∰" With="7" />
+          <Result Text="⨌" With="4" />
+          <Result Text="∮" With="5" />
+          <Result Text="∬" With="2" />
+          <Result Text="∭" With="3" />
+          <Result Text="∫" With="1" />
+          <Result Text="ʃ" With=" " />
+        </DeadKeyTable>
+      </Result>
+    </PK>
+    <PK VK="VK_O" SC="18">
+      <Result Text="o" />
+      <Result Text="O" With="VK_SHIFT" />
+      <Result Text="O" With="VK_CAPITAL" />
+      <Result Text="o" With="VK_SHIFT VK_CAPITAL" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="ϕ" Name="GREEK PHI SYMBOL">
+          <Result Text="⊜" With="=" />
+          <Result Text="⊗" With="x" />
+          <Result Text="⊙" With="." />
+          <Result Text="⊘" With="/" />
+          <Result Text="⊚" With="O" />
+          <Result Text="⊖" With="-" />
+          <Result Text="⊕" With="+" />
+          <Result Text="⊛" With="*" />
+          <Result Text="⊝" With="_" />
+          <Result Text="∎" With="q" />
+          <Result Text="∘" With="o" />
+          <Result Text="ϕ" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result Text="∅" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_P" SC="19">
+      <Result Text="p" />
+      <Result Text="P" With="VK_SHIFT" />
+      <Result Text="P" With="VK_CAPITAL" />
+      <Result Text="p" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="℗" With="VK_CONTROL VK_MENU" />
+      <Result Text="¶" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_OEM_4" SC="1A">
+      <Result Text="[" />
+      <Result Text="{" With="VK_SHIFT" />
+      <Result TextCodepoints="001B" With="VK_CONTROL" />
+      <Result Text="‹" With="VK_CONTROL VK_MENU" />
+      <Result Text="«" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_OEM_6" SC="1B">
+      <Result Text="]" />
+      <Result Text="}" With="VK_SHIFT" />
+      <Result TextCodepoints="001D" With="VK_CONTROL" />
+      <Result Text="›" With="VK_CONTROL VK_MENU" />
+      <Result Text="»" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_RETURN" SC="1C" Name="Enter">
+      <Result TextCodepoints="000D" />
+      <Result TextCodepoints="000D" With="VK_SHIFT" />
+      <Result TextCodepoints="000A" With="VK_CONTROL" />
+    </PK>
+    <PK VK="VK_LCONTROL" SC="1D" Name="Ctrl" />
+    <PK VK="VK_A" SC="1E">
+      <Result Text="a" />
+      <Result Text="A" With="VK_SHIFT" />
+      <Result Text="A" With="VK_CAPITAL" />
+      <Result Text="a" With="VK_SHIFT VK_CAPITAL" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="ɐ" Name="LATIN SMALL LETTER TURNED A">
+          <Result Text="⊅" With="\" />
+          <Result Text="⊄" With="/" />
+          <Result Text="ɐ" With="a" />
+          <Result Text="⊆" With="[" />
+          <Result Text="⊇" With="]" />
+          <Result Text="⊃" With="|" />
+          <Result Text="∁" With="C" />
+          <Result Text="∠" With="A" />
+          <Result Text="⊈" With="{" />
+          <Result Text="⊉" With="}" />
+          <Result Text="⊂" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result Text="∀" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_S" SC="1F">
+      <Result Text="s" />
+      <Result Text="S" With="VK_SHIFT" />
+      <Result Text="S" With="VK_CAPITAL" />
+      <Result Text="s" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ß" With="VK_CONTROL VK_MENU" />
+      <Result Text="§" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_D" SC="20">
+      <Result Text="d" />
+      <Result Text="D" With="VK_SHIFT" />
+      <Result Text="D" With="VK_CAPITAL" />
+      <Result Text="d" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="∂" With="VK_CONTROL VK_MENU" />
+      <Result Text="∆" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_F" SC="21">
+      <Result Text="f" />
+      <Result Text="F" With="VK_SHIFT" />
+      <Result Text="F" With="VK_CAPITAL" />
+      <Result Text="f" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ϝ" With="VK_CONTROL VK_MENU" />
+      <Result Text="Ϝ" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_G" SC="22">
+      <Result Text="g" />
+      <Result Text="G" With="VK_SHIFT" />
+      <Result Text="G" With="VK_CAPITAL" />
+      <Result Text="g" With="VK_SHIFT VK_CAPITAL" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="γ" Name="GREEK SMALL LETTER GAMMA">
+          <Result Text="β" With="b" />
+          <Result Text="ν" With="n" />
+          <Result Text="ω" With="v" />
+          <Result Text="ψ" With="c" />
+          <Result Text="χ" With="x" />
+          <Result Text="ζ" With="z" />
+          <Result Text="μ" With="m" />
+          <Result Text="α" With="a" />
+          <Result Text="η" With="h" />
+          <Result Text="ξ" With="j" />
+          <Result Text="γ" With="g" />
+          <Result Text="φ" With="f" />
+          <Result Text="δ" With="d" />
+          <Result Text="σ" With="s" />
+          <Result Text="λ" With="l" />
+          <Result Text="κ" With="k" />
+          <Result Text="ς" With="w" />
+          <Result Text="ε" With="e" />
+          <Result Text="ρ" With="r" />
+          <Result Text="π" With="p" />
+          <Result Text="θ" With="u" />
+          <Result Text="ι" With="i" />
+          <Result Text="τ" With="t" />
+          <Result Text="υ" With="y" />
+          <Result Text="ο" With="o" />
+          <Result Text="ϑ" With="q" />
+          <Result Text="ϱ" With="6" />
+          <Result Text="ℸ" With="4" />
+          <Result Text="ϰ" With="5" />
+          <Result Text="ℶ" With="2" />
+          <Result Text="ℷ" With="3" />
+          <Result Text="ℵ" With="1" />
+          <Result Text="Β" With="B" />
+          <Result Text="Ν" With="N" />
+          <Result Text="Ω" With="V" />
+          <Result Text="Ψ" With="C" />
+          <Result Text="Χ" With="X" />
+          <Result Text="Ζ" With="Z" />
+          <Result Text="Μ" With="M" />
+          <Result Text="Α" With="A" />
+          <Result Text="Η" With="H" />
+          <Result Text="Ξ" With="J" />
+          <Result Text="Γ" With="G" />
+          <Result Text="Φ" With="F" />
+          <Result Text="Δ" With="D" />
+          <Result Text="Σ" With="S" />
+          <Result Text="Λ" With="L" />
+          <Result Text="Κ" With="K" />
+          <Result Text="ϖ" With="W" />
+          <Result Text="Ε" With="E" />
+          <Result Text="Ρ" With="R" />
+          <Result Text="Π" With="P" />
+          <Result Text="Θ" With="U" />
+          <Result Text="Ι" With="I" />
+          <Result Text="Τ" With="T" />
+          <Result Text="Υ" With="Y" />
+          <Result Text="Ο" With="O" />
+          <Result Text="ϴ" With="Q" />
+          <Result Text="γ" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result Text="∇" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_H" SC="23">
+      <Result Text="h" />
+      <Result Text="H" With="VK_SHIFT" />
+      <Result Text="H" With="VK_CAPITAL" />
+      <Result Text="h" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ℏ" With="VK_CONTROL VK_MENU" />
+      <Result With="VK_SHIFT VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="Ħ" Name="LATIN CAPITAL LETTER H WITH STROKE">
+          <Result Text="ℭ" With="C" />
+          <Result Text="ℨ" With="Z" />
+          <Result Text="ℌ" With="H" />
+          <Result Text="ℜ" With="R" />
+          <Result Text="ℑ" With="I" />
+          <Result Text="ℌ" With=" " />
+        </DeadKeyTable>
+      </Result>
+    </PK>
+    <PK VK="VK_J" SC="24">
+      <Result Text="j" />
+      <Result Text="J" With="VK_SHIFT" />
+      <Result Text="J" With="VK_CAPITAL" />
+      <Result Text="j" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="←" With="VK_CONTROL VK_MENU" />
+      <Result Text="⇐" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_K" SC="25">
+      <Result Text="k" />
+      <Result Text="K" With="VK_SHIFT" />
+      <Result Text="K" With="VK_CAPITAL" />
+      <Result Text="k" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="↔" With="VK_CONTROL VK_MENU" />
+      <Result Text="⇔" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_L" SC="26">
+      <Result Text="l" />
+      <Result Text="L" With="VK_SHIFT" />
+      <Result Text="L" With="VK_CAPITAL" />
+      <Result Text="l" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="→" With="VK_CONTROL VK_MENU" />
+      <Result Text="⇒" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_OEM_1" SC="27">
+      <Result Text=";" />
+      <Result Text=":" With="VK_SHIFT" />
+      <Result Text="∴" With="VK_CONTROL VK_MENU" />
+      <Result Text="∵" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_OEM_7" SC="28">
+      <Result Text="'" />
+      <Result Text="&quot;" With="VK_SHIFT" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="́" Name="COMBINING ACUTE ACCENT">
+          <Result Text="ń" With="n" />
+          <Result Text="ć" With="c" />
+          <Result Text="ź" With="z" />
+          <Result Text="ḿ" With="m" />
+          <Result Text="á" With="a" />
+          <Result Text="ǵ" With="g" />
+          <Result Text="ś" With="s" />
+          <Result Text="ĺ" With="l" />
+          <Result Text="ḱ" With="k" />
+          <Result Text="ẃ" With="w" />
+          <Result Text="é" With="e" />
+          <Result Text="ŕ" With="r" />
+          <Result Text="ṕ" With="p" />
+          <Result Text="ú" With="u" />
+          <Result Text="í" With="i" />
+          <Result Text="ý" With="y" />
+          <Result Text="ó" With="o" />
+          <Result Text="Ń" With="N" />
+          <Result Text="Ć" With="C" />
+          <Result Text="Ź" With="Z" />
+          <Result Text="Ḿ" With="M" />
+          <Result Text="Á" With="A" />
+          <Result Text="Ǵ" With="G" />
+          <Result Text="Ś" With="S" />
+          <Result Text="Ĺ" With="L" />
+          <Result Text="Ḱ" With="K" />
+          <Result Text="Ẃ" With="W" />
+          <Result Text="É" With="E" />
+          <Result Text="Ŕ" With="R" />
+          <Result Text="Ṕ" With="P" />
+          <Result Text="Ú" With="U" />
+          <Result Text="Í" With="I" />
+          <Result Text="Ý" With="Y" />
+          <Result Text="Ó" With="O" />
+          <Result Text="´" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result With="VK_SHIFT VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="̈" Name="COMBINING DIAERESIS">
+          <Result Text="ä" With="a" />
+          <Result Text="ë" With="e" />
+          <Result Text="ü" With="u" />
+          <Result Text="ï" With="i" />
+          <Result Text="ÿ" With="y" />
+          <Result Text="ö" With="o" />
+          <Result Text="⃜" With="4" />
+          <Result Text="̈" With="2" />
+          <Result Text="⃛" With="3" />
+          <Result Text="̇" With="1" />
+          <Result Text="Ä" With="A" />
+          <Result Text="Ë" With="E" />
+          <Result Text="Ü" With="U" />
+          <Result Text="Ï" With="I" />
+          <Result Text="Ö" With="O" />
+          <Result Text="Ÿ" With="Y" />
+          <Result Text="Ḧ" With="H" />
+          <Result Text="ḧ" With="h" />
+          <Result Text="Ẅ" With="W" />
+          <Result Text="ẅ" With="w" />
+          <Result Text="Ẍ" With="X" />
+          <Result Text="ẍ" With="x" />
+          <Result Text="ẗ" With="t" />
+          <Result Text="¨" With=" " />
+        </DeadKeyTable>
+      </Result>
+    </PK>
+    <PK VK="VK_OEM_3" SC="29">
+      <Result Text="`" />
+      <Result Text="~" With="VK_SHIFT" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="̀" Name="COMBINING GRAVE ACCENT">
+          <Result Text="à" With="a" />
+          <Result Text="ẁ" With="w" />
+          <Result Text="è" With="e" />
+          <Result Text="ù" With="u" />
+          <Result Text="ì" With="i" />
+          <Result Text="ỳ" With="y" />
+          <Result Text="ò" With="o" />
+          <Result Text="À" With="A" />
+          <Result Text="Ẁ" With="W" />
+          <Result Text="È" With="E" />
+          <Result Text="Ù" With="U" />
+          <Result Text="Ì" With="I" />
+          <Result Text="Ỳ" With="Y" />
+          <Result Text="Ò" With="O" />
+          <Result Text="`" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result With="VK_SHIFT VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="̃" Name="COMBINING TILDE">
+          <Result Text="≅" With="=" />
+          <Result Text="ñ" With="n" />
+          <Result Text="ṽ" With="v" />
+          <Result Text="ã" With="a" />
+          <Result Text="ẽ" With="e" />
+          <Result Text="ũ" With="u" />
+          <Result Text="ĩ" With="i" />
+          <Result Text="ỹ" With="y" />
+          <Result Text="õ" With="o" />
+          <Result Text="Ñ" With="N" />
+          <Result Text="Ṽ" With="V" />
+          <Result Text="Ã" With="A" />
+          <Result Text="Ẽ" With="E" />
+          <Result Text="Ũ" With="U" />
+          <Result Text="Ĩ" With="I" />
+          <Result Text="Ỹ" With="Y" />
+          <Result Text="Õ" With="O" />
+          <Result Text="≃" With="-" />
+          <Result Text="˜" With=" " />
+        </DeadKeyTable>
+      </Result>
+    </PK>
+    <PK VK="VK_LSHIFT" SC="2A" Name="Shift" />
+    <PK VK="VK_OEM_5" SC="2B">
+      <Result Text="\" />
+      <Result Text="|" With="VK_SHIFT" />
+      <Result TextCodepoints="001C" With="VK_CONTROL" />
+      <Result Text="↓" With="VK_CONTROL VK_MENU" />
+      <Result Text="↑" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_Z" SC="2C">
+      <Result Text="z" />
+      <Result Text="Z" With="VK_SHIFT" />
+      <Result Text="Z" With="VK_CAPITAL" />
+      <Result Text="z" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="≠" With="VK_CONTROL VK_MENU" />
+      <Result With="VK_SHIFT VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="Ƶ" Name="LATIN CAPITAL LETTER Z WITH STROKE">
+          <Result Text="ⅉ" With="j" />
+          <Result Text="ⅆ" With="d" />
+          <Result Text="ⅇ" With="e" />
+          <Result Text="ⅈ" With="i" />
+          <Result Text="ℕ" With="N" />
+          <Result Text="ℂ" With="C" />
+          <Result Text="ℤ" With="Z" />
+          <Result Text="ℍ" With="H" />
+          <Result Text="ⅅ" With="D" />
+          <Result Text="ℝ" With="R" />
+          <Result Text="ℙ" With="P" />
+          <Result Text="ℚ" With="Q" />
+          <Result Text="ℤ" With=" " />
+        </DeadKeyTable>
+      </Result>
+    </PK>
+    <PK VK="VK_X" SC="2D">
+      <Result Text="x" />
+      <Result Text="X" With="VK_SHIFT" />
+      <Result Text="X" With="VK_CAPITAL" />
+      <Result Text="x" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="×" With="VK_CONTROL VK_MENU" />
+      <Result Text="≈" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_C" SC="2E">
+      <Result Text="c" />
+      <Result Text="C" With="VK_SHIFT" />
+      <Result Text="C" With="VK_CAPITAL" />
+      <Result Text="c" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="©" With="VK_CONTROL VK_MENU" />
+      <Result Text="¢" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_V" SC="2F">
+      <Result Text="v" />
+      <Result Text="V" With="VK_SHIFT" />
+      <Result Text="V" With="VK_CAPITAL" />
+      <Result Text="v" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="∨" With="VK_CONTROL VK_MENU" />
+      <Result Text="∧" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_B" SC="30">
+      <Result Text="b" />
+      <Result Text="B" With="VK_SHIFT" />
+      <Result Text="B" With="VK_CAPITAL" />
+      <Result Text="b" With="VK_SHIFT VK_CAPITAL" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="̄" Name="COMBINING MACRON">
+          <Result Text="̅" With="-" />
+          <Result Text="̿" With="=" />
+          <Result Text="¯" With="_" />
+          <Result Text="Ā" With="A" />
+          <Result Text="ā" With="a" />
+          <Result Text="Ē" With="E" />
+          <Result Text="ē" With="e" />
+          <Result Text="Ī" With="I" />
+          <Result Text="ī" With="i" />
+          <Result Text="Ō" With="O" />
+          <Result Text="ō" With="o" />
+          <Result Text="Ū" With="U" />
+          <Result Text="ū" With="u" />
+          <Result Text="Ḡ" With="G" />
+          <Result Text="ḡ" With="g" />
+          <Result Text="ˉ" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result With="VK_SHIFT VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="̆" Name="COMBINING BREVE">
+          <Result Text="ă" With="a" />
+          <Result Text="ğ" With="g" />
+          <Result Text="ĕ" With="e" />
+          <Result Text="ŭ" With="u" />
+          <Result Text="ĭ" With="i" />
+          <Result Text="ŏ" With="o" />
+          <Result Text="Ă" With="A" />
+          <Result Text="Ğ" With="G" />
+          <Result Text="Ĕ" With="E" />
+          <Result Text="Ŭ" With="U" />
+          <Result Text="Ĭ" With="I" />
+          <Result Text="Ŏ" With="O" />
+          <Result Text="˘" With=" " />
+        </DeadKeyTable>
+      </Result>
+    </PK>
+    <PK VK="VK_N" SC="31">
+      <Result Text="n" />
+      <Result Text="N" With="VK_SHIFT" />
+      <Result Text="N" With="VK_CAPITAL" />
+      <Result Text="n" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="¬" With="VK_CONTROL VK_MENU" />
+      <Result Text="⊻" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_M" SC="32">
+      <Result Text="m" />
+      <Result Text="M" With="VK_SHIFT" />
+      <Result Text="M" With="VK_CAPITAL" />
+      <Result Text="m" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="↦" With="VK_CONTROL VK_MENU" />
+      <Result With="VK_SHIFT VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="µ" Name="MICRO SIGN">
+          <Result Text="ℊ" With="g" />
+          <Result Text="ℓ" With="l" />
+          <Result Text="ℯ" With="e" />
+          <Result Text="ℴ" With="o" />
+          <Result Text="ℬ" With="B" />
+          <Result Text="ℳ" With="M" />
+          <Result Text="ℋ" With="H" />
+          <Result Text="ℱ" With="F" />
+          <Result Text="ℒ" With="L" />
+          <Result Text="ℰ" With="E" />
+          <Result Text="ℛ" With="R" />
+          <Result Text="℘" With="P" />
+          <Result Text="ℐ" With="I" />
+          <Result Text="ℳ" With=" " />
+        </DeadKeyTable>
+      </Result>
+    </PK>
+    <PK VK="VK_OEM_COMMA" SC="33">
+      <Result Text="," />
+      <Result Text="&lt;" With="VK_SHIFT" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="̧" Name="COMBINING CEDILLA">
+          <Result Text="˛" With="|" />
+          <Result Text="ņ" With="n" />
+          <Result Text="ç" With="c" />
+          <Result Text="̨" With="\" />
+          <Result Text="ą" With="a" />
+          <Result Text="ḩ" With="h" />
+          <Result Text="ģ" With="g" />
+          <Result Text="ḑ" With="d" />
+          <Result Text="ş" With="s" />
+          <Result Text="ļ" With="l" />
+          <Result Text="ķ" With="k" />
+          <Result Text="ę" With="e" />
+          <Result Text="ŗ" With="r" />
+          <Result Text="ų" With="u" />
+          <Result Text="į" With="i" />
+          <Result Text="ţ" With="t" />
+          <Result Text="ǫ" With="o" />
+          <Result Text="Ņ" With="N" />
+          <Result Text="Ç" With="C" />
+          <Result Text="Ą" With="A" />
+          <Result Text="Ḩ" With="H" />
+          <Result Text="Ģ" With="G" />
+          <Result Text="Ḑ" With="D" />
+          <Result Text="Ş" With="S" />
+          <Result Text="Ļ" With="L" />
+          <Result Text="Ķ" With="K" />
+          <Result Text="Ę" With="E" />
+          <Result Text="Ŗ" With="R" />
+          <Result Text="Ų" With="U" />
+          <Result Text="Į" With="I" />
+          <Result Text="Ţ" With="T" />
+          <Result Text="Ǫ" With="O" />
+          <Result Text="¸" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result With="VK_SHIFT VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="&lt;" Name="LESS-THAN SIGN">
+          <Result Text="≦" With="=" />
+          <Result Text="≮" With="/" />
+          <Result Text="⌊" With="[" />
+          <Result Text="≤" With="-" />
+          <Result Text="≰" With="+" />
+          <Result Text="≶" With="&gt;" />
+          <Result Text="≪" With="&lt;" />
+          <Result Text="⌈" With="{" />
+          <Result Text="≲" With="~" />
+          <Result Text="≤" With=" " />
+        </DeadKeyTable>
+      </Result>
+    </PK>
+    <PK VK="VK_OEM_PERIOD" SC="34">
+      <Result Text="." />
+      <Result Text="&gt;" With="VK_SHIFT" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="̣" Name="COMBINING DOT BELOW">
+          <Result Text="⋱" With="\" />
+          <Result Text="…" With="." />
+          <Result Text="⋰" With="/" />
+          <Result Text="⋯" With="-" />
+          <Result Text="⋮" With="|" />
+          <Result Text="Ḅ" With="B" />
+          <Result Text="ḅ" With="b" />
+          <Result Text="Ḍ" With="D" />
+          <Result Text="ḍ" With="d" />
+          <Result Text="Ḥ" With="H" />
+          <Result Text="ḥ" With="h" />
+          <Result Text="Ḳ" With="K" />
+          <Result Text="ḳ" With="k" />
+          <Result Text="Ḷ" With="L" />
+          <Result Text="ḷ" With="l" />
+          <Result Text="Ṃ" With="M" />
+          <Result Text="ṃ" With="m" />
+          <Result Text="Ṇ" With="N" />
+          <Result Text="ṇ" With="n" />
+          <Result Text="Ṛ" With="R" />
+          <Result Text="ṛ" With="r" />
+          <Result Text="Ṣ" With="S" />
+          <Result Text="ṣ" With="s" />
+          <Result Text="Ṭ" With="T" />
+          <Result Text="ṭ" With="t" />
+          <Result Text="Ṿ" With="V" />
+          <Result Text="ṿ" With="v" />
+          <Result Text="Ẉ" With="W" />
+          <Result Text="ẉ" With="w" />
+          <Result Text="Ẓ" With="Z" />
+          <Result Text="ẓ" With="z" />
+          <Result Text="Ạ" With="A" />
+          <Result Text="ạ" With="a" />
+          <Result Text="Ẹ" With="E" />
+          <Result Text="ẹ" With="e" />
+          <Result Text="Ị" With="I" />
+          <Result Text="ị" With="i" />
+          <Result Text="Ọ" With="O" />
+          <Result Text="ọ" With="o" />
+          <Result Text="Ụ" With="U" />
+          <Result Text="ụ" With="u" />
+          <Result Text="Ỵ" With="Y" />
+          <Result Text="ỵ" With="y" />
+          <Result Text="̤" With="&quot;" />
+          <Result Text="·" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result With="VK_SHIFT VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="&gt;" Name="GREATER-THAN SIGN">
+          <Result Text="≧" With="=" />
+          <Result Text="≯" With="/" />
+          <Result Text="⌋" With="]" />
+          <Result Text="≥" With="-" />
+          <Result Text="≱" With="+" />
+          <Result Text="≫" With="&gt;" />
+          <Result Text="≷" With="&lt;" />
+          <Result Text="⌉" With="}" />
+          <Result Text="≳" With="~" />
+          <Result Text="≥" With=" " />
+        </DeadKeyTable>
+      </Result>
+    </PK>
+    <PK VK="VK_OEM_2" SC="35">
+      <Result Text="/" />
+      <Result Text="?" With="VK_SHIFT" />
+      <Result With="VK_CONTROL VK_MENU">
+        <DeadKeyTable Accent="̸" Name="COMBINING LONG SOLIDUS OVERLAY">
+          <Result Text="ƀ" With="b" />
+          <Result Text="ƶ" With="z" />
+          <Result Text="ħ" With="h" />
+          <Result Text="ǥ" With="g" />
+          <Result Text="đ" With="d" />
+          <Result Text="ł" With="l" />
+          <Result Text="ɨ" With="i" />
+          <Result Text="ŧ" With="t" />
+          <Result Text="ø" With="o" />
+          <Result Text="Ƶ" With="Z" />
+          <Result Text="Ħ" With="H" />
+          <Result Text="Ǥ" With="G" />
+          <Result Text="Đ" With="D" />
+          <Result Text="Ł" With="L" />
+          <Result Text="Ɨ" With="I" />
+          <Result Text="Ŧ" With="T" />
+          <Result Text="Ø" With="O" />
+          <Result Text="Ⱥ" With="A" />
+          <Result Text="Ȼ" With="C" />
+          <Result Text="ȼ" With="c" />
+          <Result Text="Ƀ" With="B" />
+          <Result Text="Ɇ" With="E" />
+          <Result Text="ɇ" With="e" />
+          <Result Text="Ɉ" With="J" />
+          <Result Text="ɉ" With="j" />
+          <Result Text="Ɍ" With="R" />
+          <Result Text="ɍ" With="r" />
+          <Result Text="Ɏ" With="Y" />
+          <Result Text="ɏ" With="y" />
+          <Result Text="ᵽ" With="p" />
+          <Result Text="Ᵽ" With="P" />
+          <Result Text="ⱥ" With="a" />
+          <Result Text="Ꝁ" With="K" />
+          <Result Text="ꝁ" With="k" />
+          <Result Text="Ꞙ" With="F" />
+          <Result Text="ꞙ" With="f" />
+          <Result Text="Ꞹ" With="U" />
+          <Result Text="ꞹ" With="u" />
+          <Result Text="⁄" With=" " />
+        </DeadKeyTable>
+      </Result>
+      <Result Text="¿" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_RSHIFT" SC="36" Name="Right Shift" />
+    <PK VK="VK_MULTIPLY" SC="37" Name="Num *">
+      <Result Text="*" />
+      <Result Text="*" With="VK_SHIFT" />
+    </PK>
+    <PK VK="VK_LMENU" SC="38" Name="Alt" />
+    <PK VK="VK_SPACE" SC="39" Name="Space">
+      <Result Text=" " />
+      <Result Text=" " With="VK_SHIFT" />
+      <Result Text=" " With="VK_CONTROL" />
+      <Result Text=" " With="VK_CONTROL VK_MENU" />
+      <Result Text="​" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_CAPITAL" SC="3A" Name="Caps Lock" />
+    <PK VK="VK_F1" SC="3B" Name="F1" />
+    <PK VK="VK_F2" SC="3C" Name="F2" />
+    <PK VK="VK_F3" SC="3D" Name="F3" />
+    <PK VK="VK_F4" SC="3E" Name="F4" />
+    <PK VK="VK_F5" SC="3F" Name="F5" />
+    <PK VK="VK_F6" SC="40" Name="F6" />
+    <PK VK="VK_F7" SC="41" Name="F7" />
+    <PK VK="VK_F8" SC="42" Name="F8" />
+    <PK VK="VK_F9" SC="43" Name="F9" />
+    <PK VK="VK_F10" SC="44" Name="F10" />
+    <PK VK="VK_NUMLOCK" SC="45" Name="Pause" />
+    <PK VK="VK_SCROLL" SC="46" Name="Scroll Lock" />
+    <PK VK="VK_HOME" SC="47" Name="Num 7">
+      <Result Text="7" VK="VK_NUMPAD7" With="VK_NUMLOCK" />
+    </PK>
+    <PK VK="VK_UP" SC="48" Name="Num 8">
+      <Result Text="8" VK="VK_NUMPAD8" With="VK_NUMLOCK" />
+    </PK>
+    <PK VK="VK_PRIOR" SC="49" Name="Num 9">
+      <Result Text="9" VK="VK_NUMPAD9" With="VK_NUMLOCK" />
+    </PK>
+    <PK VK="VK_SUBTRACT" SC="4A" Name="Num -">
+      <Result Text="-" />
+      <Result Text="-" With="VK_SHIFT" />
+    </PK>
+    <PK VK="VK_LEFT" SC="4B" Name="Num 4">
+      <Result Text="4" VK="VK_NUMPAD4" With="VK_NUMLOCK" />
+    </PK>
+    <PK VK="VK_CLEAR" SC="4C" Name="Num 5">
+      <Result Text="5" VK="VK_NUMPAD5" With="VK_NUMLOCK" />
+    </PK>
+    <PK VK="VK_RIGHT" SC="4D" Name="Num 6">
+      <Result Text="6" VK="VK_NUMPAD6" With="VK_NUMLOCK" />
+    </PK>
+    <PK VK="VK_ADD" SC="4E" Name="Num +">
+      <Result Text="+" />
+      <Result Text="+" With="VK_SHIFT" />
+    </PK>
+    <PK VK="VK_END" SC="4F" Name="Num 1">
+      <Result Text="1" VK="VK_NUMPAD1" With="VK_NUMLOCK" />
+    </PK>
+    <PK VK="VK_DOWN" SC="50" Name="Num 2">
+      <Result Text="2" VK="VK_NUMPAD2" With="VK_NUMLOCK" />
+    </PK>
+    <PK VK="VK_NEXT" SC="51" Name="Num 3">
+      <Result Text="3" VK="VK_NUMPAD3" With="VK_NUMLOCK" />
+    </PK>
+    <PK VK="VK_INSERT" SC="52" Name="Num 0">
+      <Result Text="0" VK="VK_NUMPAD0" With="VK_NUMLOCK" />
+    </PK>
+    <PK VK="VK_DELETE" SC="53" Name="Num Del">
+      <Result Text="." VK="VK_DECIMAL" With="VK_NUMLOCK" />
+    </PK>
+    <PK VK="VK_SNAPSHOT" SC="54" Name="Sys Req" />
+    <PK VK="VK_OEM_102" SC="56">
+      <Result Text="\" />
+      <Result Text="|" With="VK_SHIFT" />
+      <Result TextCodepoints="001C" With="VK_CONTROL" />
+      <Result Text="↓" With="VK_CONTROL VK_MENU" />
+      <Result Text="↑" With="VK_SHIFT VK_CONTROL VK_MENU" />
+    </PK>
+    <PK VK="VK_F11" SC="57" Name="F11" />
+    <PK VK="VK_F12" SC="58" Name="F12" />
+    <PK VK="VK_CLEAR" SC="59" />
+    <PK VK="VK_OEM_WSCTRL" SC="5A" />
+    <PK VK="VK_DBE_KATAKANA" SC="5B" />
+    <PK VK="VK_OEM_JUMP" SC="5C" />
+    <PK VK="VK_DBE_FLUSHSTRING" SC="5D" />
+    <PK VK="VK_OEM_BACKTAB" SC="5E" />
+    <PK VK="VK_OEM_AUTO" SC="5F" />
+    <PK VK="VK_DBE_NOCODEINPUT" SC="62" />
+    <PK VK="VK_HELP" SC="63" />
+    <PK VK="VK_F13" SC="64" />
+    <PK VK="VK_F14" SC="65" />
+    <PK VK="VK_F15" SC="66" />
+    <PK VK="VK_F16" SC="67" />
+    <PK VK="VK_F17" SC="68" />
+    <PK VK="VK_F18" SC="69" />
+    <PK VK="VK_F19" SC="6A" />
+    <PK VK="VK_F20" SC="6B" />
+    <PK VK="VK_F21" SC="6C" />
+    <PK VK="VK_F22" SC="6D" />
+    <PK VK="VK_F23" SC="6E" />
+    <PK VK="VK_OEM_PA3" SC="6F" />
+    <PK VK="VK_OEM_RESET" SC="71" />
+    <PK VK="VK_ABNT_C1" SC="73" />
+    <PK VK="VK_F24" SC="76" />
+    <PK VK="VK_OEM_PA1" SC="7B" />
+    <PK VK="VK_TAB" SC="7C" Name="F13">
+      <Result TextCodepoints="0009" />
+      <Result TextCodepoints="0009" With="VK_SHIFT" />
+    </PK>
+    <PK VK="VK_ABNT_C2" SC="7E" Name="F15" />
+    <PK VK="VK_MEDIA_PREV_TRACK" SC="E010" />
+    <PK VK="VK_MEDIA_NEXT_TRACK" SC="E019" />
+    <PK VK="VK_RETURN" SC="E01C" Name="Num Enter">
+      <Result TextCodepoints="000D" />
+      <Result TextCodepoints="000D" With="VK_SHIFT" />
+      <Result TextCodepoints="000A" With="VK_CONTROL" />
+    </PK>
+    <PK VK="VK_RCONTROL" SC="E01D" Name="Right Ctrl" />
+    <PK VK="VK_VOLUME_MUTE" SC="E020" />
+    <PK VK="VK_LAUNCH_APP2" SC="E021" />
+    <PK VK="VK_MEDIA_PLAY_PAUSE" SC="E022" />
+    <PK VK="VK_MEDIA_STOP" SC="E024" />
+    <PK VK="VK_VOLUME_DOWN" SC="E02E" />
+    <PK VK="VK_VOLUME_UP" SC="E030" />
+    <PK VK="VK_BROWSER_HOME" SC="E032" />
+    <PK VK="VK_DIVIDE" SC="E035" Name="Num /">
+      <Result Text="/" />
+      <Result Text="/" With="VK_SHIFT" />
+    </PK>
+    <PK VK="VK_SNAPSHOT" SC="E037" Name="Prnt Scrn" />
+    <PK VK="VK_RMENU" SC="E038" Name="Right Alt" />
+    <PK VK="VK_CANCEL" SC="E046" Name="Break">
+      <Result TextCodepoints="0003" />
+      <Result TextCodepoints="0003" With="VK_SHIFT" />
+      <Result TextCodepoints="0003" With="VK_CONTROL" />
+    </PK>
+    <PK VK="VK_HOME" SC="E047" Name="Home" />
+    <PK VK="VK_UP" SC="E048" Name="Up" />
+    <PK VK="VK_PRIOR" SC="E049" Name="Page Up" />
+    <PK VK="VK_LEFT" SC="E04B" Name="Left" />
+    <PK VK="VK_RIGHT" SC="E04D" Name="Right" />
+    <PK VK="VK_END" SC="E04F" Name="End" />
+    <PK VK="VK_DOWN" SC="E050" Name="Down" />
+    <PK VK="VK_NEXT" SC="E051" Name="Page Down" />
+    <PK VK="VK_INSERT" SC="E052" Name="Insert" />
+    <PK VK="VK_DELETE" SC="E053" Name="Delete" />
+    <PK VK="VK_LWIN" SC="E05B" Name="Left Windows" />
+    <PK VK="VK_RWIN" SC="E05C" Name="Right Windows" />
+    <PK VK="VK_APPS" SC="E05D" Name="Application" />
+    <PK VK="VK_SLEEP" SC="E05F" />
+    <PK VK="VK_BROWSER_SEARCH" SC="E065" />
+    <PK VK="VK_BROWSER_FAVORITES" SC="E066" />
+    <PK VK="VK_BROWSER_REFRESH" SC="E067" />
+    <PK VK="VK_BROWSER_STOP" SC="E068" />
+    <PK VK="VK_BROWSER_FORWARD" SC="E069" />
+    <PK VK="VK_BROWSER_BACK" SC="E06A" />
+    <PK VK="VK_LAUNCH_APP1" SC="E06B" />
+    <PK VK="VK_LAUNCH_MAIL" SC="E06C" />
+    <PK VK="VK_LAUNCH_MEDIA_SELECT" SC="E06D" />
+    <PK VK="VK_PAUSE" SC="E11D" />
+  </PhysicalKeys>
+</KeyboardLayout>

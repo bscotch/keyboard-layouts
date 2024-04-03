@@ -1,0 +1,536 @@
+<KeyboardLayout RightAltIsAltGr="false" ShiftCancelsCapsLock="false" ChangesDirectionality="false">
+  <PhysicalKeys>
+    <PK VK="VK_ESCAPE" SC="00">
+      <Result TextCodepoints="001B" />
+      <Result TextCodepoints="001B" With="VK_SHIFT" />
+      <Result TextCodepoints="001B" With="VK_CONTROL" />
+      <Result TextCodepoints="001B" With="VK_KANA" />
+      <Result TextCodepoints="001B" With="VK_SHIFT VK_KANA" />
+      <Result TextCodepoints="001B" With="VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_1" SC="01">
+      <Result Text="1" />
+      <Result Text="!" With="VK_SHIFT" />
+      <Result Text="ﾇ" With="VK_KANA" />
+      <Result Text="ﾇ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_2" SC="02">
+      <Result Text="2" />
+      <Result Text="&quot;" With="VK_SHIFT" />
+      <Result Text="ﾌ" With="VK_KANA" />
+      <Result TextCodepoints="0000" With="VK_SHIFT VK_CONTROL" />
+      <Result Text="ﾌ" With="VK_SHIFT VK_KANA" />
+      <Result TextCodepoints="0000" With="VK_SHIFT VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_3" SC="03">
+      <Result Text="3" />
+      <Result Text="#" With="VK_SHIFT" />
+      <Result Text="ｱ" With="VK_KANA" />
+      <Result Text="ｧ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_4" SC="04">
+      <Result Text="4" />
+      <Result Text="$" With="VK_SHIFT" />
+      <Result Text="ｳ" With="VK_KANA" />
+      <Result Text="ｩ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_5" SC="05">
+      <Result Text="5" />
+      <Result Text="%" With="VK_SHIFT" />
+      <Result Text="ｴ" With="VK_KANA" />
+      <Result Text="ｪ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_6" SC="06">
+      <Result Text="6" />
+      <Result Text="&amp;" With="VK_SHIFT" />
+      <Result Text="ｵ" With="VK_KANA" />
+      <Result TextCodepoints="001E" With="VK_SHIFT VK_CONTROL" />
+      <Result Text="ｫ" With="VK_SHIFT VK_KANA" />
+      <Result TextCodepoints="001E" With="VK_SHIFT VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_7" SC="07">
+      <Result Text="7" />
+      <Result Text="'" With="VK_SHIFT" />
+      <Result Text="ﾔ" With="VK_KANA" />
+      <Result Text="ｬ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_8" SC="08">
+      <Result Text="8" />
+      <Result Text="(" With="VK_SHIFT" />
+      <Result Text="ﾕ" With="VK_KANA" />
+      <Result Text="ｭ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_9" SC="09">
+      <Result Text="9" />
+      <Result Text=")" With="VK_SHIFT" />
+      <Result Text="ﾖ" With="VK_KANA" />
+      <Result Text="ｮ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_0" SC="0A">
+      <Result Text="0" />
+      <Result Text="0" With="VK_SHIFT" />
+      <Result Text="ﾜ" With="VK_KANA" />
+      <Result Text="ｦ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_OEM_MINUS" SC="0B">
+      <Result Text="-" />
+      <Result Text="=" With="VK_SHIFT" />
+      <Result Text="ﾎ" With="VK_KANA" />
+      <Result TextCodepoints="001F" With="VK_SHIFT VK_CONTROL" />
+      <Result Text="ﾎ" With="VK_SHIFT VK_KANA" />
+      <Result TextCodepoints="001F" With="VK_SHIFT VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_OEM_7" SC="0C">
+      <Result Text="^" />
+      <Result Text="`" With="VK_SHIFT" />
+      <Result TextCodepoints="001E" With="VK_CONTROL" />
+      <Result Text="ﾍ" With="VK_KANA" />
+      <Result Text="ﾍ" With="VK_SHIFT VK_KANA" />
+      <Result TextCodepoints="001E" With="VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_OEM_5" SC="0D">
+      <Result Text="\" />
+      <Result Text="|" With="VK_SHIFT" />
+      <Result TextCodepoints="001C" With="VK_CONTROL" />
+      <Result Text="ｰ" With="VK_KANA" />
+      <Result Text="ｰ" With="VK_SHIFT VK_KANA" />
+      <Result TextCodepoints="001C" With="VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_BACK" SC="0E" Name="BS">
+      <Result TextCodepoints="0008" />
+      <Result TextCodepoints="0008" With="VK_SHIFT" />
+      <Result Text="" With="VK_CONTROL" />
+      <Result TextCodepoints="0008" With="VK_KANA" />
+      <Result TextCodepoints="0008" With="VK_SHIFT VK_KANA" />
+      <Result Text="" With="VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_TAB" SC="0F" Name="TAB">
+      <Result TextCodepoints="0009" />
+      <Result TextCodepoints="0009" With="VK_SHIFT" />
+      <Result TextCodepoints="0009" With="VK_KANA" />
+      <Result TextCodepoints="0009" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_Q" SC="10">
+      <Result Text="q" />
+      <Result Text="Q" With="VK_SHIFT" />
+      <Result Text="Q" With="VK_CAPITAL" />
+      <Result Text="ﾀ" With="VK_KANA" />
+      <Result Text="q" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾀ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_W" SC="11">
+      <Result Text="w" />
+      <Result Text="W" With="VK_SHIFT" />
+      <Result Text="W" With="VK_CAPITAL" />
+      <Result Text="ﾃ" With="VK_KANA" />
+      <Result Text="w" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾃ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_E" SC="12">
+      <Result Text="e" />
+      <Result Text="E" With="VK_SHIFT" />
+      <Result Text="E" With="VK_CAPITAL" />
+      <Result Text="ｲ" With="VK_KANA" />
+      <Result Text="e" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ｨ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_R" SC="13">
+      <Result Text="r" />
+      <Result Text="R" With="VK_SHIFT" />
+      <Result Text="R" With="VK_CAPITAL" />
+      <Result Text="ｽ" With="VK_KANA" />
+      <Result Text="r" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ｽ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_T" SC="14">
+      <Result Text="t" />
+      <Result Text="T" With="VK_SHIFT" />
+      <Result Text="T" With="VK_CAPITAL" />
+      <Result Text="ｶ" With="VK_KANA" />
+      <Result Text="t" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ｶ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_Y" SC="15">
+      <Result Text="y" />
+      <Result Text="Y" With="VK_SHIFT" />
+      <Result Text="Y" With="VK_CAPITAL" />
+      <Result Text="ﾝ" With="VK_KANA" />
+      <Result Text="y" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾝ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_U" SC="16">
+      <Result Text="u" />
+      <Result Text="U" With="VK_SHIFT" />
+      <Result Text="U" With="VK_CAPITAL" />
+      <Result Text="ﾅ" With="VK_KANA" />
+      <Result Text="u" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾅ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_I" SC="17">
+      <Result Text="i" />
+      <Result Text="I" With="VK_SHIFT" />
+      <Result Text="I" With="VK_CAPITAL" />
+      <Result Text="ﾆ" With="VK_KANA" />
+      <Result Text="i" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾆ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_O" SC="18">
+      <Result Text="o" />
+      <Result Text="O" With="VK_SHIFT" />
+      <Result Text="O" With="VK_CAPITAL" />
+      <Result Text="ﾗ" With="VK_KANA" />
+      <Result Text="o" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾗ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_P" SC="19">
+      <Result Text="p" />
+      <Result Text="P" With="VK_SHIFT" />
+      <Result Text="P" With="VK_CAPITAL" />
+      <Result Text="ｾ" With="VK_KANA" />
+      <Result Text="p" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ｾ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_OEM_3" SC="1A">
+      <Result Text="@" />
+      <Result Text="~" With="VK_SHIFT" />
+      <Result TextCodepoints="0000" With="VK_CONTROL" />
+      <Result Text="ﾞ" With="VK_KANA" />
+      <Result Text="ﾞ" With="VK_SHIFT VK_KANA" />
+      <Result TextCodepoints="0000" With="VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_OEM_4" SC="1B">
+      <Result Text="[" />
+      <Result Text="{" With="VK_SHIFT" />
+      <Result TextCodepoints="001B" With="VK_CONTROL" />
+      <Result Text="ﾟ" With="VK_KANA" />
+      <Result Text="｢" With="VK_SHIFT VK_KANA" />
+      <Result TextCodepoints="001B" With="VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_RETURN" SC="1C" Name="RETURN">
+      <Result TextCodepoints="000D" />
+      <Result TextCodepoints="000D" With="VK_SHIFT" />
+      <Result TextCodepoints="000A" With="VK_CONTROL" />
+      <Result TextCodepoints="000D" With="VK_KANA" />
+      <Result TextCodepoints="000D" With="VK_SHIFT VK_KANA" />
+      <Result TextCodepoints="000A" With="VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_A" SC="1D">
+      <Result Text="a" />
+      <Result Text="A" With="VK_SHIFT" />
+      <Result Text="A" With="VK_CAPITAL" />
+      <Result Text="ﾁ" With="VK_KANA" />
+      <Result Text="a" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾁ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_S" SC="1E">
+      <Result Text="s" />
+      <Result Text="S" With="VK_SHIFT" />
+      <Result Text="S" With="VK_CAPITAL" />
+      <Result Text="ﾄ" With="VK_KANA" />
+      <Result Text="s" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾄ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_D" SC="1F">
+      <Result Text="d" />
+      <Result Text="D" With="VK_SHIFT" />
+      <Result Text="D" With="VK_CAPITAL" />
+      <Result Text="ｼ" With="VK_KANA" />
+      <Result Text="d" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ｼ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_F" SC="20">
+      <Result Text="f" />
+      <Result Text="F" With="VK_SHIFT" />
+      <Result Text="F" With="VK_CAPITAL" />
+      <Result Text="ﾊ" With="VK_KANA" />
+      <Result Text="f" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾊ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_G" SC="21">
+      <Result Text="g" />
+      <Result Text="G" With="VK_SHIFT" />
+      <Result Text="G" With="VK_CAPITAL" />
+      <Result Text="ｷ" With="VK_KANA" />
+      <Result Text="g" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ｷ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_H" SC="22">
+      <Result Text="h" />
+      <Result Text="H" With="VK_SHIFT" />
+      <Result Text="H" With="VK_CAPITAL" />
+      <Result Text="ｸ" With="VK_KANA" />
+      <Result Text="h" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ｸ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_J" SC="23">
+      <Result Text="j" />
+      <Result Text="J" With="VK_SHIFT" />
+      <Result Text="J" With="VK_CAPITAL" />
+      <Result Text="ﾏ" With="VK_KANA" />
+      <Result Text="j" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾏ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_K" SC="24">
+      <Result Text="k" />
+      <Result Text="K" With="VK_SHIFT" />
+      <Result Text="K" With="VK_CAPITAL" />
+      <Result Text="ﾉ" With="VK_KANA" />
+      <Result Text="k" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾉ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_L" SC="25">
+      <Result Text="l" />
+      <Result Text="L" With="VK_SHIFT" />
+      <Result Text="L" With="VK_CAPITAL" />
+      <Result Text="ﾘ" With="VK_KANA" />
+      <Result Text="l" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾘ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_OEM_PLUS" SC="26">
+      <Result Text=";" />
+      <Result Text="+" With="VK_SHIFT" />
+      <Result Text="ﾚ" With="VK_KANA" />
+      <Result Text="ﾚ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_OEM_1" SC="27">
+      <Result Text=":" />
+      <Result Text="*" With="VK_SHIFT" />
+      <Result Text="ｹ" With="VK_KANA" />
+      <Result Text="ｹ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_OEM_6" SC="28">
+      <Result Text="]" />
+      <Result Text="}" With="VK_SHIFT" />
+      <Result TextCodepoints="001D" With="VK_CONTROL" />
+      <Result Text="ﾑ" With="VK_KANA" />
+      <Result Text="｣" With="VK_SHIFT VK_KANA" />
+      <Result TextCodepoints="001D" With="VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_Z" SC="29">
+      <Result Text="z" />
+      <Result Text="Z" With="VK_SHIFT" />
+      <Result Text="Z" With="VK_CAPITAL" />
+      <Result Text="ﾂ" With="VK_KANA" />
+      <Result Text="z" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ｯ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_X" SC="2A">
+      <Result Text="x" />
+      <Result Text="X" With="VK_SHIFT" />
+      <Result Text="X" With="VK_CAPITAL" />
+      <Result Text="ｻ" With="VK_KANA" />
+      <Result Text="x" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ｻ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_C" SC="2B">
+      <Result Text="c" />
+      <Result Text="C" With="VK_SHIFT" />
+      <Result Text="C" With="VK_CAPITAL" />
+      <Result Text="ｿ" With="VK_KANA" />
+      <Result Text="c" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ｿ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_V" SC="2C">
+      <Result Text="v" />
+      <Result Text="V" With="VK_SHIFT" />
+      <Result Text="V" With="VK_CAPITAL" />
+      <Result Text="ﾋ" With="VK_KANA" />
+      <Result Text="v" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾋ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_B" SC="2D">
+      <Result Text="b" />
+      <Result Text="B" With="VK_SHIFT" />
+      <Result Text="B" With="VK_CAPITAL" />
+      <Result Text="ｺ" With="VK_KANA" />
+      <Result Text="b" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ｺ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_N" SC="2E">
+      <Result Text="n" />
+      <Result Text="N" With="VK_SHIFT" />
+      <Result Text="N" With="VK_CAPITAL" />
+      <Result Text="ﾐ" With="VK_KANA" />
+      <Result Text="n" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾐ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_M" SC="2F">
+      <Result Text="m" />
+      <Result Text="M" With="VK_SHIFT" />
+      <Result Text="M" With="VK_CAPITAL" />
+      <Result Text="ﾓ" With="VK_KANA" />
+      <Result Text="m" With="VK_SHIFT VK_CAPITAL" />
+      <Result Text="ﾓ" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_OEM_COMMA" SC="30">
+      <Result Text="," />
+      <Result Text="&lt;" With="VK_SHIFT" />
+      <Result Text="ﾈ" With="VK_KANA" />
+      <Result Text="､" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_OEM_PERIOD" SC="31">
+      <Result Text="." />
+      <Result Text="&gt;" With="VK_SHIFT" />
+      <Result Text="ﾙ" With="VK_KANA" />
+      <Result Text="｡" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_OEM_2" SC="32">
+      <Result Text="/" />
+      <Result Text="?" With="VK_SHIFT" />
+      <Result Text="ﾒ" With="VK_KANA" />
+      <Result Text="･" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_OEM_8" SC="33">
+      <Result Text="_" With="VK_SHIFT" />
+      <Result TextCodepoints="001F" With="VK_CONTROL" />
+      <Result Text="ﾛ" With="VK_KANA" />
+      <Result Text="ﾛ" With="VK_SHIFT VK_KANA" />
+      <Result TextCodepoints="001F" With="VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_SPACE" SC="34" Name="SPACE">
+      <Result Text=" " />
+      <Result Text=" " With="VK_SHIFT" />
+      <Result Text=" " With="VK_CONTROL" />
+      <Result Text=" " With="VK_KANA" />
+      <Result Text=" " With="VK_SHIFT VK_KANA" />
+      <Result Text=" " With="VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_CONVERT" SC="35" Name="XFER" />
+    <PK VK="VK_NEXT" SC="36" Name="ROLL UP" />
+    <PK VK="VK_PRIOR" SC="37" Name="ROLL DOWN" />
+    <PK VK="VK_INSERT" SC="38" Name="INS" />
+    <PK VK="VK_DELETE" SC="39" Name="DEL" />
+    <PK VK="VK_UP" SC="3A" Name="UP" />
+    <PK VK="VK_LEFT" SC="3B" Name="LEFT" />
+    <PK VK="VK_RIGHT" SC="3C" Name="RIGHT" />
+    <PK VK="VK_DOWN" SC="3D" Name="DOWN" />
+    <PK VK="VK_HOME" SC="3E" Name="CLR" />
+    <PK VK="VK_END" SC="3F" Name="HELP" />
+    <PK VK="VK_SUBTRACT" SC="40" Name="Num -">
+      <Result Text="-" />
+      <Result Text="-" With="VK_SHIFT" />
+      <Result Text="-" With="VK_KANA" />
+      <Result Text="-" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_DIVIDE" SC="41" Name="Num /">
+      <Result Text="/" />
+      <Result Text="/" With="VK_SHIFT" />
+      <Result Text="/" With="VK_KANA" />
+      <Result Text="/" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_NUMPAD7" SC="42" Name="Num 7">
+      <Result Text="7" />
+      <Result Text="7" With="VK_KANA" />
+    </PK>
+    <PK VK="VK_NUMPAD8" SC="43" Name="Num 8">
+      <Result Text="8" />
+      <Result Text="8" With="VK_KANA" />
+    </PK>
+    <PK VK="VK_NUMPAD9" SC="44" Name="Num 9">
+      <Result Text="9" />
+      <Result Text="9" With="VK_KANA" />
+    </PK>
+    <PK VK="VK_MULTIPLY" SC="45" Name="Num *">
+      <Result Text="*" />
+      <Result Text="*" With="VK_SHIFT" />
+      <Result Text="*" With="VK_KANA" />
+      <Result Text="*" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_NUMPAD4" SC="46" Name="Num 4">
+      <Result Text="4" />
+      <Result Text="4" With="VK_KANA" />
+    </PK>
+    <PK VK="VK_NUMPAD5" SC="47" Name="Num 5">
+      <Result Text="5" />
+      <Result Text="5" With="VK_KANA" />
+    </PK>
+    <PK VK="VK_NUMPAD6" SC="48" Name="Num 6">
+      <Result Text="6" />
+      <Result Text="6" With="VK_KANA" />
+    </PK>
+    <PK VK="VK_ADD" SC="49" Name="Num +">
+      <Result Text="+" />
+      <Result Text="+" With="VK_SHIFT" />
+      <Result Text="+" With="VK_KANA" />
+      <Result Text="+" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_NUMPAD1" SC="4A" Name="Num 1">
+      <Result Text="1" />
+      <Result Text="1" With="VK_KANA" />
+    </PK>
+    <PK VK="VK_NUMPAD2" SC="4B" Name="Num 2">
+      <Result Text="2" />
+      <Result Text="2" With="VK_KANA" />
+    </PK>
+    <PK VK="VK_NUMPAD3" SC="4C" Name="Num 3">
+      <Result Text="3" />
+      <Result Text="3" With="VK_KANA" />
+    </PK>
+    <PK VK="VK_OEM_NEC_EQUAL" SC="4D" Name="Num =">
+      <Result Text="=" />
+      <Result Text="=" With="VK_SHIFT" />
+      <Result Text="=" With="VK_KANA" />
+      <Result Text="=" With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_NUMPAD0" SC="4E" Name="Num 0">
+      <Result Text="0" />
+      <Result Text="0" With="VK_KANA" />
+    </PK>
+    <PK VK="VK_SEPARATOR" SC="4F" Name="Num ,">
+      <Result Text="," />
+      <Result Text="," With="VK_SHIFT" />
+      <Result Text="," With="VK_KANA" />
+      <Result Text="," With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_DECIMAL" SC="50" Name="Num .">
+      <Result Text="." />
+      <Result Text="." With="VK_SHIFT" />
+      <Result Text="." With="VK_KANA" />
+      <Result Text="." With="VK_SHIFT VK_KANA" />
+    </PK>
+    <PK VK="VK_NONCONVERT" SC="51" Name="NFER" />
+    <PK VK="VK_F11" SC="52" Name="f･11" />
+    <PK VK="VK_F12" SC="53" Name="f･12" />
+    <PK VK="VK_F13" SC="54" Name="f･13" />
+    <PK VK="VK_F14" SC="55" Name="f･14" />
+    <PK VK="VK_F15" SC="56" Name="f･15" />
+    <PK VK="VK_RETURN" SC="5C">
+      <Result TextCodepoints="000D" />
+      <Result TextCodepoints="000D" With="VK_SHIFT" />
+      <Result TextCodepoints="000A" With="VK_CONTROL" />
+      <Result TextCodepoints="000D" With="VK_KANA" />
+      <Result TextCodepoints="000D" With="VK_SHIFT VK_KANA" />
+      <Result TextCodepoints="000A" With="VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_CANCEL" SC="60" Name="STOP">
+      <Result TextCodepoints="0003" />
+      <Result TextCodepoints="0003" With="VK_SHIFT" />
+      <Result TextCodepoints="0003" With="VK_CONTROL" />
+      <Result TextCodepoints="0003" With="VK_KANA" />
+      <Result TextCodepoints="0003" With="VK_SHIFT VK_KANA" />
+      <Result TextCodepoints="0003" With="VK_CONTROL VK_KANA" />
+    </PK>
+    <PK VK="VK_SNAPSHOT" SC="61" Name="COPY" />
+    <PK VK="VK_F1" SC="62" Name="f･1" />
+    <PK VK="VK_F2" SC="63" Name="f･2" />
+    <PK VK="VK_F3" SC="64" Name="f･3" />
+    <PK VK="VK_F4" SC="65" Name="f･4" />
+    <PK VK="VK_F5" SC="66" Name="f･5" />
+    <PK VK="VK_F6" SC="67" Name="f･6" />
+    <PK VK="VK_F7" SC="68" Name="f･7" />
+    <PK VK="VK_F8" SC="69" Name="f･8" />
+    <PK VK="VK_F9" SC="6A" Name="f･9" />
+    <PK VK="VK_F10" SC="6B" Name="f･10" />
+    <PK VK="VK_LSHIFT" SC="70" Name="SHIFT" />
+    <PK VK="VK_CAPITAL" SC="71" Name="CAPS" />
+    <PK VK="VK_KANA" SC="72" Name="ｶﾅ" />
+    <PK VK="VK_LMENU" SC="73" Name="GRPH" />
+    <PK VK="VK_LCONTROL" SC="74" Name="CTRL" />
+    <PK VK="VK_LWIN" SC="77" Name="Left Windows" />
+    <PK VK="VK_RWIN" SC="78" Name="Right Windows" />
+    <PK VK="VK_APPS" SC="79" Name="Application" />
+    <PK VK="VK_RSHIFT" SC="7D" Name="SHIFT" />
+    <PK VK="VK_ABNT_C2" SC="7E" />
+    <PK VK="VK_OEM_PA2" SC="7F" />
+  </PhysicalKeys>
+</KeyboardLayout>
