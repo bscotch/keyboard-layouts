@@ -9,8 +9,6 @@ import {
 
 const selectedLayouts = process.argv[2]?.split(",").map((x) => x.toLowerCase());
 
-console.log(selectedLayouts);
-
 const layoutFiles = await getWindowsLayoutFiles();
 
 const keyCodes = await getVirtualKeycodes(windowsKeycodesFile);
@@ -19,7 +17,10 @@ const keyCodes = await getVirtualKeycodes(windowsKeycodesFile);
 
 const usLayout = defined(layoutFiles.get("kbdus"));
 let usKeyMappings = {};
-usKeyMappings = await getVirtualKeyMappings(defined(usLayout.keysPath));
+usKeyMappings = await getVirtualKeyMappings(
+  defined(usLayout.keysPath),
+  "en-US"
+);
 
 /** @type {{[kbdId:string]:Record<import("./shared.mjs").VKCode, string>}} */
 const selectedKeycodeMap = {};
@@ -70,7 +71,7 @@ async function getVirtualKeycodes(htmlFile) {
       // need to construct its VK code.
       const char = description.match(/(?<char>[A-Z0-9])/)?.[0];
       if (!char) {
-        console.log(`Could not parse character from ${description}`);
+        console.error(`Could not parse character from ${description}`);
         continue;
       }
       vkCode = `VK_${char}`;
