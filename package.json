@@ -5,7 +5,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "download": "node ./scripts/download-windows-layouts.mjs"
+    "download": "node ./scripts/download-windows-layouts.mjs",
+    "process": "node ./scripts/process-windows-layouts.mjs"
   },
   "keywords": [],
   "author": "",
@@ -15,7 +16,6 @@
     "@bscotch/pathy": "^2.12.0",
     "@types/node": "^20.12.3",
     "cheerio": "1.0.0-rc.12",
-    "htmlparser2": "^9.1.0",
     "typescript": "^5.4.3"
   }
 }

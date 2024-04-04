@@ -14,115 +14,322 @@ To that end, we need to be able to map all of the virtual keycodes to characters
 - Install [pnpm](https://pnpm.io/installation)
 - In this project directory, run `pnpm install`
 - (optional) To scrape the latest remote resources, run `pnpm download`
-- To get a JSON file of Virtual Keycodes that deviate from the US Keybouard layout (when uppercased), run `node scripts/process-windows-layouts.mjs` with a comma-separated list of keyboard IDs (the Windows DLL names)
+- To get a JSON file of Virtual Keycodes that deviate from the US Keyboard layout (when uppercased), run `node.exe scripts/get-windows-vk-overrides.mjs` with a comma-separated filter list of either languages codes (e.g `en`), driver names (e.g. `kbdus`), or KLIDs (e.g. `00000409`).
 
 For example:
 
-`node scripts/process-windows-layouts.mjs kbdus,kbdfrna,kbdsp,kbdbr,kbdit,kbdgr,kbd106,kbdtuq,kbdpl,kbdla`
+`node.exe scripts/get-windows-vk-overrides.mjs language de,es,fr,it,ja,ko,pl,pt,tr,zh`
 
 Returns:
 
 ```json
 {
-  "kbd106": {
-    "186": ":",
-    "187": ";",
-    "192": "@",
-    "222": "^"
+  "klidDrivers": {
+    "0000080c": "kbdbe",
+    "00000813": "kbdbe",
+    "0001080c": "kbdbene",
+    "00000416": "kbdbr",
+    "00010416": "kbdbr",
+    "0001040a": "kbdes",
+    "00000c0c": "kbdfc",
+    "0000040c": "kbdfr",
+    "0001040c": "kbdfrna",
+    "0002040c": "kbdfrnb",
+    "00000407": "kbdgr",
+    "00010407": "kbdgr1",
+    "00020407": "kbdgre1",
+    "00030407": "kbdgre2",
+    "00000410": "kbdit",
+    "00010410": "kbdit142",
+    "00000411": "kbdjpn",
+    "00000412": "kbdkor",
+    "0000080a": "kbdla",
+    "00010415": "kbdpl",
+    "00000415": "kbdpl1",
+    "00000816": "kbdpo",
+    "0000046e": "kbdsf",
+    "0000100c": "kbdsf",
+    "00000807": "kbdsg",
+    "0000040a": "kbdsp",
+    "0001041f": "kbdtuf",
+    "0000041f": "kbdtuq",
+    "00010402": "kbdus",
+    "00000404": "kbdus",
+    "00000409": "kbdus",
+    "00000804": "kbdus",
+    "00000c04": "kbdus",
+    "00001004": "kbdus",
+    "00001404": "kbdus"
   },
-  "kbdbr": {
-    "186": "Ç",
-    "191": ";",
-    "192": "'",
-    "220": "]",
-    "221": "["
-  },
-  "kbdfrna": {
-    "48": "»",
-    "49": "À",
-    "50": "É",
-    "51": "È",
-    "52": "Ê",
-    "53": "(",
-    "54": ")",
-    "55": "‘",
-    "56": "’",
-    "57": "«",
-    "187": "+",
-    "191": ":",
-    "192": "@",
-    "219": "/",
-    "220": "*",
-    "226": "<"
-  },
-  "kbdgr": {
-    "186": "Ü",
-    "187": "+",
-    "191": "#",
-    "192": "Ö",
-    "219": "SS",
-    "222": "Ä",
-    "226": "<"
-  },
-  "kbdit": {
-    "186": "È",
-    "187": "+",
-    "191": "Ù",
-    "192": "Ò",
-    "219": "'",
-    "221": "Ì",
-    "222": "À",
-    "226": "<"
-  },
-  "kbdla": {
-    "187": "+",
-    "191": "}",
-    "192": "Ñ",
-    "219": "'",
-    "220": "|",
-    "221": "¿",
-    "222": "{",
-    "226": "<"
-  },
-  "kbdpl": {
-    "186": "Ł",
-    "187": "+",
-    "191": "'",
-    "219": "Ż",
-    "220": "Ó",
-    "221": "Ś",
-    "222": "Ą",
-    "226": "<"
-  },
-  "kbdsp": {
-    "187": "+",
-    "191": "Ç",
-    "192": "Ñ",
-    "219": "'",
-    "220": "º",
-    "221": "¡",
-    "226": "<"
-  },
-  "kbdtuq": {
-    "186": "Ş",
-    "191": "Ö",
-    "192": "\"",
-    "219": "Ğ",
-    "220": "Ç",
-    "221": "Ü",
-    "222": "İ",
-    "223": "*",
-    "226": "<"
+  "driverOverrides": {
+    "kbdbe": {
+      "48": "À",
+      "49": "&",
+      "50": "É",
+      "51": "\"",
+      "52": "'",
+      "53": "(",
+      "54": "§",
+      "55": "È",
+      "56": "!",
+      "57": "Ç",
+      "186": "$",
+      "190": ";",
+      "191": ":",
+      "192": "Ù",
+      "219": ")",
+      "220": "Μ",
+      "222": "²",
+      "226": "<"
+    },
+    "kbdbene": {
+      "48": "À",
+      "49": "&",
+      "50": "É",
+      "51": "\"",
+      "52": "'",
+      "53": "(",
+      "54": "§",
+      "55": "È",
+      "56": "!",
+      "57": "Ç",
+      "186": "$",
+      "190": ";",
+      "191": ":",
+      "192": "Ù",
+      "219": ")",
+      "220": "Μ",
+      "222": "²",
+      "226": "<"
+    },
+    "kbdbr": {
+      "186": "Ç",
+      "191": ";",
+      "192": "'",
+      "220": "]",
+      "221": "["
+    },
+    "kbdes": {
+      "192": "Ñ",
+      "220": "'",
+      "221": "÷",
+      "222": "Ç",
+      "223": "=",
+      "226": "<"
+    },
+    "kbdfc": {
+      "191": "É",
+      "192": "È",
+      "220": "À",
+      "221": "Ç",
+      "222": "°",
+      "226": "Ù"
+    },
+    "kbdfr": {
+      "48": "À",
+      "49": "&",
+      "50": "É",
+      "51": "\"",
+      "52": "'",
+      "53": "(",
+      "54": "-",
+      "55": "È",
+      "56": "_",
+      "57": "Ç",
+      "186": "$",
+      "190": ";",
+      "191": ":",
+      "192": "Ù",
+      "219": ")",
+      "220": "*",
+      "222": "²",
+      "223": "!",
+      "226": "<"
+    },
+    "kbdfrna": {
+      "48": "»",
+      "49": "À",
+      "50": "É",
+      "51": "È",
+      "52": "Ê",
+      "53": "(",
+      "54": ")",
+      "55": "‘",
+      "56": "’",
+      "57": "«",
+      "187": "+",
+      "191": ":",
+      "192": "@",
+      "219": "/",
+      "220": "*",
+      "226": "<"
+    },
+    "kbdfrnb": {
+      "48": "*",
+      "49": "\"",
+      "50": "«",
+      "51": "»",
+      "52": "(",
+      "53": ")",
+      "54": "@",
+      "55": "+",
+      "56": "-",
+      "57": "/",
+      "186": "É",
+      "187": "%",
+      "189": "=",
+      "191": "È",
+      "192": "’",
+      "220": "Ç",
+      "221": "À",
+      "222": "$",
+      "226": "Ê"
+    },
+    "kbdgr": {
+      "186": "Ü",
+      "187": "+",
+      "191": "#",
+      "192": "Ö",
+      "219": "SS",
+      "222": "Ä",
+      "226": "<"
+    },
+    "kbdgr1": {
+      "186": "Ü",
+      "187": "+",
+      "191": "#",
+      "192": "Ö",
+      "219": "SS",
+      "222": "Ä",
+      "226": "<"
+    },
+    "kbdgre1": {
+      "186": "Ü",
+      "187": "+",
+      "191": "#",
+      "192": "Ö",
+      "219": "SS",
+      "222": "Ä",
+      "226": "<"
+    },
+    "kbdgre2": {
+      "186": "Ü",
+      "187": "+",
+      "191": "#",
+      "192": "Ö",
+      "219": "SS",
+      "222": "Ä"
+    },
+    "kbdit": {
+      "186": "È",
+      "187": "+",
+      "191": "Ù",
+      "192": "Ò",
+      "219": "'",
+      "221": "Ì",
+      "222": "À",
+      "226": "<"
+    },
+    "kbdit142": {
+      "186": "È",
+      "187": "+",
+      "191": "Ù",
+      "192": "Ò",
+      "219": "'",
+      "221": "Ì",
+      "222": "À",
+      "226": "<"
+    },
+    "kbdjpn": {},
+    "kbdkor": {},
+    "kbdla": {
+      "187": "+",
+      "191": "}",
+      "192": "Ñ",
+      "219": "'",
+      "220": "|",
+      "221": "¿",
+      "222": "{",
+      "226": "<"
+    },
+    "kbdpl": {
+      "186": "Ł",
+      "187": "+",
+      "191": "'",
+      "219": "Ż",
+      "220": "Ó",
+      "221": "Ś",
+      "222": "Ą",
+      "226": "<"
+    },
+    "kbdpl1": {},
+    "kbdpo": {
+      "187": "+",
+      "192": "Ç",
+      "219": "'",
+      "221": "«",
+      "222": "º",
+      "226": "<"
+    },
+    "kbdsf": {
+      "186": "È",
+      "191": "§",
+      "219": "'",
+      "220": "À",
+      "222": "É",
+      "223": "$",
+      "226": "<"
+    },
+    "kbdsg": {
+      "186": "Ü",
+      "191": "§",
+      "219": "'",
+      "220": "Ä",
+      "222": "Ö",
+      "223": "$",
+      "226": "<"
+    },
+    "kbdsp": {
+      "187": "+",
+      "191": "Ç",
+      "192": "Ñ",
+      "219": "'",
+      "220": "º",
+      "221": "¡",
+      "226": "<"
+    },
+    "kbdtuf": {
+      "186": "Ğ",
+      "187": "/",
+      "191": "Ç",
+      "192": "+",
+      "219": "İ",
+      "220": "Ö",
+      "221": "Ü",
+      "222": "Ş",
+      "226": "<"
+    },
+    "kbdtuq": {
+      "186": "Ş",
+      "191": "Ö",
+      "192": "\"",
+      "219": "Ğ",
+      "220": "Ç",
+      "221": "Ü",
+      "222": "İ",
+      "223": "*",
+      "226": "<"
+    },
+    "kbdus": {}
   }
 }
 ```
 
+The returned structure can be used for different lookup scenarios. If you are using the Windows APIs to get the current keyboard layout, you'll probably be getting it as a KLID. Therefore you can do a two-step lookup with the above data: (1) get the driver from the KLID; (2) get the VK Overrides from the driver.
+
 ## Resources
 
 - Keyboard Layout data: https://kbdlayout.info
+- Table of Windows Languages and IDs: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/available-language-packs-for-windows
 - Table mapping languages to default keyboard layouts on Windows: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs
 - Microsoft's list of layouts: https://learn.microsoft.com/en-us/globalization/windows-keyboard-layouts
-
-## Other notes
-
-- Crashlands 2 supported layouts: kbdbr,kbdfr,kbdgr,kbdit,kbdjpn,kbdla,kbdpl1,kbdsp,kbdtuq,kbdus

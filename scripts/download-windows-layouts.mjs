@@ -2,6 +2,7 @@ import assert from "node:assert";
 import {
   downloadsDir,
   windowsKeycodesFile,
+  windowsLanguagesFile,
   windowsLayoutsDir,
 } from "./shared.mjs";
 
@@ -50,4 +51,20 @@ const keycodesHtml = await (
 
 await downloadsDir.ensureDir();
 await windowsKeycodesFile.write(keycodesHtml);
+//#endregion
+
+//#region LANGUAGES
+const langMappingIndexHtml = await (
+  await fetch(
+    "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs"
+  )
+).text();
+await windowsLanguagesFile.write(langMappingIndexHtml);
+
+const langIndexHtml = await (
+  await fetch(
+    "https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/available-language-packs-for-windows"
+  )
+).text();
+await windowsLanguagesFile.write(langIndexHtml);
 //#endregion

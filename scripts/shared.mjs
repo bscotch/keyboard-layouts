@@ -7,8 +7,16 @@ import assert from "assert";
 
 export const downloadsDir = pathy("scripts/downloads");
 export const windowsLayoutsDir = downloadsDir.join("windows-layouts");
-export const windowsKeycodesFile = await downloadsDir.join(
+export const windowsKeycodesFile = downloadsDir.join(
   "windows-virtual-keycodes.html"
+);
+export const windowsLanguagesFile = downloadsDir.join("windows-languages.html");
+export const windowsLanguageLayoutsFile = downloadsDir.join(
+  "windows-language-layouts.html"
+);
+/** @type {Pathy<{[driver:string]:{klids:string[], langs:string[], vk:{[code:string]:string}}}>} */
+export const windowsVkCodeOverridesFile = pathy(
+  "windows-vkcode-overrides.json"
 );
 
 export async function getWindowsLayoutFiles() {

@@ -1,0 +1,2675 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+	class="hasSidebar hasPageActions hasBreadcrumb conceptual has-default-focus theme-light"
+	lang="en-us"
+	dir="ltr"
+	data-authenticated="false"
+	data-auth-status-determined="false"
+	data-target="docs"
+	x-ms-format-detection="none">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta property="og:title" content="Default input profiles (input locales) in Windows" />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs?view=windows-11" />
+			<meta property="og:description" content="Input profiles (or input locales) describe the language of the input entered, and the keyboard on which it is being entered. When the first user logs into Windows and identifies their region, Windows sets the input profiles." />
+
+	<meta property="og:image" content="https://learn.microsoft.com/en-us/media/open-graph-image.png" />
+
+	<meta property="og:image:alt" content="Microsoft Learn" />
+
+	<meta name="twitter:card" content="summary_large_image" />
+
+	<meta name="twitter:site" content="@MicrosoftLearn" />
+
+	<meta name="color-scheme" content="light dark">
+
+
+	<meta name="author" content="windows-driver-content" />
+<meta name="breadcrumb_path" content="/windows-hardware/manufacture/breadcrumbs/toc.json" />
+<meta name="default_moniker" content="windows-11" />
+<meta name="depot_name" content="MSDN.manufacture-oem" />
+<meta name="description" content="Input profiles (or input locales) describe the language of the input entered, and the keyboard on which it is being entered. When the first user logs into Windows and identifies their region, Windows sets the input profiles." />
+<meta name="document_id" content="a3e868f9-1a58-77df-151d-e6014dd5641c" />
+<meta name="document_version_independent_id" content="b0c54b13-f3b7-1a53-d28e-90e33b154877" />
+<meta name="feedback_help_link_type" content="" />
+<meta name="feedback_help_link_url" content="" />
+<meta name="feedback_product_url" content="" />
+<meta name="feedback_system" content="None" />
+<meta name="git_commit_id" content="56dbf2f9ee97b3d94e9abaac5a83b9b07c4a95bd" />
+<meta name="gitcommit" content="https://github.com/MicrosoftDocs/commercialization-docs-pr/blob/56dbf2f9ee97b3d94e9abaac5a83b9b07c4a95bd/manufacture/desktop/default-input-locales-for-windows-language-packs.md" />
+<meta name="locale" content="en-us" />
+<meta name="monikers" content="windows-10" />
+<meta name="monikers" content="windows-11" />
+<meta name="ms.assetid" content="0bae00b5-dfcb-472e-a271-07ef62ad5fc5" />
+<meta name="ms.author" content="windowsdriverdev" />
+<meta name="ms.date" content="06/16/2023" />
+<meta name="ms.service" content="windows-hardware-driver-quality" />
+<meta name="ms.subservice" content="windows-oem" />
+<meta name="ms.topic" content="article" />
+<meta name="MSHAttr" content="PreferredLib:/library/windows/hardware" />
+<meta name="original_content_git_url" content="https://github.com/MicrosoftDocs/commercialization-docs-pr/blob/live/manufacture/desktop/default-input-locales-for-windows-language-packs.md" />
+<meta name="page_type" content="conceptual" />
+<meta name="pdf_url_template" content="https://learn.microsoft.com/pdfstore/en-us/MSDN.manufacture-oem/{branchName}{pdfName}" />
+<meta name="recommendations" content="true" />
+<meta name="schema" content="Conceptual" />
+<meta name="site_name" content="Docs" />
+<meta name="toc_rel" content="../toc.json" />
+<meta name="uhfHeaderId" content="MSDocsHeader-WinHW" />
+<meta name="updated_at" content="2023-06-19 10:55 AM" />
+<meta name="word_count" content="3041" />
+
+
+	<meta name="persistent_id" content="e5977de2-f620-3e97-a738-1f2571f569cc" />
+	
+
+
+	<meta name="cmProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/bcbcbad5-4208-4783-8035-8481272c98b8" data-source="generated" />
+
+	<meta name="cmProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/c6f99e62-1cf6-4b71-af9b-649b05f80cce" data-source="generated" />
+
+	
+
+
+	<meta name="spProducts" content="https://authoring-docs-microsoft.poolparty.biz/devrel/43b2e5aa-8a6d-4de2-a252-692232e5edc8" data-source="generated" />
+
+	<meta name="spProducts" content="https://microsoft-devrel.poolparty.biz/DevRelOfferingOntology/3f56b378-07a9-4fa1-afe8-9889fdc77628" data-source="generated" />
+
+	
+
+
+	<meta name="scope" content="OEM" />
+	<meta name="github_feedback_content_git_url" content="https://github.com/MicrosoftDocs/commercialization-docs-pr/blob/live/manufacture/desktop/default-input-locales-for-windows-language-packs.md" />
+<link href="https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs?view=windows-11" rel="canonical">
+	<title>Default input profiles (input locales) in Windows | Microsoft Learn</title>
+
+		<link rel="stylesheet" href="/_themes/docs.theme/master/en-us/_themes/styles/24b6bbbc.site-ltr.css ">
+
+	
+
+	<script id="msdocs-script">
+	var msDocs = {
+		data: {
+			timeOrigin: Date.now(),
+			contentLocale: 'en-us',
+			contentDir: 'ltr',
+			userLocale: 'en-us',
+			userDir: 'ltr',
+			pageTemplate: 'Conceptual',
+			brand: '',
+			context: {
+			},
+			hasBinaryRating: true,
+			hasGithubIssues: false,
+			feedbackHelpLinkType:'',
+			feedbackHelpLinkUrl:'',
+			standardFeedback: false,
+			showFeedbackReport: false,
+			enableTutorialFeedback: false,
+			feedbackSystem: 'None',
+			feedbackGitHubRepo: '',
+			feedbackProductUrl: '',
+			extendBreadcrumb: false,
+			isEditDisplayable: false,
+			hideViewSource: false,
+			hasPageActions: true,
+			hasPrintButton: true,
+			hasBookmark: true,
+			hasShare: true,
+			isPermissioned: false,
+			isPrivateUnauthorized: false,
+			hasRecommendations: true,
+			contributors: [
+						{ name: "windows-driver-content", url: "https://github.com/windows-driver-content" },
+						{ name: "mhopkins-msft", url: "https://github.com/mhopkins-msft" },
+						{ name: "themar-msft", url: "https://github.com/themar-msft" },
+						{ name: "EliotSeattle", url: "https://github.com/EliotSeattle" },
+						{ name: "tedhudek", url: "https://github.com/tedhudek" },
+						{ name: "dennis271lee", url: "https://github.com/dennis271lee" },
+						{ name: "joshbax-msft", url: "https://github.com/joshbax-msft" }
+],
+		},
+		functions:{}
+	};
+	</script>
+	<script src="https://wcpstatic.microsoft.com/mscc/lib/v2/wcp-consent.js"></script>
+	<script src="https://js.monitor.azure.com/scripts/c/ms.jsll-3.min.js"></script>
+
+	<script src="/_themes/docs.theme/master/en-us/_themes/global/67a45209.deprecation.js"></script>
+
+		<link rel="preconnect" href="//mscom.demdex.net" crossorigin>
+		<link rel="dns-prefetch" href="//target.microsoft.com">
+		<link rel="dns-prefetch" href="//microsoftmscompoc.tt.omtrdc.net">
+		<link
+			rel="preload"
+			as="script"
+			href="/static/third-party/adobe-target/at-js/2.9.0/at.js"
+			integrity="sha384-1/viVM50hgc33O2gOgkWz3EjiD/Fy/ld1dKYXJRUyjNYVEjSUGcSN+iPiQF7e4cu"
+			crossorigin="anonymous"
+			id="adobe-target-script"
+			type="application/javascript"
+		/>
+		<script src="/_themes/docs.theme/master/en-us/_themes/scripts/57c344b.index-docs.js"></script>
+</head>
+
+<body lang="en-us" dir="ltr">
+	<div class="header-holder has-default-focus">
+		<a href="#main" class="skip-to-main-link has-outline-color-text visually-hidden-until-focused position-fixed has-inner-focus focus-visible top-0 left-0 right-0 padding-xs has-text-centered has-body-background" tabindex="1">Skip to main content</a>
+
+		<div hidden id="cookie-consent-holder" data-test-id="cookie-consent-container"></div>
+
+		<div id="unsupported-browser" style="
+			background-color: white;
+			color: black;
+			padding: 16px;
+			border-bottom: 1px solid grey;"
+			hidden
+		>
+			<div style="max-width: 800px; margin: 0 auto;">
+				<p style="font-size: 24px">This browser is no longer supported.</p>
+				<p style="font-size: 16px; margin-top: 16px;">Upgrade to Microsoft Edge to take advantage of the latest features, security updates, and technical support.</p>
+				<div style="margin-top: 12px;">
+					<a href="https://go.microsoft.com/fwlink/p/?LinkID=2092881 "
+						style="
+						background-color: #0078d4;
+						border: 1px solid #0078d4;
+						color: white;
+						padding: 6px 12px;
+						border-radius: 2px;
+						display: inline-block;
+						">
+Download Microsoft Edge					</a>
+					<a href="https://learn.microsoft.com/en-us/lifecycle/faq/internet-explorer-microsoft-edge"
+						style="
+							background-color: white;
+							padding: 6px 12px;
+							border: 1px solid #505050;
+							color: #171717;
+							border-radius: 2px;
+							display: inline-block;
+							">
+More info about Internet Explorer and Microsoft Edge					</a>
+				</div>
+			</div>
+		</div>
+		<!-- liquid-tag banners global -->
+
+		<!-- site header -->
+		<header id="ms--site-header" data-test-id="site-header-wrapper" role="banner" itemscope="itemscope" itemtype="http://schema.org/Organization">
+			<div id="ms--mobile-nav" class="site-header display-none-tablet padding-inline-none gap-none" data-bi-name="mobile-header" data-test-id="mobile-header"></div>
+			<div id="ms--primary-nav" class="site-header display-none display-flex-tablet" data-bi-name="L1-header" data-test-id="primary-header"></div>
+			<div id="ms--secondary-nav" class="site-header display-none display-flex-tablet" data-bi-name="L2-header" data-test-id="secondary-header"></div>
+		</header>
+
+
+			<div id="content-header" class="content-header uhf-container has-padding has-default-focus border-bottom-none" data-bi-name="content-header">
+				<div class="content-header-controls margin-xxs margin-inline-sm-tablet">
+					<button type="button" class="contents-button button button-sm margin-right-xxs" data-bi-name="contents-expand" aria-haspopup="true" data-contents-button>
+						<span class="icon"><span class="docon docon-menu" aria-hidden="true"></span></span>
+						<span class="contents-expand-title">
+Table of contents						</span>
+					</button>
+					<button type="button" class="ap-collapse-behavior ap-expanded button button-sm" data-bi-name="ap-collapse" aria-controls="action-panel">
+						<span class="icon"><span class="docon docon-exit-mode" aria-hidden="true"></span></span>
+						<span>Exit focus mode</span>
+					</button>
+				</div>
+			</div>
+
+		<div id="disclaimer-holder" class="has-overflow-hidden has-default-focus">
+			<!-- liquid-tag banners sectional -->
+		</div>
+	</div>
+
+	<div class="mainContainer  uhf-container has-default-focus" data-bi-name="body">
+
+		<div class="columns has-large-gaps is-gapless-mobile ">
+
+			<div id="left-container" class="left-container is-hidden-mobile column is-one-third-tablet is-one-quarter-desktop">
+				<nav id="affixed-left-container" class="margin-top-sm-tablet position-sticky display-flex flex-direction-column" aria-label="Primary"></nav>
+			</div>
+
+			<!-- .primary-holder -->
+			<section class="primary-holder column is-two-thirds-tablet is-three-quarters-desktop">
+				<!--div.columns -->
+				<div class="columns is-gapless-mobile has-large-gaps ">
+
+
+					<div id="main-column" class="column  is-full is-8-desktop">
+
+						<main id="main" class="" role="main" data-bi-name="content" lang="en-us" dir="ltr">
+							<!-- article-header -->
+							<div id="article-header" class="background-color-body margin-top-sm-tablet margin-bottom-xs display-none-print">
+								<div class="display-flex align-items-center ">
+									<details id="article-header-breadcrumbs-overflow-popover" class="popover" data-for="article-header-breadcrumbs">
+										<summary class="button button-clear button-primary button-sm inner-focus" aria-label="All breadcrumbs">
+											<span class="icon">
+												<span class="docon docon-more"></span>
+											</span>
+										</summary>
+										<div id="article-header-breadcrumbs-overflow" class="popover-content padding-none">
+
+										</div>
+									</details>
+
+									<bread-crumbs id="article-header-breadcrumbs" data-test-id="article-header-breadcrumbs" class="overflow-hidden flex-grow-1 margin-right-sm margin-right-md-tablet margin-right-lg-desktop margin-left-negative-xxs padding-left-xxs"></bread-crumbs>
+
+									<div id="article-header-page-actions"  class="opacity-none margin-left-auto display-flex flex-wrap-no-wrap align-items-stretch">
+
+										<a
+											id="lang-link-tablet"
+											class="button button-primary button-clear button-sm display-none display-inline-flex-tablet"
+											title="Read in English" data-bi-name="language-toggle"
+											data-read-in-link
+											hidden>
+											<span class="icon margin-none" aria-hidden="true" data-read-in-link-icon>
+												<span class="docon docon-locale-globe"></span>
+											</span>
+											<span class="is-visually-hidden" data-read-in-link-text>Read in English</span>
+										</a>
+
+											<button
+												type="button"
+												class="collection button button-clear button-sm button-primary display-none display-inline-flex-tablet"
+												data-list-type="collection"
+												data-bi-name="collection"
+												title="Add to collection">
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-circle-addition"></span>
+												</span>
+												<span class="collection-status is-visually-hidden">Save</span>
+											</button>
+										
+
+											<a	data-contenteditbtn
+												class="button button-clear button-sm text-decoration-none button-primary display-none display-inline-flex-tablet"
+												aria-label="Edit"
+												title="Edit This Document"
+												data-bi-name="edit"
+
+													hidden
+
+														href="https://github.com/MicrosoftDocs/commercialization-docs-pr/blob/live/manufacture/desktop/default-input-locales-for-windows-language-packs.md"
+											>
+												<span class="icon margin-none" aria-hidden="true">
+													<span class="docon docon-edit-outline"></span>
+												</span>
+											</a>
+										
+
+
+										
+										<details class="popover popover-right" id="article-header-page-actions-overflow">
+											<summary class="justify-content-flex-start button button-clear button-sm button-primary" aria-label="More actions" title="More actions">
+												<span class="icon" aria-hidden="true">
+													<span class="docon docon-more-vertical"></span>
+												</span>
+											</summary>
+											<div class="popover-content padding-none">
+													<button
+														data-page-action-item="overflow-mobile"
+														type="button"
+														class="justify-content-flex-start button-block button-sm has-inner-focus button button-clear display-none-tablet"
+														data-bi-name="contents-expand"
+														data-contents-button
+														data-popover-close>
+														<span class="icon">
+															<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+														</span>
+															<span class="contents-expand-title">Table of contents</span>
+													</button>
+
+												<a
+													id="lang-link-overflow"
+													class="justify-content-flex-start button-sm has-inner-focus button button-clear button-block display-none-tablet"
+													title="Read in English" data-bi-name="language-toggle"
+													data-page-action-item="overflow-mobile"
+													data-check-hidden="true"
+													data-read-in-link
+													hidden
+													>
+													<span class="icon" aria-hidden="true" data-read-in-link-icon>
+														<span class="docon docon-locale-globe"></span>
+													</span>
+													<span data-read-in-link-text>Read in English</span>
+												</a>
+
+													<button
+														type="button"
+														class="collection justify-content-flex-start button button-clear button-sm has-inner-focus button-block display-none-tablet"
+														data-list-type="collection"
+														data-bi-name="collection"
+														title="Add to collection"
+														data-page-action-item="overflow-mobile"
+														data-check-hidden="true"
+														data-popover-close>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-circle-addition"></span>
+														</span>
+														<span class="collection-status">Save</span>
+													</button>
+
+													<a	data-contenteditbtn
+														class="button button-clear button-block button-sm has-inner-focus justify-content-flex-start text-decoration-none display-none-tablet"
+														aria-label="Edit"
+														title="Edit This Document"
+														data-bi-name="edit"
+
+															hidden
+
+																href="https://github.com/MicrosoftDocs/commercialization-docs-pr/blob/live/manufacture/desktop/default-input-locales-for-windows-language-packs.md"
+													>
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-edit-outline"></span>
+														</span>
+														<span>Edit</span>
+													</a>
+
+													<button
+														class="button button-block button-clear button-sm justify-content-flex-start has-inner-focus"
+														title="Print"
+														type="button"
+														aria-label="Print"
+														data-bi-name="print"
+														data-page-action-item="overflow-all"
+														data-popover-close
+														data-print-page
+														data-check-hidden="true">
+														<span class="icon" aria-hidden="true">
+															<span class="docon docon-print"></span>
+														</span>
+														<span>Print</span>
+													</button>
+
+													<div aria-hidden="true" class="margin-none
+														border-top" data-page-action-item="overflow-all"></div>
+
+													
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-twitter" data-bi-name="twitter" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-twitter"></span>
+															</span>
+															<span>Twitter</span>
+														</a>
+														<a class="button button-clear button-sm has-inner-focus button-block text-decoration-none justify-content-flex-start share-linkedin" data-bi-name="linkedin" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-linkedin"></span>
+															</span>
+															<span>LinkedIn</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-facebook" data-bi-name="facebook" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-brand-facebook"></span>
+															</span>
+															<span>Facebook</span>
+														</a>
+														<a class="button button-clear button-sm button-block has-inner-focus text-decoration-none justify-content-flex-start share-email" data-bi-name="email" data-page-action-item="overflow-all">
+															<span class="icon" aria-hidden="true">
+																<span class="docon docon-mail-message-fill"></span>
+															</span>
+															<span>Email</span>
+														</a>
+												
+											</div>
+										</details>
+										
+									</div>
+								</div>
+							</div>
+							<!-- end article-header -->
+
+
+							<div>
+								<button type="button" class="border contents-button button button-clear button-sm is-hidden-tablet has-inner-focus" data-bi-name="contents-expand" data-contents-button hidden>
+									<span class="icon">
+										<span class="docon docon-editor-list-bullet" aria-hidden="true"></span>
+									</span>
+										<span class="contents-expand-title">Table of contents</span>
+								</button>
+							</div>
+
+							<!-- end mobile-contents button  -->
+
+							<div class="content ">
+
+
+								<h1 id="default-input-profiles-input-locales-in-windows">Default input profiles (input locales) in Windows</h1>
+
+
+									<div class="display-flex justify-content-space-between align-items-center flex-wrap-wrap page-metadata-container">
+										<div class="margin-right-xxs">
+											<ul class="metadata page-metadata" data-bi-name="page info" lang="en-us" dir="ltr">
+														<li>
+Article														</li>
+															<li class="visibility-hidden-visual-diff">
+																<time class="is-invisible" data-article-date aria-label="Article review date" datetime="2023-06-19T10:55:00Z" data-article-date-source="calculated">06/19/2023</time>
+															</li>
+														<li class="contributors-holder display-none-print">
+															<button aria-label="View all contributors" class="contributors-button link-button" data-bi-name="contributors" title="View all contributors">
+																	7 contributors
+															</button>
+														</li>
+											</ul>
+										</div>
+
+<div id="user-feedback" class="margin-block-xxs display-none-print" data-hide-on-archived>
+	<button
+		id="user-feedback-button"
+		data-test-id="conceptual-feedback-button"
+		class="button button-sm button-clear button-primary"
+		type="button"
+		data-bi-name="user-feedback-button"
+		data-user-feedback-button
+	>
+		<span class="icon" aria-hidden="true">
+			<span class="docon docon-like"></span>
+		</span>
+		<span>Feedback</span>
+	</button>
+</div>
+									</div>
+
+									<div id="ms--inline-notifications" data-bi-name="inline-notification"></div>
+
+										<nav id="center-doc-outline" class="doc-outline is-hidden-desktop display-none-print margin-bottom-sm" data-bi-name="intopic toc" aria-label="In this article">
+											<h2 id="ms--in-this-article" class="title is-6 margin-block-xs">In this article</h2>
+										</nav>
+
+								<!-- <content> -->
+									<p>Input profiles (or input locales) describe the language of the input entered, and the keyboard on which it is being entered. When the first user logs into Windows and identifies their region, Windows sets the input profiles.</p>
+<h2 id="input-profiles">Input profiles</h2>
+<p>The input profiles are made up of a <a href="/en-us/openspecs/windows_protocols/ms-lcid/70feba9f-294e-491e-b6eb-56532684c37f" data-linktype="absolute-path">language identifier</a> and a <a href="/en-us/windows-hardware/manufacture/desktop/windows-language-pack-default-values" data-linktype="absolute-path">keyboard identifier</a>. For example, the <em>Arabic (Algeria)</em> input profile is <em>1401:00020401</em>, where <em>1401</em> is the hexadecimal identifier of the language <em>Arabic (Algeria)</em> (language tag <em>ar-DZ</em>) and <em>00020401</em> is the hexadecimal identifier of the <em>Arabic (102) AZERTY keyboard</em>.</p>
+<p>When the user first identifies the time and date format (User Locale) as Algeria, Windows sets up both the primary input profile, and a secondary input profile: <em>French (France)</em> with <em>French keyboard</em>. The secondary input profile can help the user by providing a keyboard with a Latin character set for tasks that require it, such as filling out email addresses. Some input methods (like Microsoft IME) have a Latin character set built in.</p>
+<p>Windows uses the language component of the input profile for tasks like spelling, hyphenation, and text prediction of the intended key press when using the touch-screen keyboard.</p>
+<p>When setting up new devices for your users, you can use the DISM commands: <code>/Set-InputLocale</code> or <code>/Set-AllIntl</code> to identify a default input profile. You can either select the input profile by its language and keyboard pair (<code>1401:00020401</code>) or you can use a language/region tag to receive the default settings for that language/region.</p>
+<p>Examples:</p>
+<pre><code class="lang-cmd">Dism /Image:&quot;C:\mount\windows&quot; /Set-InputLocale:042d:0000040a
+Dism /Image:&quot;C:\mount\windows&quot; /Set-InputLocale:0411:{03B5835F-F03C-411B-9CE2-AA23E1171E36}{A76C93D9-5523-4E90-AAFA-4DB112F9AC76}
+Dism /Image:&quot;C:\mount\windows&quot; /Set-InputLocale:id-ID
+Dism /Image:&quot;C:\mount\windows&quot; /Set-AllIntl:fr-FR
+</code></pre>
+<h2 id="input-locales">Input locales</h2>
+<p>For a list of language/region names, see <a href="available-language-packs-for-windows?view=windows-11" data-linktype="relative-path">Available Language Packs for Windows</a>.</p>
+<table>
+<thead>
+<tr>
+<th>Language/Region</th>
+<th>Primary input profile (language and keyboard pair)</th>
+<th>Secondary input profile</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Afrikaans</td>
+<td>af-ZA: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0436:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Afrikaans (Namibia)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Albanian</td>
+<td>sq-AL: <a href="/en-us/globalization/keyboards/kbdal" data-linktype="absolute-path">Albanian keyboard</a> (041C:0000041C)</td>
+<td></td>
+</tr>
+<tr>
+<td>Albanian (Kosovo)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Alsatian (France)</td>
+<td>gsw-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (0484:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>Amharic</td>
+<td>am-ET: Amharic Input Method 2 (045E:{7C472071-36A7-4709-88CC-859513E583A9}{9A4E8FC7-76BF-4A63-980D-FADDADF7E987})</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Arabic</td>
+<td>ar-SA: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (0401:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Arabic (Algeria)</td>
+<td>ar-DZ: <a href="/en-us/globalization/keyboards/kbda3" data-linktype="absolute-path">Arabic (102) AZERTY keyboard</a> (1401:00020401)</td>
+<td>fr-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (040C:0000040C)</td>
+</tr>
+<tr>
+<td>Arabic (Bahrain)</td>
+<td>ar-BH: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (3C01:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Arabic (Egypt)</td>
+<td>ar-EG: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (0C01:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Arabic (Iraq)</td>
+<td>ar-IQ: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (0801:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Arabic (Jordan)</td>
+<td>ar-JO: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (2C01:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Arabic (Kuwait)</td>
+<td>ar-KW: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (3401:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Arabic (Lebanon)</td>
+<td>ar-LB: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (3001:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Arabic (Libya)</td>
+<td>ar-LY: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (1001:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Arabic (Morocco)</td>
+<td>ar-MA: <a href="/en-us/globalization/keyboards/kbda3" data-linktype="absolute-path">Arabic (102) AZERTY keyboard</a> (1801:00020401)</td>
+<td>fr-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (040C:0000040C)</td>
+</tr>
+<tr>
+<td>Arabic (Oman)</td>
+<td>ar-OM: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (2001:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Arabic (Qatar)</td>
+<td>ar-QA: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (4001:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Arabic (Syria)</td>
+<td>ar-SY: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (2801:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Arabic (Tunisia)</td>
+<td>ar-TN: <a href="/en-us/globalization/keyboards/kbda3" data-linktype="absolute-path">Arabic (102) AZERTY keyboard</a> (1C01:00020401)</td>
+<td>fr-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (040C:0000040C)</td>
+</tr>
+<tr>
+<td>Arabic (United Arab Emirates)</td>
+<td>ar-AE: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (3801:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Arabic (World)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Arabic (Yemen)</td>
+<td>ar-YE: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (2401:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Armenian</td>
+<td>hy-AM: <a href="/en-us/globalization/keyboards/kbdarmph" data-linktype="absolute-path">Armenian Phonetic keyboard</a> (042B:0002042B)</td>
+<td>hy-AM: <a href="/en-us/globalization/keyboards/kbdarmty" data-linktype="absolute-path">Armenian Typewriter keyboard</a> (042B:0003042B)<br>ru-RU: <a href="/en-us/globalization/keyboards/kbdru" data-linktype="absolute-path">Russian keyboard</a> (0419:00000419)</td>
+</tr>
+<tr>
+<td>Assamese</td>
+<td>as-IN: <a href="/en-us/globalization/keyboards/kbdinasa" data-linktype="absolute-path">Assamese - INSCRIPT keyboard</a> (044D:0000044D)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Asturian</td>
+<td>es-ES_tradnl: <a href="/en-us/globalization/keyboards/kbdsp" data-linktype="absolute-path">Spanish keyboard</a> (040A:0000040A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Azerbaijani</td>
+<td>az-Latn-AZ: <a href="/en-us/globalization/keyboards/kbdazel" data-linktype="absolute-path">Azerbaijani Latin keyboard</a> (042C:0000042C)</td>
+<td>az-Cyrl-AZ: <a href="/en-us/globalization/keyboards/kbdaze" data-linktype="absolute-path">Azerbaijani Cyrillic keyboard</a> (082C:0000082C)<br>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Azerbaijani (Cyrillic)</td>
+<td>az-Cyrl-AZ: <a href="/en-us/globalization/keyboards/kbdaze" data-linktype="absolute-path">Azerbaijani Cyrillic keyboard</a> (082C:0000082C)</td>
+<td>az-Latn-AZ: <a href="/en-us/globalization/keyboards/kbdazel" data-linktype="absolute-path">Azerbaijani Latin keyboard</a> (042C:0000042C)<br>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Bangla</td>
+<td>bn-BD: <a href="/en-us/globalization/keyboards/kbdinben" data-linktype="absolute-path">Bangla keyboard</a> (0845:00000445)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Bashkir</td>
+<td>ba-RU: <a href="/en-us/globalization/keyboards/kbdbash" data-linktype="absolute-path">Bashkir keyboard</a> (046D:0000046D)</td>
+<td>ru-RU: <a href="/en-us/globalization/keyboards/kbdru" data-linktype="absolute-path">Russian keyboard</a> (0419:00000419)<br>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Basque</td>
+<td>eu-ES: <a href="/en-us/globalization/keyboards/kbdsp" data-linktype="absolute-path">Spanish keyboard</a> (042D:0000040A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Belarusian</td>
+<td>be-BY: <a href="/en-us/globalization/keyboards/kbdblr" data-linktype="absolute-path">Belarusian keyboard</a> (0423:00000423)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)<br>ru-RU: <a href="/en-us/globalization/keyboards/kbdru" data-linktype="absolute-path">Russian keyboard</a> (0419:00000419)</td>
+</tr>
+<tr>
+<td>Bengali (India)</td>
+<td>bn-IN: <a href="/en-us/globalization/keyboards/kbdinbe2" data-linktype="absolute-path">Bangla - INSCRIPT keyboard</a> (0445:00020445)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Bodo</td>
+<td>hi-IN: <a href="/en-us/globalization/keyboards/kbdindev" data-linktype="absolute-path">Devanagari - INSCRIPT keyboard</a> (0439:00000439)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Bosnian</td>
+<td>bs-Latn-BA: <a href="/en-us/globalization/keyboards/kbdcr_2" data-linktype="absolute-path">Standard keyboard</a> (141A:0000041A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Bosnian (Cyrillic)</td>
+<td>bs-Cyrl-BA: <a href="/en-us/globalization/keyboards/kbdbhc" data-linktype="absolute-path">Bosnian (Cyrillic) keyboard</a> (201A:0000201A)</td>
+<td>bs-Latn-BA: <a href="/en-us/globalization/keyboards/kbdcr_2" data-linktype="absolute-path">Standard keyboard</a> (141A:0000041A)</td>
+</tr>
+<tr>
+<td>Breton</td>
+<td>br-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (047E:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>Bulgarian</td>
+<td>bg-BG: <a href="/en-us/globalization/keyboards/kbdbulg" data-linktype="absolute-path">Bulgarian keyboard</a> (0402:00030402)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdusx" data-linktype="absolute-path">United States-International keyboard</a> (0409:00020409)</td>
+</tr>
+<tr>
+<td>Burmese</td>
+<td>my-MM: <a href="/en-us/globalization/keyboards/kbdmyan_2" data-linktype="absolute-path">Myanmar (Visual order) keyboard</a> (0455:00130C00)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Catalan</td>
+<td>ca-ES: <a href="/en-us/globalization/keyboards/kbdsp" data-linktype="absolute-path">Spanish keyboard</a> (0403:0000040A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Catalan (Andorra)</td>
+<td>fr-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (040C:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>Catalan (France)</td>
+<td>fr-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (040C:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>Catalan (Italy)</td>
+<td>it-IT: <a href="/en-us/globalization/keyboards/kbdit" data-linktype="absolute-path">Italian keyboard</a> (0410:00000410)</td>
+<td></td>
+</tr>
+<tr>
+<td>Central Atlas Tamazight</td>
+<td>tzm-Latn-DZ: <a href="/en-us/globalization/keyboards/kbdtzm" data-linktype="absolute-path">Central Atlas Tamazight keyboard</a> (085F:0000085F)</td>
+<td></td>
+</tr>
+<tr>
+<td>Central Atlas Tamazight (Arabic)</td>
+<td>ar-MA: <a href="/en-us/globalization/keyboards/kbda3" data-linktype="absolute-path">Arabic (102) AZERTY keyboard</a> (1801:00020401)</td>
+<td>fr-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (040C:0000040C)</td>
+</tr>
+<tr>
+<td>Central Atlas Tamazight (Tifinagh)</td>
+<td>tzm-Tfng-MA: <a href="/en-us/globalization/keyboards/kbdtifi" data-linktype="absolute-path">Tifinagh (Basic) keyboard</a> (105F:0000105F)</td>
+<td>fr-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (040C:0000040C)</td>
+</tr>
+<tr>
+<td>Central Kurdish</td>
+<td>ku-Arab-IQ: <a href="/en-us/globalization/keyboards/kbdkurd" data-linktype="absolute-path">Central Kurdish keyboard</a> (0492:00000492)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Chechen</td>
+<td>ru-RU: <a href="/en-us/globalization/keyboards/kbdru" data-linktype="absolute-path">Russian keyboard</a> (0419:00000419)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Cherokee</td>
+<td>chr-Cher-US: <a href="/en-us/globalization/keyboards/kbdcher" data-linktype="absolute-path">Cherokee Nation keyboard</a> (045C:0000045C)</td>
+<td>chr-Cher-US: <a href="/en-us/globalization/keyboards/kbdcherp" data-linktype="absolute-path">Cherokee Phonetic keyboard</a> (045C:0001045C)<br>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Chinese</td>
+<td>zh-CN: Microsoft Pinyin (0804:{81D4E9C9-1D3B-41BC-9E6C-4B40BF79E35E}{FA550B04-5AD7-411F-A5AC-CA038EC515D7})</td>
+<td></td>
+</tr>
+<tr>
+<td>Chinese (Simplified, Hong Kong SAR)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Chinese (Simplified, Macao SAR)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Chinese (Traditional)</td>
+<td>zh-TW: Microsoft Quick (0404:{531FDEBF-9B4C-4A43-A2AA-960E8FCDC732}{6024B45F-5C54-11D4-B921-0080C882687E})</td>
+<td></td>
+</tr>
+<tr>
+<td>Chinese (Traditional, Taiwan)</td>
+<td>zh-TW: Microsoft Bopomofo (0404:{B115690A-EA02-48D5-A231-E3578D2FDF80}{B2F9C502-1742-11D4-9790-0080C882687E})</td>
+<td></td>
+</tr>
+<tr>
+<td>Church Slavic</td>
+<td>ru-RU: <a href="/en-us/globalization/keyboards/kbdru" data-linktype="absolute-path">Russian keyboard</a> (0419:00000419)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Colognian</td>
+<td>de-DE: <a href="/en-us/globalization/keyboards/kbdgr" data-linktype="absolute-path">German keyboard</a> (0407:00000407)</td>
+<td></td>
+</tr>
+<tr>
+<td>Cornish</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbduk" data-linktype="absolute-path">United Kingdom keyboard</a> (0809:00000809)</td>
+<td></td>
+</tr>
+<tr>
+<td>Corsican</td>
+<td>co-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (0483:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>Croatian</td>
+<td>hr-HR: <a href="/en-us/globalization/keyboards/kbdcr_2" data-linktype="absolute-path">Standard keyboard</a> (041A:0000041A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Croatian (Bosnia &amp; Herzegovina)</td>
+<td>hr-BA: <a href="/en-us/globalization/keyboards/kbdcr_2" data-linktype="absolute-path">Standard keyboard</a> (101A:0000041A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Czech</td>
+<td>cs-CZ: <a href="/en-us/globalization/keyboards/kbdcz" data-linktype="absolute-path">Czech keyboard</a> (0405:00000405)</td>
+<td></td>
+</tr>
+<tr>
+<td>Danish</td>
+<td>da-DK: <a href="/en-us/globalization/keyboards/kbdda" data-linktype="absolute-path">Danish keyboard</a> (0406:00000406)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdda" data-linktype="absolute-path">Danish keyboard</a> (0409:00000406)</td>
+</tr>
+<tr>
+<td>Danish (Greenland)</td>
+<td>da-DK: <a href="/en-us/globalization/keyboards/kbdda" data-linktype="absolute-path">Danish keyboard</a> (0406:00000406)</td>
+<td></td>
+</tr>
+<tr>
+<td>Divehi</td>
+<td>dv-MV: <a href="/en-us/globalization/keyboards/kbddiv1" data-linktype="absolute-path">Divehi Phonetic keyboard</a> (0465:00000465)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Dutch</td>
+<td>nl-NL: <a href="/en-us/globalization/keyboards/kbdusx" data-linktype="absolute-path">United States-International keyboard</a> (0413:00020409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Dutch (Aruba)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdusx" data-linktype="absolute-path">United States-International keyboard</a> (0409:00020409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Dutch (Belgium)</td>
+<td>nl-BE: <a href="/en-us/globalization/keyboards/kbdbe_1" data-linktype="absolute-path">Belgian (Period) keyboard</a> (0813:00000813)</td>
+<td></td>
+</tr>
+<tr>
+<td>Dutch (Bonaire, Sint Eustatius and Saba)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdusx" data-linktype="absolute-path">United States-International keyboard</a> (0409:00020409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Dutch (Curaçao)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdusx" data-linktype="absolute-path">United States-International keyboard</a> (0409:00020409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Dutch (Sint Maarten)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdusx" data-linktype="absolute-path">United States-International keyboard</a> (0409:00020409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Dutch (Suriname)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdusx" data-linktype="absolute-path">United States-International keyboard</a> (0409:00020409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Dzongkha</td>
+<td>dz-BT: <a href="/en-us/globalization/keyboards/kbddzo" data-linktype="absolute-path">Dzongkha keyboard</a> (0C51:00000C51)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>English</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Australia)</td>
+<td>en-AU: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0C09:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Austria)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbdgr" data-linktype="absolute-path">German keyboard</a> (0809:00000407)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Belgium)</td>
+<td>fr-BE: <a href="/en-us/globalization/keyboards/kbdbe_2" data-linktype="absolute-path">Belgian French keyboard</a> (080C:0000080C)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Belize)</td>
+<td>en-BZ: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (2809:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (British Virgin Islands)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbduk" data-linktype="absolute-path">United Kingdom keyboard</a> (0809:00000809)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Burundi)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (0809:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Canada)</td>
+<td>en-CA: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (1009:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Caribbean)</td>
+<td>en-029: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (2409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Denmark)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdda" data-linktype="absolute-path">Danish keyboard</a> (0409:00000406)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Falkland Islands)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbduk" data-linktype="absolute-path">United Kingdom keyboard</a> (0809:00000809)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Finland)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbdfi" data-linktype="absolute-path">Finnish keyboard</a> (0809:0000040B)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Germany)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbdgr" data-linktype="absolute-path">German keyboard</a> (0809:00000407)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Gibraltar)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbduk" data-linktype="absolute-path">United Kingdom keyboard</a> (0809:00000809)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Guernsey)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbduk" data-linktype="absolute-path">United Kingdom keyboard</a> (0809:00000809)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Hong Kong SAR)</td>
+<td>en-HK: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (3C09:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (India)</td>
+<td>en-IN: <a href="/en-us/globalization/keyboards/kbdinen" data-linktype="absolute-path">English (India) keyboard</a> (4009:00004009)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Ireland)</td>
+<td>en-IE: <a href="/en-us/globalization/keyboards/kbdir" data-linktype="absolute-path">Irish keyboard</a> (1809:00001809)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Isle of Man)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbduk" data-linktype="absolute-path">United Kingdom keyboard</a> (0809:00000809)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Israel)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td>he-IL: <a href="/en-us/globalization/keyboards/kbdhebl3" data-linktype="absolute-path">Hebrew (Standard) keyboard</a> (040D:0002040D)</td>
+</tr>
+<tr>
+<td>English (Jamaica)</td>
+<td>en-JM: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (2009:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Jersey)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbduk" data-linktype="absolute-path">United Kingdom keyboard</a> (0809:00000809)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Malaysia)</td>
+<td>en-MY: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (4409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Malta)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbduk" data-linktype="absolute-path">United Kingdom keyboard</a> (0809:00000809)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Netherlands)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbdusx" data-linktype="absolute-path">United States-International keyboard</a> (0809:00020409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (New Zealand)</td>
+<td>en-NZ: <a href="/en-us/globalization/keyboards/kbdmaori" data-linktype="absolute-path">NZ Aotearoa keyboard</a> (1409:00001409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Philippines)</td>
+<td>en-PH: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (3409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Singapore)</td>
+<td>en-SG: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (4809:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Slovenia)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbdcr_1" data-linktype="absolute-path">Slovenian keyboard</a> (0809:00000424)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (South Africa)</td>
+<td>en-ZA: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (1C09:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Sweden)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbdsw" data-linktype="absolute-path">Swedish keyboard</a> (0809:0000041D)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Switzerland)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbdgr" data-linktype="absolute-path">German keyboard</a> (0809:00000407)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Trinidad &amp; Tobago)</td>
+<td>en-TT: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (2C09:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (United Kingdom)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbduk" data-linktype="absolute-path">United Kingdom keyboard</a> (0809:00000809)</td>
+<td></td>
+</tr>
+<tr>
+<td>English (Zimbabwe)</td>
+<td>en-ZW: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (3009:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Estonian</td>
+<td>et-EE: <a href="/en-us/globalization/keyboards/kbdest" data-linktype="absolute-path">Estonian keyboard</a> (0425:00000425)</td>
+<td></td>
+</tr>
+<tr>
+<td>Faroese</td>
+<td>fo-FO: <a href="/en-us/globalization/keyboards/kbdda" data-linktype="absolute-path">Danish keyboard</a> (0438:00000406)</td>
+<td></td>
+</tr>
+<tr>
+<td>Filipino</td>
+<td>fil-PH: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0464:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Finnish</td>
+<td>fi-FI: <a href="/en-us/globalization/keyboards/kbdfi" data-linktype="absolute-path">Finnish keyboard</a> (040B:0000040B)</td>
+<td></td>
+</tr>
+<tr>
+<td>French</td>
+<td>fr-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (040C:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>French (Belgium)</td>
+<td>fr-BE: <a href="/en-us/globalization/keyboards/kbdbe_2" data-linktype="absolute-path">Belgian French keyboard</a> (080C:0000080C)</td>
+<td></td>
+</tr>
+<tr>
+<td>French (Cameroon)</td>
+<td>fr-CM: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (2C0C:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>French (Canada)</td>
+<td>fr-CA: <a href="/en-us/globalization/keyboards/kbdca" data-linktype="absolute-path">Canadian French keyboard</a> (0C0C:00001009)</td>
+<td>en-CA: <a href="/en-us/globalization/keyboards/kbdca" data-linktype="absolute-path">Canadian French keyboard</a> (1009:00001009)</td>
+</tr>
+<tr>
+<td>French (Côte d’Ivoire)</td>
+<td>fr-CI: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (300C:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>French (Haiti)</td>
+<td>fr-HT: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (3C0C:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>French (Luxembourg)</td>
+<td>fr-LU: <a href="/en-us/globalization/keyboards/kbdsf_2" data-linktype="absolute-path">Swiss French keyboard</a> (140C:0000100C)</td>
+<td>fr-LU: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (140C:0000040C)</td>
+</tr>
+<tr>
+<td>French (Mali)</td>
+<td>fr-ML: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (340C:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>French (Monaco)</td>
+<td>fr-MC: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (180C:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>French (Morocco)</td>
+<td>fr-MA: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (380C:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>French (Réunion)</td>
+<td>fr-RE: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (200C:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>French (Senegal)</td>
+<td>fr-SN: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (280C:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>French (Switzerland)</td>
+<td>fr-CH: <a href="/en-us/globalization/keyboards/kbdsf_2" data-linktype="absolute-path">Swiss French keyboard</a> (100C:0000100C)</td>
+<td>de-CH: <a href="/en-us/globalization/keyboards/kbdsg" data-linktype="absolute-path">Swiss German keyboard</a> (0807:00000807)</td>
+</tr>
+<tr>
+<td>French Congo (DRC)</td>
+<td>fr-CD: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (240C:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>Friulian</td>
+<td>it-IT: <a href="/en-us/globalization/keyboards/kbdit" data-linktype="absolute-path">Italian keyboard</a> (0410:00000410)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulah</td>
+<td>ff-Latn-SN: <a href="/en-us/globalization/keyboards/kbdwol" data-linktype="absolute-path">Wolof keyboard</a> (0867:00000488)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulah (Adlam)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulah (Latin, Burkina Faso)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulah (Latin, Cameroon)</td>
+<td>wo-SN: <a href="/en-us/globalization/keyboards/kbdwol" data-linktype="absolute-path">Wolof keyboard</a> (0488:00000488)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulah (Latin, Gambia)</td>
+<td>wo-SN: <a href="/en-us/globalization/keyboards/kbdwol" data-linktype="absolute-path">Wolof keyboard</a> (0488:00000488)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulah (Latin, Ghana)</td>
+<td>wo-SN: <a href="/en-us/globalization/keyboards/kbdwol" data-linktype="absolute-path">Wolof keyboard</a> (0488:00000488)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulah (Latin, Guinea)</td>
+<td>wo-SN: <a href="/en-us/globalization/keyboards/kbdwol" data-linktype="absolute-path">Wolof keyboard</a> (0488:00000488)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulah (Latin, Guinea-Bissau)</td>
+<td>wo-SN: <a href="/en-us/globalization/keyboards/kbdwol" data-linktype="absolute-path">Wolof keyboard</a> (0488:00000488)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulah (Latin, Liberia)</td>
+<td>wo-SN: <a href="/en-us/globalization/keyboards/kbdwol" data-linktype="absolute-path">Wolof keyboard</a> (0488:00000488)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulah (Latin, Mauritania)</td>
+<td>wo-SN: <a href="/en-us/globalization/keyboards/kbdwol" data-linktype="absolute-path">Wolof keyboard</a> (0488:00000488)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulah (Latin, Niger)</td>
+<td>wo-SN: <a href="/en-us/globalization/keyboards/kbdwol" data-linktype="absolute-path">Wolof keyboard</a> (0488:00000488)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulah (Latin, Nigeria)</td>
+<td>wo-SN: <a href="/en-us/globalization/keyboards/kbdwol" data-linktype="absolute-path">Wolof keyboard</a> (0488:00000488)</td>
+<td></td>
+</tr>
+<tr>
+<td>Fulah (Latin, Sierra Leone)</td>
+<td>wo-SN: <a href="/en-us/globalization/keyboards/kbdwol" data-linktype="absolute-path">Wolof keyboard</a> (0488:00000488)</td>
+<td></td>
+</tr>
+<tr>
+<td>Galician</td>
+<td>gl-ES: <a href="/en-us/globalization/keyboards/kbdsp" data-linktype="absolute-path">Spanish keyboard</a> (0456:0000040A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Georgian</td>
+<td>ka-GE: <a href="/en-us/globalization/keyboards/kbdgeoqw" data-linktype="absolute-path">Georgian (QWERTY) keyboard</a> (0437:00010437)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>German</td>
+<td>de-DE: <a href="/en-us/globalization/keyboards/kbdgr" data-linktype="absolute-path">German keyboard</a> (0407:00000407)</td>
+<td></td>
+</tr>
+<tr>
+<td>German (Austria)</td>
+<td>de-AT: <a href="/en-us/globalization/keyboards/kbdgr" data-linktype="absolute-path">German keyboard</a> (0C07:00000407)</td>
+<td></td>
+</tr>
+<tr>
+<td>German (Belgium)</td>
+<td>fr-BE: <a href="/en-us/globalization/keyboards/kbdbe_2" data-linktype="absolute-path">Belgian French keyboard</a> (080C:0000080C)</td>
+<td></td>
+</tr>
+<tr>
+<td>German (Italy)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>German (Liechtenstein)</td>
+<td>de-LI: <a href="/en-us/globalization/keyboards/kbdsg" data-linktype="absolute-path">Swiss German keyboard</a> (1407:00000807)</td>
+<td></td>
+</tr>
+<tr>
+<td>German (Luxembourg)</td>
+<td>de-LU: <a href="/en-us/globalization/keyboards/kbdgr" data-linktype="absolute-path">German keyboard</a> (1007:00000407)</td>
+<td></td>
+</tr>
+<tr>
+<td>German (Switzerland)</td>
+<td>de-CH: <a href="/en-us/globalization/keyboards/kbdsg" data-linktype="absolute-path">Swiss German keyboard</a> (0807:00000807)</td>
+<td>fr-CH: <a href="/en-us/globalization/keyboards/kbdsf_2" data-linktype="absolute-path">Swiss French keyboard</a> (100C:0000100C)</td>
+</tr>
+<tr>
+<td>Greek</td>
+<td>el-GR: <a href="/en-us/globalization/keyboards/kbdhe" data-linktype="absolute-path">Greek keyboard</a> (0408:00000408)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Guarani</td>
+<td>gn-PY: <a href="/en-us/globalization/keyboards/kbdgn" data-linktype="absolute-path">Guarani keyboard</a> (0474:00000474)</td>
+<td></td>
+</tr>
+<tr>
+<td>Gujarati</td>
+<td>gu-IN: <a href="/en-us/globalization/keyboards/kbdinguj" data-linktype="absolute-path">Gujarati keyboard</a> (0447:00000447)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Hausa</td>
+<td>ha-Latn-NG: <a href="/en-us/globalization/keyboards/kbdhau" data-linktype="absolute-path">Hausa keyboard</a> (0468:00000468)</td>
+<td></td>
+</tr>
+<tr>
+<td>Hawaiian</td>
+<td>haw-US: <a href="/en-us/globalization/keyboards/kbdhaw" data-linktype="absolute-path">Hawaiian keyboard</a> (0475:00000475)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Hebrew</td>
+<td>he-IL: <a href="/en-us/globalization/keyboards/kbdhebl3" data-linktype="absolute-path">Hebrew (Standard) keyboard</a> (040D:0002040D)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Hindi</td>
+<td>hi-IN: <a href="/en-us/globalization/keyboards/kbdinhin" data-linktype="absolute-path">Hindi Traditional keyboard</a> (0439:00010439)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Hungarian</td>
+<td>hu-HU: <a href="/en-us/globalization/keyboards/kbdhu" data-linktype="absolute-path">Hungarian keyboard</a> (040E:0000040E)</td>
+<td></td>
+</tr>
+<tr>
+<td>Icelandic</td>
+<td>is-IS: <a href="/en-us/globalization/keyboards/kbdic" data-linktype="absolute-path">Icelandic keyboard</a> (040F:0000040F)</td>
+<td></td>
+</tr>
+<tr>
+<td>Igbo</td>
+<td>ig-NG: <a href="/en-us/globalization/keyboards/kbdibo" data-linktype="absolute-path">Igbo keyboard</a> (0470:00000470)</td>
+<td></td>
+</tr>
+<tr>
+<td>Indonesian</td>
+<td>id-ID: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0421:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Interlingua</td>
+<td>fr-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (040C:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>Inuktitut</td>
+<td>iu-Latn-CA: <a href="/en-us/globalization/keyboards/kbdiulat" data-linktype="absolute-path">Inuktitut - Latin keyboard</a> (085D:0000085D)</td>
+<td>en-CA: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (1009:00000409)</td>
+</tr>
+<tr>
+<td>Inuktitut (Syllabics)</td>
+<td>iu-Cans-CA: <a href="/en-us/globalization/keyboards/kbdinuk2" data-linktype="absolute-path">Inuktitut - Naqittaut keyboard</a> (045D:0001045D)</td>
+<td>en-CA: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (1009:00000409)</td>
+</tr>
+<tr>
+<td>Irish</td>
+<td>ga-IE: <a href="/en-us/globalization/keyboards/kbdir" data-linktype="absolute-path">Irish keyboard</a> (083C:00001809)</td>
+<td></td>
+</tr>
+<tr>
+<td>Irish (United Kingdom)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Italian</td>
+<td>it-IT: <a href="/en-us/globalization/keyboards/kbdit" data-linktype="absolute-path">Italian keyboard</a> (0410:00000410)</td>
+<td></td>
+</tr>
+<tr>
+<td>Italian (Switzerland)</td>
+<td>it-CH: <a href="/en-us/globalization/keyboards/kbdsf_2" data-linktype="absolute-path">Swiss French keyboard</a> (0810:0000100C)</td>
+<td>it-CH: <a href="/en-us/globalization/keyboards/kbdit" data-linktype="absolute-path">Italian keyboard</a> (0810:00000410)</td>
+</tr>
+<tr>
+<td>Italian (Vatican City)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Japanese</td>
+<td>ja-JP: Microsoft IME (0411:{03B5835F-F03C-411B-9CE2-AA23E1171E36}{A76C93D9-5523-4E90-AAFA-4DB112F9AC76})</td>
+<td></td>
+</tr>
+<tr>
+<td>Javanese</td>
+<td>jv: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0C00:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Javanese (Javanese)</td>
+<td>jv-Java: <a href="/en-us/globalization/keyboards/kbdjav" data-linktype="absolute-path">Javanese keyboard</a> (0C00:00110C00)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Kalaallisut</td>
+<td>kl-GL: <a href="/en-us/globalization/keyboards/kbdda" data-linktype="absolute-path">Danish keyboard</a> (046F:00000406)</td>
+<td></td>
+</tr>
+<tr>
+<td>Kannada</td>
+<td>kn-IN: <a href="/en-us/globalization/keyboards/kbdinkan" data-linktype="absolute-path">Kannada keyboard</a> (044B:0000044B)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Kashmiri</td>
+<td>ur-PK: <a href="/en-us/globalization/keyboards/kbdurdu" data-linktype="absolute-path">Urdu keyboard</a> (0420:00000420)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Kashmiri (Devanagari)</td>
+<td>hi-IN: <a href="/en-us/globalization/keyboards/kbdinhin" data-linktype="absolute-path">Hindi Traditional keyboard</a> (0439:00010439)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Kazakh</td>
+<td>kk-KZ: <a href="/en-us/globalization/keyboards/kbdkaz" data-linktype="absolute-path">Kazakh keyboard</a> (043F:0000043F)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Khmer</td>
+<td>km-KH: <a href="/en-us/globalization/keyboards/kbdkhmr" data-linktype="absolute-path">Khmer keyboard</a> (0453:00000453)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Kinyarwanda</td>
+<td>rw-RW: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0487:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Kiswahili</td>
+<td>sw-KE: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0441:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Kiswahili (Congo DRC)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Kiswahili (Tanzania)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Kiswahili (Uganda)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Konkani</td>
+<td>kok-IN: <a href="/en-us/globalization/keyboards/kbdindev" data-linktype="absolute-path">Devanagari - INSCRIPT keyboard</a> (0457:00000439)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Korean</td>
+<td>ko-KR: Microsoft IME (0412:{A028AE76-01B1-46C2-99C4-ACD9858AE02F}{B5FE1F02-D5F2-4445-9C03-C568F23C99A1})</td>
+<td></td>
+</tr>
+<tr>
+<td>Korean (North Korea)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Kyrgyz</td>
+<td>ky-KG: <a href="/en-us/globalization/keyboards/kbdkyr" data-linktype="absolute-path">Kyrgyz Cyrillic keyboard</a> (0440:00000440)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Kʼicheʼ</td>
+<td>quc-Latn-GT: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (0486:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Lao</td>
+<td>lo-LA: <a href="/en-us/globalization/keyboards/kbdlao" data-linktype="absolute-path">Lao keyboard</a> (0454:00000454)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Latvian</td>
+<td>lv-LV: <a href="/en-us/globalization/keyboards/kbdlvst" data-linktype="absolute-path">Latvian (Standard) keyboard</a> (0426:00020426)</td>
+<td></td>
+</tr>
+<tr>
+<td>Lithuanian</td>
+<td>lt-LT: <a href="/en-us/globalization/keyboards/kbdlt1" data-linktype="absolute-path">Lithuanian keyboard</a> (0427:00010427)</td>
+<td></td>
+</tr>
+<tr>
+<td>Lower Sorbian</td>
+<td>dsb-DE: <a href="/en-us/globalization/keyboards/kbdsors1" data-linktype="absolute-path">Sorbian Standard keyboard</a> (082E:0002042E)</td>
+<td></td>
+</tr>
+<tr>
+<td>Luxembourgish</td>
+<td>lb-LU: <a href="/en-us/globalization/keyboards/kbdsf_1" data-linktype="absolute-path">Luxembourgish keyboard</a> (046E:0000046E)</td>
+<td></td>
+</tr>
+<tr>
+<td>Macedonian</td>
+<td>mk-MK: <a href="/en-us/globalization/keyboards/kbdmacst" data-linktype="absolute-path">Macedonian - Standard keyboard</a> (042F:0001042F)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Malagasy</td>
+<td>mg: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (0C00:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>Malay</td>
+<td>ms-MY: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (043E:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Malay (Brunei)</td>
+<td>ms-BN: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (083E:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Malay (Indonesia)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Malay (Singapore)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Malayalam</td>
+<td>ml-IN: <a href="/en-us/globalization/keyboards/kbdinmal" data-linktype="absolute-path">Malayalam keyboard</a> (044C:0000044C)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Maltese</td>
+<td>mt-MT: <a href="/en-us/globalization/keyboards/kbdmlt47" data-linktype="absolute-path">Maltese 47-Key keyboard</a> (043A:0000043A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Manipuri</td>
+<td>en-IN: <a href="/en-us/globalization/keyboards/kbdinen" data-linktype="absolute-path">English (India) keyboard</a> (4009:00004009)</td>
+<td></td>
+</tr>
+<tr>
+<td>Manx</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbduk" data-linktype="absolute-path">United Kingdom keyboard</a> (0809:00000809)</td>
+<td></td>
+</tr>
+<tr>
+<td>Maori</td>
+<td>mi-NZ: <a href="/en-us/globalization/keyboards/kbdmaori" data-linktype="absolute-path">Maori keyboard</a> (0481:00000481)</td>
+<td>en-NZ: <a href="/en-us/globalization/keyboards/kbdmaori" data-linktype="absolute-path">Maori keyboard</a> (1409:00000481)</td>
+</tr>
+<tr>
+<td>Mapuche</td>
+<td>arn-CL: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (047A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Marathi</td>
+<td>mr-IN: <a href="/en-us/globalization/keyboards/kbdinmar" data-linktype="absolute-path">Marathi keyboard</a> (044E:0000044E)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Mazanderani</td>
+<td>fa-IR: <a href="/en-us/globalization/keyboards/kbdfa" data-linktype="absolute-path">Persian keyboard</a> (0429:00000429)</td>
+<td>fa-IR: <a href="/en-us/globalization/keyboards/kbdfar" data-linktype="absolute-path">Persian (Standard) keyboard</a> (0429:00050429)<br>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Mohawk</td>
+<td>moh-CA: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (047C:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Mongolian</td>
+<td>mn-MN: <a href="/en-us/globalization/keyboards/kbdmon" data-linktype="absolute-path">Mongolian Cyrillic keyboard</a> (0450:00000450)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Mongolian (Traditional Mongolian)</td>
+<td>mn-Mong-CN: <a href="/en-us/globalization/keyboards/kbdmonst" data-linktype="absolute-path">Traditional Mongolian (Standard) keyboard</a> (0850:00010850)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Mongolian (Traditional Mongolian, Mongolia)</td>
+<td>mn-Mong-MN: <a href="/en-us/globalization/keyboards/kbdmonst" data-linktype="absolute-path">Traditional Mongolian (Standard) keyboard</a> (0C50:00010850)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>N'ko</td>
+<td>nqo: <a href="/en-us/globalization/keyboards/kbdnko" data-linktype="absolute-path">N’Ko keyboard</a> (0C00:00090C00)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Nepali</td>
+<td>ne-NP: <a href="/en-us/globalization/keyboards/kbdnepr" data-linktype="absolute-path">Nepali keyboard</a> (0461:00000461)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Nepali (India)</td>
+<td>ne-IN: <a href="/en-us/globalization/keyboards/kbdnepr" data-linktype="absolute-path">Nepali keyboard</a> (0861:00000461)</td>
+<td></td>
+</tr>
+<tr>
+<td>Northern Luri</td>
+<td>ar-IQ: <a href="/en-us/globalization/keyboards/kbda1" data-linktype="absolute-path">Arabic (101) keyboard</a> (0801:00000401)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Northern Sami</td>
+<td>se-NO: <a href="/en-us/globalization/keyboards/kbdno1" data-linktype="absolute-path">Norwegian with Sami keyboard</a> (043B:0000043B)</td>
+<td></td>
+</tr>
+<tr>
+<td>Norwegian</td>
+<td>nb-NO: <a href="/en-us/globalization/keyboards/kbdno" data-linktype="absolute-path">Norwegian keyboard</a> (0414:00000414)</td>
+<td></td>
+</tr>
+<tr>
+<td>Norwegian Nynorsk</td>
+<td>nn-NO: <a href="/en-us/globalization/keyboards/kbdno" data-linktype="absolute-path">Norwegian keyboard</a> (0814:00000414)</td>
+<td></td>
+</tr>
+<tr>
+<td>Occitan</td>
+<td>oc-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (0482:0000040C)</td>
+<td></td>
+</tr>
+<tr>
+<td>Odia</td>
+<td>or-IN: <a href="/en-us/globalization/keyboards/kbdinori" data-linktype="absolute-path">Odia keyboard</a> (0448:00000448)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Oromo</td>
+<td>om-ET: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0472:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Oromo (Kenya)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Ossetic</td>
+<td>ru-RU: <a href="/en-us/globalization/keyboards/kbdru" data-linktype="absolute-path">Russian keyboard</a> (0419:00000419)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Papiamento</td>
+<td>pap-029: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0479:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Pashto</td>
+<td>ps-AF: <a href="/en-us/globalization/keyboards/kbdpash" data-linktype="absolute-path">Pashto (Afghanistan) keyboard</a> (0463:00000463)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Pashto (Pakistan)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Persian</td>
+<td>fa-IR: <a href="/en-us/globalization/keyboards/kbdfa" data-linktype="absolute-path">Persian keyboard</a> (0429:00000429)</td>
+<td>fa-IR: <a href="/en-us/globalization/keyboards/kbdfar" data-linktype="absolute-path">Persian (Standard) keyboard</a> (0429:00050429)<br>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Persian (Afghanistan)</td>
+<td>fa-AF: <a href="/en-us/globalization/keyboards/kbdfar" data-linktype="absolute-path">Persian (Standard) keyboard</a> (048C:00050429)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Polish</td>
+<td>pl-PL: <a href="/en-us/globalization/keyboards/kbdpl1" data-linktype="absolute-path">Polish (Programmers) keyboard</a> (0415:00000415)</td>
+<td></td>
+</tr>
+<tr>
+<td>Portuguese</td>
+<td>pt-BR: <a href="/en-us/globalization/keyboards/kbdbr_1" data-linktype="absolute-path">Portuguese (Brazil ABNT) keyboard</a> (0416:00000416)</td>
+<td></td>
+</tr>
+<tr>
+<td>Portuguese (Angola)</td>
+<td>pt-PT: <a href="/en-us/globalization/keyboards/kbdpo" data-linktype="absolute-path">Portuguese keyboard</a> (0816:00000816)</td>
+<td></td>
+</tr>
+<tr>
+<td>Portuguese (Cabo Verde)</td>
+<td>pt-PT: <a href="/en-us/globalization/keyboards/kbdpo" data-linktype="absolute-path">Portuguese keyboard</a> (0816:00000816)</td>
+<td></td>
+</tr>
+<tr>
+<td>Portuguese (Equatorial Guinea)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Portuguese (Guinea-Bissau)</td>
+<td>pt-PT: <a href="/en-us/globalization/keyboards/kbdpo" data-linktype="absolute-path">Portuguese keyboard</a> (0816:00000816)</td>
+<td></td>
+</tr>
+<tr>
+<td>Portuguese (Luxembourg)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Portuguese (Macao SAR)</td>
+<td>pt-PT: <a href="/en-us/globalization/keyboards/kbdpo" data-linktype="absolute-path">Portuguese keyboard</a> (0816:00000816)</td>
+<td></td>
+</tr>
+<tr>
+<td>Portuguese (Mozambique)</td>
+<td>pt-PT: <a href="/en-us/globalization/keyboards/kbdpo" data-linktype="absolute-path">Portuguese keyboard</a> (0816:00000816)</td>
+<td></td>
+</tr>
+<tr>
+<td>Portuguese (Portugal)</td>
+<td>pt-PT: <a href="/en-us/globalization/keyboards/kbdpo" data-linktype="absolute-path">Portuguese keyboard</a> (0816:00000816)</td>
+<td></td>
+</tr>
+<tr>
+<td>Portuguese (Switzerland)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Portuguese (São Tomé &amp; Príncipe)</td>
+<td>pt-PT: <a href="/en-us/globalization/keyboards/kbdpo" data-linktype="absolute-path">Portuguese keyboard</a> (0816:00000816)</td>
+<td></td>
+</tr>
+<tr>
+<td>Portuguese (Timor-Leste)</td>
+<td>pt-PT: <a href="/en-us/globalization/keyboards/kbdpo" data-linktype="absolute-path">Portuguese keyboard</a> (0816:00000816)</td>
+<td></td>
+</tr>
+<tr>
+<td>Prussian</td>
+<td>de-DE: <a href="/en-us/globalization/keyboards/kbdgr" data-linktype="absolute-path">German keyboard</a> (0407:00000407)</td>
+<td></td>
+</tr>
+<tr>
+<td>Punjabi</td>
+<td>pa-IN: <a href="/en-us/globalization/keyboards/kbdinpun" data-linktype="absolute-path">Punjabi keyboard</a> (0446:00000446)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Punjabi</td>
+<td>pa-Arab-PK: <a href="/en-us/globalization/keyboards/kbdurdu" data-linktype="absolute-path">Urdu keyboard</a> (0846:00000420)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Quechua</td>
+<td>quz-BO: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (046B:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Quechua (Ecuador)</td>
+<td>quz-EC: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (086B:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Quechua (Peru)</td>
+<td>quz-PE: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (0C6B:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Romanian</td>
+<td>ro-RO: <a href="/en-us/globalization/keyboards/kbdrost" data-linktype="absolute-path">Romanian (Standard) keyboard</a> (0418:00010418)</td>
+<td></td>
+</tr>
+<tr>
+<td>Romanian (Moldova)</td>
+<td>ro-MD: <a href="/en-us/globalization/keyboards/kbdrost" data-linktype="absolute-path">Romanian (Standard) keyboard</a> (0818:00010418)</td>
+<td></td>
+</tr>
+<tr>
+<td>Romansh</td>
+<td>rm-CH: <a href="/en-us/globalization/keyboards/kbdsg" data-linktype="absolute-path">Swiss German keyboard</a> (0417:00000807)</td>
+<td></td>
+</tr>
+<tr>
+<td>Russian</td>
+<td>ru-RU: <a href="/en-us/globalization/keyboards/kbdru" data-linktype="absolute-path">Russian keyboard</a> (0419:00000419)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Russian (Moldova)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Sakha</td>
+<td>sah-RU: <a href="/en-us/globalization/keyboards/kbdyak" data-linktype="absolute-path">Sakha keyboard</a> (0485:00000485)</td>
+<td>ru-RU: <a href="/en-us/globalization/keyboards/kbdru" data-linktype="absolute-path">Russian keyboard</a> (0419:00000419)<br>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Sami (Inari)</td>
+<td>smn-FI: <a href="/en-us/globalization/keyboards/kbdfi1_1" data-linktype="absolute-path">Finnish with Sami keyboard</a> (243B:0001083B)</td>
+<td></td>
+</tr>
+<tr>
+<td>Sami (Lule)</td>
+<td>smj-SE: <a href="/en-us/globalization/keyboards/kbdfi1_2" data-linktype="absolute-path">Swedish with Sami keyboard</a> (143B:0000083B)</td>
+<td></td>
+</tr>
+<tr>
+<td>Sami (Skolt)</td>
+<td>sms-FI: <a href="/en-us/globalization/keyboards/kbdfi1_1" data-linktype="absolute-path">Finnish with Sami keyboard</a> (203B:0001083B)</td>
+<td></td>
+</tr>
+<tr>
+<td>Sami (Southern)</td>
+<td>sma-SE: <a href="/en-us/globalization/keyboards/kbdfi1_2" data-linktype="absolute-path">Swedish with Sami keyboard</a> (1C3B:0000083B)</td>
+<td></td>
+</tr>
+<tr>
+<td>Sami, Lule (Norway)</td>
+<td>smj-NO: <a href="/en-us/globalization/keyboards/kbdno1" data-linktype="absolute-path">Norwegian with Sami keyboard</a> (103B:0000043B)</td>
+<td></td>
+</tr>
+<tr>
+<td>Sami, Northern (Finland)</td>
+<td>se-FI: <a href="/en-us/globalization/keyboards/kbdfi1_1" data-linktype="absolute-path">Finnish with Sami keyboard</a> (0C3B:0001083B)</td>
+<td></td>
+</tr>
+<tr>
+<td>Sami, Northern (Sweden)</td>
+<td>se-SE: <a href="/en-us/globalization/keyboards/kbdfi1_2" data-linktype="absolute-path">Swedish with Sami keyboard</a> (083B:0000083B)</td>
+<td></td>
+</tr>
+<tr>
+<td>Sami, Southern (Norway)</td>
+<td>sma-NO: <a href="/en-us/globalization/keyboards/kbdno1" data-linktype="absolute-path">Norwegian with Sami keyboard</a> (183B:0000043B)</td>
+<td></td>
+</tr>
+<tr>
+<td>Sanskrit</td>
+<td>sa-IN: <a href="/en-us/globalization/keyboards/kbdindev" data-linktype="absolute-path">Devanagari - INSCRIPT keyboard</a> (044F:00000439)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Scottish Gaelic</td>
+<td>gd-GB: <a href="/en-us/globalization/keyboards/kbdgae" data-linktype="absolute-path">Scottish Gaelic keyboard</a> (0491:00011809)</td>
+<td></td>
+</tr>
+<tr>
+<td>Serbian</td>
+<td>sr-Latn-RS: <a href="/en-us/globalization/keyboards/kbdycl" data-linktype="absolute-path">Serbian (Latin) keyboard</a> (241A:0000081A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Serbian (Cyrillic)</td>
+<td>sr-Cyrl-RS: <a href="/en-us/globalization/keyboards/kbdycc" data-linktype="absolute-path">Serbian (Cyrillic) keyboard</a> (281A:00000C1A)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdusx" data-linktype="absolute-path">United States-International keyboard</a> (0409:00020409)</td>
+</tr>
+<tr>
+<td>Serbian (Cyrillic, Bosnia and Herzegovina)</td>
+<td>sr-Cyrl-BA: <a href="/en-us/globalization/keyboards/kbdycc" data-linktype="absolute-path">Serbian (Cyrillic) keyboard</a> (1C1A:00000C1A)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Serbian (Cyrillic, Kosovo)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Serbian (Cyrillic, Montenegro)</td>
+<td>sr-Cyrl-ME: <a href="/en-us/globalization/keyboards/kbdycc" data-linktype="absolute-path">Serbian (Cyrillic) keyboard</a> (301A:00000C1A)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdusx" data-linktype="absolute-path">United States-International keyboard</a> (0409:00020409)</td>
+</tr>
+<tr>
+<td>Serbian (Latin, Bosnia &amp; Herzegovina)</td>
+<td>sr-Latn-BA: <a href="/en-us/globalization/keyboards/kbdycl" data-linktype="absolute-path">Serbian (Latin) keyboard</a> (181A:0000081A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Serbian (Latin, Kosovo)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Serbian (Latin, Montenegro)</td>
+<td>sr-Latn-ME: <a href="/en-us/globalization/keyboards/kbdycl" data-linktype="absolute-path">Serbian (Latin) keyboard</a> (2C1A:0000081A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Sesotho</td>
+<td>st-ZA: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0430:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Sesotho (Lesotho)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Sesotho sa Leboa</td>
+<td>nso-ZA: <a href="/en-us/globalization/keyboards/kbdnso_1" data-linktype="absolute-path">Sesotho sa Leboa keyboard</a> (046C:0000046C)</td>
+<td></td>
+</tr>
+<tr>
+<td>Setswana</td>
+<td>tn-ZA: <a href="/en-us/globalization/keyboards/kbdnso_2" data-linktype="absolute-path">Setswana keyboard</a> (0432:00000432)</td>
+<td></td>
+</tr>
+<tr>
+<td>Setswana (Botswana)</td>
+<td>tn-BW: <a href="/en-us/globalization/keyboards/kbdnso_2" data-linktype="absolute-path">Setswana keyboard</a> (0832:00000432)</td>
+<td></td>
+</tr>
+<tr>
+<td>Shona</td>
+<td>jv: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0C00:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Sindhi</td>
+<td>sd-Arab-PK: <a href="/en-us/globalization/keyboards/kbdurdu" data-linktype="absolute-path">Urdu keyboard</a> (0859:00000420)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Sindhi (Devanagari)</td>
+<td>hi-IN: <a href="/en-us/globalization/keyboards/kbdinhin" data-linktype="absolute-path">Hindi Traditional keyboard</a> (0439:00010439)</td>
+<td>en-IN: <a href="/en-us/globalization/keyboards/kbdinen" data-linktype="absolute-path">English (India) keyboard</a> (4009:00004009)</td>
+</tr>
+<tr>
+<td>Sinhala</td>
+<td>si-LK: <a href="/en-us/globalization/keyboards/kbdsn1" data-linktype="absolute-path">Sinhala keyboard</a> (045B:0000045B)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Slovak</td>
+<td>sk-SK: <a href="/en-us/globalization/keyboards/kbdsl" data-linktype="absolute-path">Slovak keyboard</a> (041B:0000041B)</td>
+<td></td>
+</tr>
+<tr>
+<td>Slovenian</td>
+<td>sl-SI: <a href="/en-us/globalization/keyboards/kbdcr_1" data-linktype="absolute-path">Slovenian keyboard</a> (0424:00000424)</td>
+<td></td>
+</tr>
+<tr>
+<td>Somali</td>
+<td>so-SO: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0477:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Somali (Djibouti)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Somali (Ethiopia)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Somali (Kenya)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish</td>
+<td>es-ES: <a href="/en-us/globalization/keyboards/kbdsp" data-linktype="absolute-path">Spanish keyboard</a> (0C0A:0000040A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Argentina)</td>
+<td>es-AR: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (2C0A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Belize)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Bolivia)</td>
+<td>es-BO: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (400A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Brazil)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Chile)</td>
+<td>es-CL: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (340A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Colombia)</td>
+<td>es-CO: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (240A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Costa Rica)</td>
+<td>es-CR: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (140A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Cuba)</td>
+<td>es-MX: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (080A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Dominican Republic)</td>
+<td>es-DO: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (1C0A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Ecuador)</td>
+<td>es-EC: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (300A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (El Salvador)</td>
+<td>es-SV: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (440A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Equatorial Guinea)</td>
+<td>es-MX: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (080A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Guatemala)</td>
+<td>es-GT: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (100A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Honduras)</td>
+<td>es-HN: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (480A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Latin America)</td>
+<td>es-419: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (580A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Mexico)</td>
+<td>es-MX: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (080A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Nicaragua)</td>
+<td>es-NI: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (4C0A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Panama)</td>
+<td>es-PA: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (180A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Paraguay)</td>
+<td>es-PY: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (3C0A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Peru)</td>
+<td>es-PE: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (280A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Philippines)</td>
+<td>es-MX: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (080A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Puerto Rico)</td>
+<td>es-PR: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (500A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (United States)</td>
+<td>es-US: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (540A:0000080A)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Spanish (Uruguay)</td>
+<td>es-UY: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (380A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Spanish (Venezuela)</td>
+<td>es-VE: <a href="/en-us/globalization/keyboards/kbdla" data-linktype="absolute-path">Latin American keyboard</a> (200A:0000080A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Standard Moroccan Tamazight</td>
+<td>zgh: <a href="/en-us/globalization/keyboards/kbdtifi" data-linktype="absolute-path">Tifinagh (Basic) keyboard</a> (0C00:0000105F)</td>
+<td>fr-FR: <a href="/en-us/globalization/keyboards/kbdfr" data-linktype="absolute-path">French keyboard</a> (040C:0000040C)</td>
+</tr>
+<tr>
+<td>Swedish</td>
+<td>sv-SE: <a href="/en-us/globalization/keyboards/kbdsw" data-linktype="absolute-path">Swedish keyboard</a> (041D:0000041D)</td>
+<td></td>
+</tr>
+<tr>
+<td>Swedish (Finland)</td>
+<td>sv-FI: <a href="/en-us/globalization/keyboards/kbdsw" data-linktype="absolute-path">Swedish keyboard</a> (081D:0000041D)</td>
+<td></td>
+</tr>
+<tr>
+<td>Swiss German</td>
+<td>de-CH: <a href="/en-us/globalization/keyboards/kbdsg" data-linktype="absolute-path">Swiss German keyboard</a> (0807:00000807)</td>
+<td></td>
+</tr>
+<tr>
+<td>Syriac</td>
+<td>syr-SY: <a href="/en-us/globalization/keyboards/kbdsyr1" data-linktype="absolute-path">Syriac keyboard</a> (045A:0000045A)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Tachelhit</td>
+<td>tzm-Tfng-MA: <a href="/en-us/globalization/keyboards/kbdtifi" data-linktype="absolute-path">Tifinagh (Basic) keyboard</a> (105F:0000105F)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Tachelhit (Latin)</td>
+<td>tzm-Latn-DZ: <a href="/en-us/globalization/keyboards/kbdtzm" data-linktype="absolute-path">Central Atlas Tamazight keyboard</a> (085F:0000085F)</td>
+<td></td>
+</tr>
+<tr>
+<td>Tajik</td>
+<td>tg-Cyrl-TJ: <a href="/en-us/globalization/keyboards/kbdtajik" data-linktype="absolute-path">Tajik keyboard</a> (0428:00000428)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Tamil</td>
+<td>ta-IN: <a href="/en-us/globalization/keyboards/kbdtam99" data-linktype="absolute-path">Tamil 99 keyboard</a> (0449:00020449)</td>
+<td>en-IN: <a href="/en-us/globalization/keyboards/kbdinen" data-linktype="absolute-path">English (India) keyboard</a> (4009:00004009)</td>
+</tr>
+<tr>
+<td>Tamil (Malaysia)</td>
+<td>ta-IN: <a href="/en-us/globalization/keyboards/kbdtam99" data-linktype="absolute-path">Tamil 99 keyboard</a> (0449:00020449)</td>
+<td>ms-MY: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (043E:00000409)</td>
+</tr>
+<tr>
+<td>Tamil (Singapore)</td>
+<td>ta-IN: <a href="/en-us/globalization/keyboards/kbdtam99" data-linktype="absolute-path">Tamil 99 keyboard</a> (0449:00020449)</td>
+<td>en-SG: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (4809:00000409)</td>
+</tr>
+<tr>
+<td>Tamil (Sri Lanka)</td>
+<td>ta-LK: <a href="/en-us/globalization/keyboards/kbdtam99" data-linktype="absolute-path">Tamil 99 keyboard</a> (0849:00020449)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Tatar</td>
+<td>tt-RU: <a href="/en-us/globalization/keyboards/kbdtt102" data-linktype="absolute-path">Tatar keyboard</a> (0444:00010444)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)<br>ru-RU: <a href="/en-us/globalization/keyboards/kbdru" data-linktype="absolute-path">Russian keyboard</a> (0419:00000419)</td>
+</tr>
+<tr>
+<td>Telugu</td>
+<td>te-IN: <a href="/en-us/globalization/keyboards/kbdintel" data-linktype="absolute-path">Telugu keyboard</a> (044A:0000044A)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Thai</td>
+<td>th-TH: <a href="/en-us/globalization/keyboards/kbdth0" data-linktype="absolute-path">Thai Kedmanee keyboard</a> (041E:0000041E)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Tibetan</td>
+<td>bo-CN: <a href="/en-us/globalization/keyboards/kbdtiprd" data-linktype="absolute-path">Tibetan (PRC) - Updated keyboard</a> (0451:00010451)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Tibetan (India)</td>
+<td>bo-CN: <a href="/en-us/globalization/keyboards/kbdtiprc" data-linktype="absolute-path">Tibetan (PRC) keyboard</a> (0451:00000451)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Tigrinya</td>
+<td>ti-ET: Tigrinya Input Method (0473:{E429B25A-E5D3-4D1F-9BE3-0C608477E3A1}{3CAB88B7-CC3E-46A6-9765-B772AD7761FF})</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Turkish</td>
+<td>tr-TR: <a href="/en-us/globalization/keyboards/kbdtuq" data-linktype="absolute-path">Turkish Q keyboard</a> (041F:0000041F)</td>
+<td></td>
+</tr>
+<tr>
+<td>Turkmen</td>
+<td>tk-TM: <a href="/en-us/globalization/keyboards/kbdturme" data-linktype="absolute-path">Turkmen keyboard</a> (0442:00000442)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Ukrainian</td>
+<td>uk-UA: <a href="/en-us/globalization/keyboards/kbdur1" data-linktype="absolute-path">Ukrainian (Enhanced) keyboard</a> (0422:00020422)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Upper Sorbian</td>
+<td>hsb-DE: <a href="/en-us/globalization/keyboards/kbdsors1" data-linktype="absolute-path">Sorbian Standard keyboard</a> (042E:0002042E)</td>
+<td></td>
+</tr>
+<tr>
+<td>Urdu</td>
+<td>ur-PK: <a href="/en-us/globalization/keyboards/kbdurdu" data-linktype="absolute-path">Urdu keyboard</a> (0420:00000420)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Urdu (India)</td>
+<td>ur-IN: <a href="/en-us/globalization/keyboards/kbdurdu" data-linktype="absolute-path">Urdu keyboard</a> (0820:00000420)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Uyghur</td>
+<td>ug-CN: <a href="/en-us/globalization/keyboards/kbdughr1" data-linktype="absolute-path">Uyghur keyboard</a> (0480:00010480)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Uzbek</td>
+<td>uz-Latn-UZ: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0443:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Uzbek (Arabic)</td>
+<td>ps-AF: <a href="/en-us/globalization/keyboards/kbdpash" data-linktype="absolute-path">Pashto (Afghanistan) keyboard</a> (0463:00000463)</td>
+<td>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Uzbek (Cyrillic)</td>
+<td>uz-Cyrl-UZ: <a href="/en-us/globalization/keyboards/kbduzb" data-linktype="absolute-path">Uzbek Cyrillic keyboard</a> (0843:00000843)</td>
+<td>uz-Latn-UZ: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0443:00000409)</td>
+</tr>
+<tr>
+<td>Valencian (Spain)</td>
+<td>ca-ES-valencia: <a href="/en-us/globalization/keyboards/kbdsp" data-linktype="absolute-path">Spanish keyboard</a> (0803:0000040A)</td>
+<td></td>
+</tr>
+<tr>
+<td>Vietnamese</td>
+<td>vi-VN: Vietnamese Telex (042A:{C2CB2CF0-AF47-413E-9780-8BC3A3C16068}{5FB02EC5-0A77-4684-B4FA-DEF8A2195628})</td>
+<td>vi-VN: Vietnamese Number Key-Based (042A:{C2CB2CF0-AF47-413E-9780-8BC3A3C16068}{591AE943-56BE-48F6-8966-06B43915CC5A})<br>vi-VN: <a href="/en-us/globalization/keyboards/kbdvntc" data-linktype="absolute-path">Vietnamese keyboard</a> (042A:0000042A)<br>en-US: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0409:00000409)</td>
+</tr>
+<tr>
+<td>Walser</td>
+<td>de-CH: <a href="/en-us/globalization/keyboards/kbdsg" data-linktype="absolute-path">Swiss German keyboard</a> (0807:00000807)</td>
+<td></td>
+</tr>
+<tr>
+<td>Welsh</td>
+<td>cy-GB: <a href="/en-us/globalization/keyboards/kbdukx" data-linktype="absolute-path">United Kingdom Extended keyboard</a> (0452:00000452)</td>
+<td>en-GB: <a href="/en-us/globalization/keyboards/kbduk" data-linktype="absolute-path">United Kingdom keyboard</a> (0809:00000809)</td>
+</tr>
+<tr>
+<td>Western Frisian</td>
+<td>fy-NL: <a href="/en-us/globalization/keyboards/kbdusx" data-linktype="absolute-path">United States-International keyboard</a> (0462:00020409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Wolof</td>
+<td>wo-SN: <a href="/en-us/globalization/keyboards/kbdwol" data-linktype="absolute-path">Wolof keyboard</a> (0488:00000488)</td>
+<td></td>
+</tr>
+<tr>
+<td>Xitsonga</td>
+<td>ts-ZA: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0431:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>Yi</td>
+<td>ii-CN: Yi Input Method (0478:{E429B25A-E5D3-4D1F-9BE3-0C608477E3A1}{409C8376-007B-4357-AE8E-26316EE3FB0D})</td>
+<td>zh-CN: Microsoft Pinyin (0804:{81D4E9C9-1D3B-41BC-9E6C-4B40BF79E35E}{FA550B04-5AD7-411F-A5AC-CA038EC515D7})</td>
+</tr>
+<tr>
+<td>Yoruba</td>
+<td>yo-NG: <a href="/en-us/globalization/keyboards/kbdyba" data-linktype="absolute-path">Yoruba keyboard</a> (046A:0000046A)</td>
+<td></td>
+</tr>
+<tr>
+<td>isiXhosa</td>
+<td>xh-ZA: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0434:00000409)</td>
+<td></td>
+</tr>
+<tr>
+<td>isiZulu</td>
+<td>zu-ZA: <a href="/en-us/globalization/keyboards/kbdus_7" data-linktype="absolute-path">US keyboard</a> (0435:00000409)</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-topics">Related topics</h2>
+<ul>
+<li><a href="default-time-zones?view=windows-11" data-linktype="relative-path">Default Time Zones</a></li>
+<li><a href="add-language-packs-to-windows?preserve-view=true&amp;view=windows-11" data-linktype="relative-path">Add Language Packs to Windows</a></li>
+<li><a href="available-language-packs-for-windows?view=windows-11" data-linktype="relative-path">Available Language Packs for Windows</a></li>
+<li><a href="windows-language-pack-default-values?view=windows-11" data-linktype="relative-path">Keyboard identifiers for Windows</a></li>
+<li><a href="dism-languages-and-international-servicing-command-line-options?view=windows-11" data-linktype="relative-path">DISM Languages and International Servicing Command-Line Options</a></li>
+</ul>
+
+							</div>
+
+							<div id="assertive-live-region" role="alert" aria-live="assertive" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<div id="polite-live-region" role="status" aria-live="polite" class="visually-hidden" aria-relevant="additions" aria-atomic="true"></div>
+							<!-- </content> -->
+
+						</main>
+
+
+
+
+						<!-- recommendations section -->
+						<!-- end recommendations section -->
+
+						<!-- feedback section -->
+						<!-- end feedback section -->
+
+						<!-- feedback report section -->
+						<!-- end feedback report section -->
+
+							<aside
+								id="ms--additional-resources-mobile"
+								aria-label="Additional resources"
+								class="display-none-desktop display-none-print"
+							>
+								<hr class="hr" hidden />
+								<h2 id="ms--additional-resources-mobile-heading" class="title is-3" hidden>Additional resources</h2>
+								<section id="right-rail-recommendations-mobile" data-bi-name="recommendations" hidden></section>
+								<section id="right-rail-training-mobile" data-bi-name="learning-resources-card" hidden></section>
+								<section id="right-rail-events-mobile" data-bi-name="events-card" hidden></section>
+								<section id="right-rail-qna-mobile" data-bi-name="qna-link-card" hidden></section>
+							</aside>
+
+						<div class="border-top is-visible-interactive has-default-focus margin-top-sm ">
+
+
+
+	<footer id="footer-interactive" data-bi-name="footer" class="footer-layout">
+	<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-sm button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+<a
+	href="https://aka.ms/yourcaliforniaprivacychoices"
+	class="button button-sm button-clear flex-shrink-0"
+	data-mscc-ic="false"
+	data-bi-name="your-privacy-choices"
+>
+	<svg
+		role="img"
+		aria-label="California Consumer Privacy Act (CCPA) Opt-Out Icon"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 30 14"
+		xml:space="preserve"
+		height="16"
+		width="43"
+		focusable="false"
+	>
+		<title>California Consumer Privacy Act (CCPA) Opt-Out Icon</title>
+		<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+		<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+		<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+		<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+	</svg>
+	<span>Your Privacy Choices</span>
+</a>
+		</div>
+		<div class="flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu-interactive" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+		<span class="icon expanded-indicator" aria-hidden="true">
+			<span class="docon docon-chevron-down-light"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu-interactive" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Light					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/previous-versions/" data-bi-name="archivelink">Previous Versions</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/contribute/" data-bi-name="contributorGuide">Contribute</a></li>
+					<li><a class="external-link-indicator" data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2024</li>
+	</ul>
+</footer>
+						</div>
+
+					</div>
+
+						<div
+							id="ms--additional-resources"
+							class="right-container column is-4-desktop display-none display-block-desktop"
+							data-bi-name="pageactions"
+							role="complementary"
+							aria-label="Additional resources"
+						>
+							<div id="affixed-right-container" class="margin-top-sm-tablet" data-bi-name="right-column">
+								<h2 id="ms--additional-resources-heading" class="title is-6 margin-top-md" hidden>Additional resources</h2>
+								<section id="right-rail-events" data-bi-name="events-card" hidden></section>
+								<section id="right-rail-training" data-bi-name="learning-resources-card" hidden></section>
+								<section id="right-rail-recommendations" data-bi-name="recommendations" hidden></section>
+								<nav id="side-doc-outline" class="doc-outline" data-bi-name="intopic toc" aria-label="In this article">
+									<h3>In this article</h3>
+								</nav>
+								<section id="right-rail-qna" class="margin-top-xxs" data-bi-name="qna-link-card" hidden></section>
+							</div>
+						</div>
+
+				</div>
+				<!--end of div.columns -->
+
+			</section>
+			<!--end of .primary-holder -->
+
+			<!-- interactive container -->
+			<aside id="interactive-container" class="interactive-container is-visible-interactive column has-body-background-dark ">
+			</aside>
+			<!-- end of interactive container -->
+		</div>
+
+	</div>
+	<!--end of .mainContainer -->
+
+	<section class="border-top has-default-focus is-hidden-interactive margin-top-sm ">
+
+
+
+	<footer id="footer" data-bi-name="footer" class="footer-layout uhf-container has-padding" role="contentinfo">
+	<div class="display-flex gap-xs flex-wrap-wrap is-full-height padding-right-lg-desktop">
+			<a
+				data-mscc-ic="false"
+				class="locale-selector-link button button-sm button-clear flex-shrink-0"
+				href="#"
+				data-bi-name="select-locale">
+					<span class="icon" aria-hidden="true">
+						<span class="docon docon-world"></span>
+					</span>
+					<span class="local-selector-link-text"></span></a>
+		<div class="ccpa-privacy-link" data-ccpa-privacy-link hidden>
+<a
+	href="https://aka.ms/yourcaliforniaprivacychoices"
+	class="button button-sm button-clear flex-shrink-0"
+	data-mscc-ic="false"
+	data-bi-name="your-privacy-choices"
+>
+	<svg
+		role="img"
+		aria-label="California Consumer Privacy Act (CCPA) Opt-Out Icon"
+		xmlns="http://www.w3.org/2000/svg"
+		viewBox="0 0 30 14"
+		xml:space="preserve"
+		height="16"
+		width="43"
+		focusable="false"
+	>
+		<title>California Consumer Privacy Act (CCPA) Opt-Out Icon</title>
+		<path d="M7.4 12.8h6.8l3.1-11.6H7.4C4.2 1.2 1.6 3.8 1.6 7s2.6 5.8 5.8 5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#fff"></path>
+		<path d="M22.6 0H7.4c-3.9 0-7 3.1-7 7s3.1 7 7 7h15.2c3.9 0 7-3.1 7-7s-3.2-7-7-7zm-21 7c0-3.2 2.6-5.8 5.8-5.8h9.9l-3.1 11.6H7.4c-3.2 0-5.8-2.6-5.8-5.8z" style="fill-rule:evenodd;clip-rule:evenodd;fill:#06f"></path>
+		<path d="M24.6 4c.2.2.2.6 0 .8L22.5 7l2.2 2.2c.2.2.2.6 0 .8-.2.2-.6.2-.8 0l-2.2-2.2-2.2 2.2c-.2.2-.6.2-.8 0-.2-.2-.2-.6 0-.8L20.8 7l-2.2-2.2c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0l2.2 2.2L23.8 4c.2-.2.6-.2.8 0z" style="fill:#fff"></path>
+		<path d="M12.7 4.1c.2.2.3.6.1.8L8.6 9.8c-.1.1-.2.2-.3.2-.2.1-.5.1-.7-.1L5.4 7.7c-.2-.2-.2-.6 0-.8.2-.2.6-.2.8 0L8 8.6l3.8-4.5c.2-.2.6-.2.9 0z" style="fill:#06f"></path>
+	</svg>
+	<span>Your Privacy Choices</span>
+</a>
+		</div>
+		<div class="flex-shrink-0">
+<div class="dropdown has-caret-up">
+	<button class="dropdown-trigger button button-clear button-sm has-inner-focus theme-dropdown-trigger"
+		aria-controls="theme-menu" aria-expanded="false" title="Theme" data-bi-name="theme">
+		<span class="icon">
+			<span class="docon docon-sun" aria-hidden="true"></span>
+		</span>
+		<span>Theme</span>
+		<span class="icon expanded-indicator" aria-hidden="true">
+			<span class="docon docon-chevron-down-light"></span>
+		</span>
+	</button>
+	<div class="dropdown-menu" id="theme-menu" role="menu">
+		<ul class="theme-selector padding-xxs" role="none">
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="light">
+					<span class="theme-light margin-right-xxs">
+						<span
+							class="theme-selector-icon border display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Light					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="dark">
+					<span class="theme-dark margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+Dark					</span>
+				</button>
+			</li>
+			<li class="theme display-block" role="menuitem">
+				<button class="button button-clear button-sm theme-control button-block justify-content-flex-start"
+					data-theme-to="high-contrast">
+					<span class="theme-high-contrast margin-right-xxs">
+						<span
+							class="border theme-selector-icon display-inline-block has-body-background"
+							aria-hidden="true">
+							<svg class="svg" xmlns="http://www.w3.org/2000/svg"
+								viewBox="0 0 22 14">
+								<rect width="22" height="14" class="has-fill-body-background" />
+								<rect x="5" y="5" width="12" height="4" class="has-fill-secondary" />
+								<rect x="5" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="8" y="2" width="2" height="1" class="has-fill-secondary" />
+								<rect x="11" y="2" width="3" height="1" class="has-fill-secondary" />
+								<rect x="1" y="1" width="2" height="2" class="has-fill-secondary" />
+								<rect x="5" y="10" width="7" height="2" rx="0.3" class="has-fill-primary" />
+								<rect x="19" y="1" width="2" height="2" rx="1" class="has-fill-secondary" />
+							</svg>
+						</span>
+					</span>
+					<span>
+High contrast					</span>
+				</button>
+			</li>
+		</ul>
+	</div>
+</div>
+		</div>
+	</div>
+	<ul class="links" data-bi-name="footerlinks">
+		<li class="manage-cookies-holder" hidden></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/previous-versions/" data-bi-name="archivelink">Previous Versions</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://techcommunity.microsoft.com/t5/microsoft-learn-blog/bg-p/MicrosoftLearnBlog" data-bi-name="bloglink">Blog</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/contribute/" data-bi-name="contributorGuide">Contribute</a></li>
+					<li><a class="external-link-indicator" data-mscc-ic="false" href="https://go.microsoft.com/fwlink/?LinkId=521839" data-bi-name="privacy">Privacy</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="/en-us/legal/termsofuse" data-bi-name="termsofuse">Terms of Use</a></li>
+				<li><a class="external-link-indicator" data-mscc-ic="false" href="https://www.microsoft.com/legal/intellectualproperty/Trademarks/" data-bi-name="trademarks">Trademarks</a></li>
+		<li>&copy; Microsoft 2024</li>
+	</ul>
+</footer>
+	</section>
+
+	<div id="action-panel" role="region" aria-label="Action Panel" class="action-panel has-default-focus" tabindex="-1"></div>
+</body>
+</html>

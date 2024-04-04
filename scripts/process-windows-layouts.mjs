@@ -1,28 +1,33 @@
 import { Pathy } from "@bscotch/pathy";
 import assert from "assert";
 import * as cheerio from "cheerio";
+import fs from "node:fs/promises";
 import {
   defined,
   getWindowsLayoutFiles,
+  jsonify,
   windowsKeycodesFile,
+  windowsVkCodeOverridesFile,
 } from "./shared.mjs";
 
 const selectedLayouts = process.argv[2]?.split(",").map((x) => x.toLowerCase());
-
 const layoutFiles = await getWindowsLayoutFiles();
-
 const keyCodes = await getVirtualKeycodes(windowsKeycodesFile);
-/** @type {Map<string, {klids: Set<string>, langs: Set<string>}>} */
-const layoutSummaries = new Map();
+/** @type {Map<string, {klids: Set<string>, langs: Set<string>, vk: {}}>} */
+const driverSummaries = new Map();
+
+/** @type {Map<string, Record<string, string>} */
+const driverVkCodes = new Map();
 
 // We only care about stuff that deviates from the US Layout. So first we need to get the US layout.
 
 const usLayout = defined(layoutFiles.get("kbdus"));
-let usKeyMappings = {};
-usKeyMappings = await getVirtualKeyMappings(
-  defined(usLayout.keysPath),
-  "en-US"
+let usVkCodes = {};
+driverVkCodes.set(
+  "kbdus",
+  await getVirtualKeyMappings(defined(usLayout.keysPath), "en-US")
 );
+usVkCodes = defined(driverVkCodes.get("kbdus"));
 
 /** @type {{[kbdId:string]:Record<import("./shared.mjs").VKCode, string>}} */
 const selectedKeycodeMap = {};
@@ -41,6 +46,7 @@ for (const [name, files] of layoutFiles) {
     defined(files.keysPath),
     lang
   );
+  driverVkCodes.set(name, keyMappings);
 
   if (selectedLayouts?.length) {
     selectedKeycodeMap[name] = keyMappings;
@@ -50,7 +56,13 @@ for (const [name, files] of layoutFiles) {
 if (selectedLayouts?.length) {
   console.log(JSON.stringify(selectedKeycodeMap, null, 2));
 } else {
-  // await fs.writeFile("windows-layouts.json", jsonify(layoutSummaries));
+  for (const [name, summary] of driverSummaries) {
+    summary.vk = driverVkCodes.get(name) || {};
+  }
+  await fs.writeFile(
+    windowsVkCodeOverridesFile.absolute,
+    jsonify(driverSummaries)
+  );
 }
 
 /**
@@ -112,7 +124,7 @@ async function getVirtualKeyMappings(xmlFile, lang) {
     value = value.toLocaleUpperCase(lang);
 
     // We only want things that deviate from the US layout
-    if (usKeyMappings[`${vkNum}`] === value) continue;
+    if (usVkCodes[`${vkNum}`] === value) continue;
     mappings[`${vkNum}`] = value;
   }
   return mappings;
@@ -148,12 +160,12 @@ async function getLayoutMetadata(name, htmlFile) {
         assert(lang, `Could not parse language from ${value}`);
         metadata.id = id;
         metadata.lang = lang;
-        layoutSummaries.set(
+        driverSummaries.set(
           name,
-          layoutSummaries.get(name) || { klids: new Set(), langs: new Set() }
+          driverSummaries.get(name) || { klids: new Set(), langs: new Set() }
         );
-        layoutSummaries.get(name)?.klids.add(id);
-        layoutSummaries.get(name)?.langs.add(lang);
+        driverSummaries.get(name)?.klids.add(id);
+        driverSummaries.get(name)?.langs.add(lang);
       } else if (key === "Layout Display Name") {
         metadata.layout = value;
       }
