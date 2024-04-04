@@ -334,3 +334,12 @@ The returned structure can be used for different lookup scenarios. If you are us
 - Table of Windows Languages and IDs: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/available-language-packs-for-windows
 - Table mapping languages to default keyboard layouts on Windows: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs
 - Microsoft's list of layouts: https://learn.microsoft.com/en-us/globalization/windows-keyboard-layouts
+
+## Sample Projects
+
+To see how you would use the Windows APIs to get the KLID for the user's current keyboard layout, see:
+
+- Sample Rust project: [./rust-kbd-layout](./rust-kbd-layout)
+- Sample CPP project: [./cpp-kbd-layout](./cpp-kbd-layout)
+
+In both cases we use the Windows `GetKeyboardLayoutNameA` method to get the current KLID.
