@@ -12,6 +12,8 @@ const selectedLayouts = process.argv[2]?.split(",").map((x) => x.toLowerCase());
 const layoutFiles = await getWindowsLayoutFiles();
 
 const keyCodes = await getVirtualKeycodes(windowsKeycodesFile);
+/** @type {Map<string, {klids: Set<string>, langs: Set<string>}>} */
+const layoutSummaries = new Map();
 
 // We only care about stuff that deviates from the US Layout. So first we need to get the US layout.
 
@@ -31,7 +33,7 @@ for (const [name, files] of layoutFiles) {
   if (selectedLayouts?.length && name === "kbdus") continue;
 
   // Parse the HTML info file to get the layout metadata
-  const metadata = await getLayoutMetadata(defined(files.infoPath));
+  const metadata = await getLayoutMetadata(name, defined(files.infoPath));
   const lang = metadata[0]?.lang;
 
   // Parse the XML key mapping file to get the key mappings. We want to map the virtual key codes to the UTF8 characters.
@@ -47,6 +49,8 @@ for (const [name, files] of layoutFiles) {
 
 if (selectedLayouts?.length) {
   console.log(JSON.stringify(selectedKeycodeMap, null, 2));
+} else {
+  // await fs.writeFile("windows-layouts.json", jsonify(layoutSummaries));
 }
 
 /**
@@ -115,10 +119,11 @@ async function getVirtualKeyMappings(xmlFile, lang) {
 }
 
 /**
+ * @param {string} name
  * @param {Pathy} htmlFile
  * @returns {Promise<{ id:string, lang:string, layout:string}[]>}
  */
-async function getLayoutMetadata(htmlFile) {
+async function getLayoutMetadata(name, htmlFile) {
   const $ = cheerio.load(await htmlFile.read());
   const metadataTables = $(".metaGroup.group > table");
 
@@ -143,6 +148,12 @@ async function getLayoutMetadata(htmlFile) {
         assert(lang, `Could not parse language from ${value}`);
         metadata.id = id;
         metadata.lang = lang;
+        layoutSummaries.set(
+          name,
+          layoutSummaries.get(name) || { klids: new Set(), langs: new Set() }
+        );
+        layoutSummaries.get(name)?.klids.add(id);
+        layoutSummaries.get(name)?.langs.add(lang);
       } else if (key === "Layout Display Name") {
         metadata.layout = value;
       }

@@ -41,3 +41,21 @@ export function defined(x) {
   // @ts-ignore
   return x;
 }
+
+/**
+ * @param {string} name
+ */
+export function jsonify(x) {
+  return JSON.stringify(
+    x,
+    (key, value) => {
+      if (value instanceof Set) {
+        return Array.from(value);
+      } else if (value instanceof Map) {
+        return Object.fromEntries(value);
+      }
+      return value;
+    },
+    2
+  );
+}
