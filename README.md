@@ -10,12 +10,21 @@ To that end, we need to be able to map all of the virtual keycodes to characters
 
 ## Usage
 
+### All VK Code Overrides
+
+The file [`windows-vkcode-overrides.json`](./windows-vkcode-overrides.json) summarizes all keyboard layouts by driver, including Virtual Key overrides (relative to the US Keyboard), languages, and KLIDs for all layouts.
+
+### Filtered VK Code Overrides
+
+It's likely that you only want a subset of VK Code overrides for a given project. To that end you'll need to run some code, so there's some setup to do:
+
 - Ensure [NodeJS](https://nodejs.org/en) is installed (v16+ minimum, ideally v20+)
 - Clone/Pull this repo
 - This project should work with `npm`, but is developed using `pnpm`. For best compatibility use [pnpm](https://pnpm.io/installation)
 - In this project directory, run `pnpm install` (or `npm install` if you are using `npm`)
 - (optional) To scrape the latest remote resources, run `pnpm download && pnpm process` (or, for `npm`, `npm run download && npm run process`).
-- To get a JSON file of Virtual Keycodes that deviate from the US Keyboard layout (when uppercased), run `node.exe scripts/get-windows-vk-overrides.mjs` with a comma-separated filter list of either languages codes (e.g `en`), driver names (e.g. `kbdus`), or KLIDs (e.g. `00000409`).
+
+Once that's all done, to get a JSON file of Virtual Keycodes that deviate from the US Keyboard layout (when uppercased), run `node.exe scripts/get-windows-vk-overrides.mjs` with a comma-separated filter list of either language codes (e.g `en,zh`), driver names (e.g. `kbdus`), or KLIDs (e.g. `00000409`).
 
 For example:
 
