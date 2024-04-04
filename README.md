@@ -122,3 +122,7 @@ Returns:
 - Keyboard Layout data: https://kbdlayout.info
 - Table mapping languages to default keyboard layouts on Windows: https://learn.microsoft.com/en-us/windows-hardware/manufacture/desktop/default-input-locales-for-windows-language-packs
 - Microsoft's list of layouts: https://learn.microsoft.com/en-us/globalization/windows-keyboard-layouts
+
+## Other notes
+
+- Crashlands 2 supported layouts: kbdbr,kbdfr,kbdgr,kbdit,kbdjpn,kbdla,kbdpl1,kbdsp,kbdtuq,kbdus
