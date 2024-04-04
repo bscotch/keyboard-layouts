@@ -10,7 +10,6 @@ import {
   windowsVkCodeOverridesFile,
 } from "./shared.mjs";
 
-const selectedLayouts = process.argv[2]?.split(",").map((x) => x.toLowerCase());
 const layoutFiles = await getWindowsLayoutFiles();
 const keyCodes = await getVirtualKeycodes(windowsKeycodesFile);
 /** @type {Map<string, {klids: Set<string>, langs: Set<string>, vk: {}}>} */
@@ -33,10 +32,6 @@ usVkCodes = defined(driverVkCodes.get("kbdus"));
 const selectedKeycodeMap = {};
 
 for (const [name, files] of layoutFiles) {
-  if (selectedLayouts?.length && !selectedLayouts.includes(name.toLowerCase()))
-    continue;
-  if (selectedLayouts?.length && name === "kbdus") continue;
-
   // Parse the HTML info file to get the layout metadata
   const metadata = await getLayoutMetadata(name, defined(files.infoPath));
   const lang = metadata[0]?.lang;
@@ -47,23 +42,15 @@ for (const [name, files] of layoutFiles) {
     lang
   );
   driverVkCodes.set(name, keyMappings);
-
-  if (selectedLayouts?.length) {
-    selectedKeycodeMap[name] = keyMappings;
-  }
 }
 
-if (selectedLayouts?.length) {
-  console.log(JSON.stringify(selectedKeycodeMap, null, 2));
-} else {
-  for (const [name, summary] of driverSummaries) {
-    summary.vk = driverVkCodes.get(name) || {};
-  }
-  await fs.writeFile(
-    windowsVkCodeOverridesFile.absolute,
-    jsonify(driverSummaries)
-  );
+for (const [name, summary] of driverSummaries) {
+  summary.vk = driverVkCodes.get(name) || {};
 }
+await fs.writeFile(
+  windowsVkCodeOverridesFile.absolute,
+  jsonify(driverSummaries)
+);
 
 /**
  *
