@@ -14,7 +14,7 @@ export const windowsLanguagesFile = downloadsDir.join("windows-languages.html");
 export const windowsLanguageLayoutsFile = downloadsDir.join(
   "windows-language-layouts.html"
 );
-/** @type {Pathy<{[driver:string]:{klids:string[], langs:string[], vk:{[code:string]:string}}}>} */
+/** @type {Pathy<{[driver:string]:{klids:string[], langs:string[],codes:{vk:{[code:string]:string}, sc:{[code:string]:number}}}}>} */
 export const windowsVkCodeOverridesFile = pathy(
   "windows-vkcode-overrides.json"
 );
@@ -51,7 +51,7 @@ export function defined(x) {
 }
 
 /**
- * @param {string} name
+ * @param {any} x
  */
 export function jsonify(x) {
   return JSON.stringify(

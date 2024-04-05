@@ -29,8 +29,12 @@ if (!filterValues.length) {
 
 const allOverrides = await windowsVkCodeOverridesFile.read();
 
-/** @type {{klidDrivers:{[klid:string]: string}, driverOverrides: {[driver:string]: {[code:string]:string}}}} */
-const filtered = { klidDrivers: {}, driverOverrides: {} };
+/** @type {{klidDrivers:{[klid:string]: string}, vkToGlyphOverrides: {[driver:string]: {[code:string]:string}}, scToVkOverrides:{[driver:string]:{[scancode:string]:number}}}} */
+const filtered = {
+  klidDrivers: {},
+  vkToGlyphOverrides: {},
+  scToVkOverrides: {},
+};
 for (const [driver, info] of Object.entries(allOverrides)) {
   if (filterType === "driver" && !filterValues.includes(driver)) {
     continue;
@@ -49,7 +53,8 @@ for (const [driver, info] of Object.entries(allOverrides)) {
   for (const klid of info.klids) {
     filtered.klidDrivers[klid] = driver;
   }
-  filtered.driverOverrides[driver] = info.vk;
+  filtered.vkToGlyphOverrides[driver] = info.codes.vk;
+  filtered.scToVkOverrides[driver] = info.codes.sc;
 }
 
 console.log(JSON.stringify(filtered, null, 2));

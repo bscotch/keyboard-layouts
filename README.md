@@ -8,6 +8,8 @@ The problem is that when we _display_ the keybindings they'll show the wrong thi
 
 To that end, we need to be able to map all of the virtual keycodes to characters based on the user's keyboard. For each supported language we'd want reasonable defaults, but also need to allow the user to specify a different layout (since a user can use a different keyboard layout than the default for their language).
 
+Further, for game inputs we care more about the _position_ on the keyboard rather than the glyph it corresponds to (e.g. the physical position of `WASD` is what we care about for character movement). We can use "scan codes" to get that information. The game only has access to the virtual keys, but we can look up the scan code for a given virtual key by keyboard.
+
 ## Usage
 
 ### All VK Code Overrides
@@ -30,7 +32,9 @@ For example:
 
 `node.exe scripts/get-windows-vk-overrides.mjs language de,es,fr,it,ja,ko,pl,pt,tr,zh`
 
-Returns:
+<details>
+
+<summary>Returns:</summary>
 
 ```json
 {
@@ -71,7 +75,7 @@ Returns:
     "00001004": "kbdus",
     "00001404": "kbdus"
   },
-  "driverOverrides": {
+  "vkToGlyphOverrides": {
     "kbdbe": {
       "48": "À",
       "49": "&",
@@ -331,9 +335,280 @@ Returns:
       "226": "<"
     },
     "kbdus": {}
+  },
+  "scToVkOverrides": {
+    "kbdbe": {
+      "10": 65,
+      "11": 90,
+      "27": 77,
+      "28": 192,
+      "29": 222,
+      "32": 188,
+      "33": 190,
+      "34": 191,
+      "35": 187,
+      "0C": 219,
+      "0D": 189,
+      "1B": 186,
+      "1E": 81,
+      "2C": 87
+    },
+    "kbdbene": {
+      "10": 65,
+      "11": 90,
+      "27": 77,
+      "28": 192,
+      "29": 222,
+      "32": 188,
+      "33": 190,
+      "34": 191,
+      "35": 187,
+      "0C": 219,
+      "0D": 189,
+      "1B": 186,
+      "1E": 81,
+      "2C": 87
+    },
+    "kbdbr": {},
+    "kbdes": {
+      "27": 192,
+      "29": 220,
+      "35": 223,
+      "1A": 221
+    },
+    "kbdfc": {
+      "28": 192,
+      "29": 222
+    },
+    "kbdfr": {
+      "10": 65,
+      "11": 90,
+      "27": 77,
+      "28": 192,
+      "29": 222,
+      "32": 188,
+      "33": 190,
+      "34": 191,
+      "35": 223,
+      "0C": 219,
+      "1B": 186,
+      "1E": 81,
+      "2C": 87
+    },
+    "kbdfrna": {
+      "10": 65,
+      "11": 90,
+      "27": 77,
+      "28": 219,
+      "32": 190,
+      "34": 191,
+      "35": 186,
+      "0C": 222,
+      "1A": 189,
+      "1B": 187,
+      "1E": 81,
+      "2C": 87
+    },
+    "kbdfrnb": {
+      "10": 66,
+      "11": 186,
+      "12": 80,
+      "13": 79,
+      "14": 191,
+      "16": 86,
+      "17": 68,
+      "18": 76,
+      "19": 74,
+      "20": 73,
+      "21": 69,
+      "22": 188,
+      "23": 67,
+      "24": 84,
+      "25": 83,
+      "26": 82,
+      "27": 78,
+      "28": 77,
+      "29": 222,
+      "30": 75,
+      "31": 192,
+      "32": 81,
+      "33": 71,
+      "34": 72,
+      "35": 70,
+      "1A": 90,
+      "1B": 87,
+      "1F": 85,
+      "2C": 221,
+      "2D": 89,
+      "2E": 88,
+      "2F": 190
+    },
+    "kbdgr": {
+      "15": 90,
+      "27": 192,
+      "35": 189,
+      "0C": 219,
+      "1A": 186,
+      "1B": 187,
+      "2B": 191,
+      "2C": 89
+    },
+    "kbdgr1": {
+      "15": 90,
+      "27": 192,
+      "35": 189,
+      "0C": 219,
+      "1A": 186,
+      "1B": 187,
+      "2B": 191,
+      "2C": 89
+    },
+    "kbdgre1": {
+      "15": 90,
+      "27": 192,
+      "35": 189,
+      "0C": 219,
+      "1A": 186,
+      "1B": 187,
+      "2B": 191,
+      "2C": 89
+    },
+    "kbdgre2": {
+      "15": 90,
+      "27": 192,
+      "35": 189,
+      "0C": 219,
+      "1A": 186,
+      "1B": 187,
+      "2B": 191,
+      "2C": 89
+    },
+    "kbdit": {
+      "27": 192,
+      "29": 220,
+      "35": 189,
+      "0C": 219,
+      "0D": 221,
+      "1A": 186,
+      "1B": 187,
+      "2B": 191
+    },
+    "kbdit142": {
+      "27": 192,
+      "29": 220,
+      "35": 189,
+      "0C": 219,
+      "0D": 221,
+      "1A": 186,
+      "1B": 187,
+      "2B": 191
+    },
+    "kbdjpn": {},
+    "kbdkor": {},
+    "kbdla": {
+      "27": 192,
+      "29": 220,
+      "35": 189,
+      "0C": 219,
+      "0D": 221,
+      "1B": 187,
+      "2B": 191
+    },
+    "kbdpl": {
+      "15": 90,
+      "35": 189,
+      "0C": 187,
+      "0D": 191,
+      "2C": 89
+    },
+    "kbdpl1": {},
+    "kbdpo": {
+      "27": 192,
+      "29": 220,
+      "35": 189,
+      "0C": 219,
+      "0D": 221,
+      "1A": 187
+    },
+    "kbdsf": {
+      "15": 90,
+      "27": 222,
+      "28": 220,
+      "29": 191,
+      "35": 189,
+      "0C": 219,
+      "1A": 186,
+      "2B": 223,
+      "2C": 89
+    },
+    "kbdsg": {
+      "15": 90,
+      "27": 222,
+      "28": 220,
+      "29": 191,
+      "35": 189,
+      "0C": 219,
+      "1A": 186,
+      "2B": 223,
+      "2C": 89
+    },
+    "kbdsp": {
+      "27": 192,
+      "29": 220,
+      "35": 189,
+      "0C": 219,
+      "0D": 221,
+      "1B": 187,
+      "2B": 191
+    },
+    "kbdtuf": {
+      "10": 70,
+      "11": 71,
+      "12": 186,
+      "13": 73,
+      "14": 79,
+      "15": 68,
+      "16": 82,
+      "17": 78,
+      "18": 72,
+      "20": 69,
+      "21": 65,
+      "22": 221,
+      "23": 84,
+      "24": 75,
+      "25": 77,
+      "27": 89,
+      "30": 191,
+      "31": 90,
+      "32": 83,
+      "33": 66,
+      "35": 188,
+      "0C": 187,
+      "0D": 189,
+      "1A": 81,
+      "1B": 87,
+      "1E": 85,
+      "1F": 219,
+      "2B": 88,
+      "2C": 74,
+      "2D": 220,
+      "2E": 86,
+      "2F": 67
+    },
+    "kbdtuq": {
+      "33": 191,
+      "34": 220,
+      "35": 190,
+      "0C": 223,
+      "0D": 189,
+      "2B": 188
+    },
+    "kbdus": {}
   }
 }
 ```
+
+</details>
 
 The returned structure can be used for different lookup scenarios. If you are using the Windows APIs to get the current keyboard layout, you'll probably be getting it as a KLID. Therefore you can do a two-step lookup with the above data: (1) get the driver from the KLID; (2) get the VK Overrides from the driver.
 

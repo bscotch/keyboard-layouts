@@ -10,26 +10,28 @@ import {
   windowsVkCodeOverridesFile,
 } from "./shared.mjs";
 
+/**
+ * @typedef {{vk:{[code:`${number}`]:string}, sc:{[code:string]: number}}} VirtualMappings
+ */
+
 const layoutFiles = await getWindowsLayoutFiles();
 const keyCodes = await getVirtualKeycodes(windowsKeycodesFile);
-/** @type {Map<string, {klids: Set<string>, langs: Set<string>, vk: {}}>} */
+/** @type {Map<string, {klids: Set<string>, langs: Set<string>, codes: VirtualMappings}>} */
 const driverSummaries = new Map();
 
-/** @type {Map<string, Record<string, string>} */
+/** @type {Map<string, VirtualMappings>} */
 const driverVkCodes = new Map();
 
 // We only care about stuff that deviates from the US Layout. So first we need to get the US layout.
 
 const usLayout = defined(layoutFiles.get("kbdus"));
-let usVkCodes = {};
+/** @type {VirtualMappings} */
+let usVkCodes = { vk: {}, sc: {} };
 driverVkCodes.set(
   "kbdus",
   await getVirtualKeyMappings(defined(usLayout.keysPath), "en-US")
 );
 usVkCodes = defined(driverVkCodes.get("kbdus"));
-
-/** @type {{[kbdId:string]:Record<import("./shared.mjs").VKCode, string>}} */
-const selectedKeycodeMap = {};
 
 for (const [name, files] of layoutFiles) {
   // Parse the HTML info file to get the layout metadata
@@ -45,7 +47,7 @@ for (const [name, files] of layoutFiles) {
 }
 
 for (const [name, summary] of driverSummaries) {
-  summary.vk = driverVkCodes.get(name) || {};
+  summary.codes = driverVkCodes.get(name) || { vk: {}, sc: {} };
 }
 await fs.writeFile(
   windowsVkCodeOverridesFile.absolute,
@@ -92,15 +94,18 @@ async function getVirtualKeycodes(htmlFile) {
 /**
  * @param {Pathy} xmlFile
  * @param {string} lang
- * @returns {Promise<Record<string,string>>}
+ * @returns {Promise<VirtualMappings>}
  */
 async function getVirtualKeyMappings(xmlFile, lang) {
   const $ = cheerio.load(await xmlFile.read());
   const keys = $("PK");
-  const mappings = {};
+  /** @type {VirtualMappings} */
+  const mappings = { vk: {}, sc: {} };
   for (const key of keys) {
     const vk = $(key).attr("vk");
+    const scanCode = $(key).attr("sc");
     assert(vk, "VK attribute missing");
+    assert(scanCode, "Scan code attribute missing");
     const vkNum = keyCodes.get(vk)?.number;
     if (vkNum === undefined) continue;
     const values = $(key).find("result:not([with])");
@@ -111,8 +116,12 @@ async function getVirtualKeyMappings(xmlFile, lang) {
     value = value.toLocaleUpperCase(lang);
 
     // We only want things that deviate from the US layout
-    if (usVkCodes[`${vkNum}`] === value) continue;
-    mappings[`${vkNum}`] = value;
+    if (usVkCodes.vk[`${vkNum}`] !== value) {
+      mappings.vk[`${vkNum}`] = value;
+    }
+    if (usVkCodes.sc[scanCode] !== vkNum) {
+      mappings.sc[scanCode] = vkNum;
+    }
   }
   return mappings;
 }
@@ -149,7 +158,11 @@ async function getLayoutMetadata(name, htmlFile) {
         metadata.lang = lang;
         driverSummaries.set(
           name,
-          driverSummaries.get(name) || { klids: new Set(), langs: new Set() }
+          driverSummaries.get(name) || {
+            klids: new Set(),
+            langs: new Set(),
+            codes: { vk: {}, sc: {} },
+          }
         );
         driverSummaries.get(name)?.klids.add(id);
         driverSummaries.get(name)?.langs.add(lang);
