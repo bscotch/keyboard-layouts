@@ -108,6 +108,7 @@ async function getVirtualKeyMappings(xmlFile, lang) {
     assert(scanCode, "Scan code attribute missing");
     const vkNum = keyCodes.get(vk)?.number;
     if (vkNum === undefined) continue;
+    mappings.sc[scanCode] = vkNum; // want all scan codes
     const values = $(key).find("result:not([with])");
     if (values.length !== 1) continue;
     let value = $(values[0]).attr("text");
@@ -118,9 +119,6 @@ async function getVirtualKeyMappings(xmlFile, lang) {
     // We only want things that deviate from the US layout
     if (usVkCodes.vk[`${vkNum}`] !== value) {
       mappings.vk[`${vkNum}`] = value;
-    }
-    if (usVkCodes.sc[scanCode] !== vkNum) {
-      mappings.sc[scanCode] = vkNum;
     }
   }
   return mappings;

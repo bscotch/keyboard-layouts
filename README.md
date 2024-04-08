@@ -336,7 +336,7 @@ For example:
     },
     "kbdus": {}
   },
-  "scToVkOverrides": {
+  "scToVk": {
     "kbdbe": {
       "10": 65,
       "11": 90,
